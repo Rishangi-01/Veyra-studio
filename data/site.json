@@ -1,0 +1,160 @@
+{
+  "navItems": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about-us" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "heroSlides": [
+    {
+      "eyebrow": "ARCHITECTURE",
+      "title": ["Transforming", "Spaces into"],
+      "highlight": "Meaningful Living",
+      "description": "At Veyra Studio, we design spaces that inspire, function beautifully and stand the test of time. From architecture to interiors, we create environments that elevate everyday life.",
+      "image": "/images/home/banner1.png",
+      "featuredImage": "/images/home/banner2.jfif",
+      "project": "The Willow Residence",
+      "location": "California, USA",
+      "year": "2024",
+      "category": "Residential"
+    },
+    {
+      "eyebrow": "INTERIOR DESIGN",
+      "title": ["Designed for", "Beautiful"],
+      "highlight": "Everyday Living",
+      "description": "We bring materials, light and thoughtful details together to create interiors that feel timeless, personal and effortlessly sophisticated.",
+      "image": "/images/home/banner3.jfif",
+      "featuredImage": "/images/home/banner4.jfif",
+      "project": "The Solstice House",
+      "location": "Austin, USA",
+      "year": "2025",
+      "category": "Interiors"
+    },
+    {
+      "eyebrow": "CONTEMPORARY DESIGN",
+      "title": ["Beyond the", "Ordinary"],
+      "highlight": "By Design",
+      "description": "Discover a new perspective on contemporary living, where architectural precision meets natural textures and enduring elegance.",
+      "image": "/images/home/banner5.jfif",
+      "featuredImage": "/images/home/banner6.jfif",
+      "project": "The Horizon Villa",
+      "location": "Palm Springs, USA",
+      "year": "2025",
+      "category": "Architecture"
+    }
+  ],
+  "services": [
+    {
+      "title": "Architectural Design",
+      "description": "Thoughtful and innovative architectural solutions for residential, commercial and mixed-use spaces.",
+      "href": "/services/architectural-design"
+    },
+    {
+      "title": "Interior Design",
+      "description": "Beautifully balanced interiors combining refined materials, thoughtful details and everyday functionality.",
+      "href": "/services/interior-design"
+    },
+    {
+      "title": "Landscape Design",
+      "description": "Harmonious outdoor environments that connect architecture, nature and the way people experience a space.",
+      "href": "/services/landscape-design"
+    },
+    {
+      "title": "Project Management",
+      "description": "Careful coordination, clear planning and considered execution to keep every project moving forward.",
+      "href": "/services/project-management"
+    },
+    {
+      "title": "Urban Planning",
+      "description": "Forward-thinking planning that brings communities, infrastructure and sustainable development together.",
+      "href": "/services/urban-planning"
+    }
+  ],
+  "projects": [
+    {
+      "number": "01",
+      "title": "Residential Project",
+      "location": "Paris",
+      "category": "Residential Architecture",
+      "image": "/images/home/banner2.jfif",
+      "href": "/projects/residential-paris",
+      "position": "center"
+    },
+    {
+      "number": "02",
+      "title": "Concert Hall",
+      "location": "New York",
+      "category": "Cultural Architecture",
+      "image": "/images/home/banner3.jfif",
+      "href": "/projects/concert-hall",
+      "position": "center"
+    },
+    {
+      "number": "03",
+      "title": "Modern Hotel",
+      "location": "London",
+      "category": "Hospitality Architecture",
+      "image": "/images/home/banner4.jfif",
+      "href": "/projects/modern-hotel",
+      "position": "center"
+    },
+    {
+      "number": "04",
+      "title": "Modern Hotel",
+      "location": "London",
+      "category": "Luxury Architecture",
+      "image": "/images/home/banner5.jfif",
+      "href": "/projects/luxury-hotel",
+      "position": "center"
+    }
+  ],
+  "stats": [
+    { "label": "Years of experience", "value": "14+" },
+    { "label": "Projects delivered", "value": "120" },
+    { "label": "Client satisfaction", "value": "96%" },
+    { "label": "Global footprint", "value": "18 cities" }
+  ],
+  "testimonials": [
+    {
+      "name": "Sofia Martinez",
+      "role": "Private Client",
+      "quote": "Every detail felt beautifully considered. The studio translated our vision into a home that feels both timeless and deeply personal.",
+      "avatar": "/images/home/avatar-1.jpg"
+    },
+    {
+      "name": "Daniel Brooks",
+      "role": "Developer & Investor",
+      "quote": "Their process was clear, collaborative and incredibly thoughtful. The result exceeded expectations in both impact and functionality.",
+      "avatar": "/images/home/avatar-2.jpg"
+    },
+    {
+      "name": "Alicia Chen",
+      "role": "Hospitality Founder",
+      "quote": "We wanted an elevated guest experience and Veyra Studio delivered exactly that—refined, warm and memorable.",
+      "avatar": "/images/home/avatar-3.jpg"
+    }
+  ],
+  "processSteps": [
+    {
+      "number": "01",
+      "title": "Discovery",
+      "description": "We listen, map aspirations and establish the vision, goals and constraints for your project."
+    },
+    {
+      "number": "02",
+      "title": "Concept Design",
+      "description": "We develop guiding ideas, spatial strategies and early design narratives that shape the project."
+    },
+    {
+      "number": "03",
+      "title": "Detailed Design",
+      "description": "We refine material palettes, layouts and technical resolutions to bring the concept into focus."
+    },
+    {
+      "number": "04",
+      "title": "Delivery",
+      "description": "We support construction, coordination and final realization to ensure a seamless result."
+    }
+  ]
+}
