@@ -14,7 +14,9 @@ import { AnimatePresence, motion } from "motion/react";
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-us" },
+  { label: "Team", href: "/our-team" },
+  { label: "Testimonials", href: "/testimonials" },
   {
     label: "Services",
     href: "/services",

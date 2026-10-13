@@ -12,7 +12,7 @@ export default function ContactCTA() {
   return (
     <section
       id="contact-cta"
-      className="relative overflow-hidden bg-[#75001d]"
+      className="relative overflow-hidden bg-[#75001d] w-[100%]"
       aria-labelledby="contact-cta-title"
     >
       <div className="grid min-h-[390px] grid-cols-1 md:min-h-[420px] md:grid-cols-2 lg:min-h-[450px]">
