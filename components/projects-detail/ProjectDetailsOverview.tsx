@@ -74,7 +74,7 @@ export default function ProjectDetailsOverview() {
   };
 
   return (
-    <section className="overflow-hidden bg-[#fcfbf9] px-4 py-12 text-[#17191f] sm:px-6 sm:py-16 lg:px-10 lg:pt-16 lg:pb-0">
+    <section className="overflow-hidden bg-[#fcfbf9] px-4 py-8 text-[#17191f] sm:px-6 sm:py-12 lg:px-10 lg:pt-16 lg:pb-0">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-8 xl:gap-10">
 
         {/* LEFT: Project information */}

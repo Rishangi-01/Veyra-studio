@@ -27,7 +27,7 @@ export default function ArchitecturalDesignSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fcfbf9] px-5 py-16 sm:px-8 md:py-24 lg:px-12">
+    <section className="relative overflow-hidden bg-[#fcfbf9] px-5 py-12 sm:px-8 md:py-8 lg:px-12">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-20">
 
         <motion.div

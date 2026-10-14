@@ -25,7 +25,7 @@ export default function ServicesShowcase() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#faf9f6] py-16 sm:py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#faf9f6] py-16 sm:py-20 lg:pt-16 lg:pb-12"
     >
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16 lg:px-12 xl:gap-20 xl:px-16">
 
@@ -127,7 +127,7 @@ export default function ServicesShowcase() {
           </p>
 
           {/* Services list */}
-          <div className="mt-9 grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:mt-12 xl:gap-x-12">
+          <div className="mt-4 grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:mt-4 xl:gap-x-12">
             {data.items.map((service, index) => (
               <motion.div
                 key={service.number}

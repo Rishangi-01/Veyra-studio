@@ -46,7 +46,7 @@ export default function ProjectGallery() {
   );
 
   return (
-    <section className="overflow-hidden bg-[#fcfbf9] px-4 py-12 sm:px-7 sm:py-14 lg:px-10 lg:py-16">
+    <section className="overflow-hidden bg-[#fcfbf9] px-4 py-8 sm:px-7 sm:py-8 lg:px-10 lg:py-16">
       <div className="mx-auto max-w-[1600px]">
 
         {/* Heading and slider controls */}

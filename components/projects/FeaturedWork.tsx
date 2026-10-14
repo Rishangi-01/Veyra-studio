@@ -23,7 +23,7 @@ export default function FeaturedWork() {
   return (
     <section
       aria-labelledby="featured-work-title"
-      className="bg-[#faf9f7] px-5 py-16 text-[#171717] sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+      className="bg-[#faf9f7] px-5 py-16 text-[#171717] sm:px-8 sm:py-16 lg:px-12 lg:py-16"
     >
       <div className="mx-auto max-w-[1680px]">
         <div className="mb-9 flex flex-col gap-7 lg:mb-10 lg:flex-row lg:items-center lg:justify-between">

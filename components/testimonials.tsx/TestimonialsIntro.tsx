@@ -29,7 +29,7 @@ export default function TestimonialsIntro() {
       <div className="absolute inset-y-0 right-0 -z-10 hidden w-[58%] lg:block" />
 
       {/* Main content */}
-      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-10 px-6 py-14 sm:px-10 sm:py-16 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:px-[5.6%] lg:py-12 xl:gap-8">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-10 px-6 py-8 sm:px-10 sm:py-12 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:px-[5.6%] lg:py-12 xl:gap-8">
         
         {/* Left content */}
         <motion.div
@@ -73,7 +73,7 @@ export default function TestimonialsIntro() {
 
         {/* Right statistics */}
         <div className="relative lg:border-l lg:border-[#d1ccca] lg:pl-4 xl:pl-6">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-0">
+          <div className="grid grid-cols-3 gap-5 sm:grid-cols-3 sm:gap-0">
             {data.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
