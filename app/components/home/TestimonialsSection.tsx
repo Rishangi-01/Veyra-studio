@@ -20,16 +20,16 @@ const testimonials = [
       "The team understood exactly what we wanted. Their thoughtful designs, attention to detail and professional approach transformed our ideas into a beautiful living space.",
     name: "Aarav Sharma",
     role: "Homeowner, New Delhi, India",
-    avatar: "/images/home/avatar2.jfif",
-    projectImage: "/images/home/project2.jfif",
+    avatar: "/images/home/avatar2.jpg",
+    projectImage: "/images/home/project2.jpg",
   },
   {
     quote:
       "From the initial concepts to the final finishing touches, every stage was handled with care. The result is timeless, functional and truly reflects our lifestyle.",
     name: "Ananya Kapoor",
     role: "Client, Mumbai, India",
-    avatar: "/images/home/avatar3.jfif",
-    projectImage: "/images/home/project3.jfif",
+    avatar: "/images/home/avatar3.jpg",
+    projectImage: "/images/home/project3.jpg",
   },
 ];
 

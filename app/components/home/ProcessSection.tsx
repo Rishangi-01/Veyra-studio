@@ -17,7 +17,7 @@ const steps = [
     description:
       "We begin by understanding your goals, space requirements and lifestyle to create a clear vision and strategic plan for the project.",
     icon: PencilRuler,
-    image: "/images/home/banner2.jfif",
+    image: "/images/home/banner2.jpg",
   },
   {
     number: "02",
@@ -25,7 +25,7 @@ const steps = [
     description:
       "Our designers create detailed concepts, layouts and 3D visualizations, keeping you involved at every stage for a design that truly fits your vision.",
     icon: DraftingCompass,
-    image: "/images/home/banner3.jfif",
+    image: "/images/home/banner3.jpg",
   },
   {
     number: "03",
@@ -33,7 +33,7 @@ const steps = [
     description:
       "We manage construction, material selection and quality checks to ensure timely, flawless delivery of your dream space.",
     icon: HardHat,
-    image: "/images/home/banner4.jfif",
+    image: "/images/home/banner4.jpg",
   },
 ];
 
