@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import { contactCtaData } from "../../data";
 
 export default function ContactCTA() {
   const reduceMotion = useReducedMotion();
@@ -38,7 +39,7 @@ export default function ContactCTA() {
             {/* Eyebrow */}
             <div className="mb-5 flex items-center gap-5 sm:mb-6">
               <span className="text-[10px] font-medium uppercase tracking-[0.27em] text-white sm:text-[11px]">
-                Let&apos;s Create Together
+                {contactCtaData.eyebrow}
               </span>
 
               <span className="h-px w-14 bg-[#c49b91]" />
@@ -49,24 +50,23 @@ export default function ContactCTA() {
               id="contact-cta-title"
               className="font-serif text-[clamp(2.8rem,5.2vw,4.2rem)] leading-[1.04] tracking-[-0.045em] text-[#fffaf6]"
             >
-              Have a Project
+              {contactCtaData.title[0]}
               <br />
-              <span className="italic">in Mind?</span>
+              <span className="italic">{contactCtaData.title[1]}</span>
             </h2>
 
             {/* Description */}
             <p className="mt-5 max-w-[440px] text-[15px] leading-[1.75] text-white/80 sm:mt-6 sm:text-base">
-              Get in touch with our team and let&apos;s turn your ideas
-              into extraordinary spaces.
+              {contactCtaData.description}
             </p>
 
             {/* CTA button */}
             <Link
-              href="/contact-us"
+              href={contactCtaData.button.href}
               className="group mt-6 inline-flex min-h-[58px] items-center gap-5 bg-[#fffdfb] py-2 pl-6 pr-3 text-[#75001d] transition-colors duration-300 hover:bg-[#f1e7e4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:mt-7"
             >
               <span className="text-sm font-semibold">
-                Get in Touch
+                {contactCtaData.button.label}
               </span>
 
               <motion.span
@@ -95,8 +95,8 @@ export default function ContactCTA() {
           className="group relative min-h-[270px] overflow-hidden sm:min-h-[350px] md:min-h-0"
         >
           <Image
-            src="/images/home/contact-interior.png"
-            alt="Contemporary luxury interior with warm wooden finishes and garden views"
+            src={contactCtaData.image}
+            alt={contactCtaData.imageAlt}
             fill
             sizes="(max-width: 767px) 100vw, 50vw"
             className="object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"

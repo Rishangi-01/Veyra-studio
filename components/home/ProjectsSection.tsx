@@ -14,55 +14,9 @@ import {
   motion,
   useReducedMotion,
 } from "motion/react";
+import { homeProjectsData } from "../../data";
 
-type Project = {
-  number: string;
-  title: string;
-  location: string;
-  category: string;
-  image: string;
-  href: string;
-  position?: string;
-};
-
-const projects: Project[] = [
-  {
-    number: "01",
-    title: "Residential Project",
-    location: "Paris",
-    category: "Residential Architecture",
-    image: "/images/home/banner2.jpg",
-    href: "/projects/residential-paris",
-    position: "center",
-  },
-  {
-    number: "02",
-    title: "Concert Hall",
-    location: "New York",
-    category: "Cultural Architecture",
-    image: "/images/home/banner3.jpg",
-    href: "/projects/concert-hall",
-    position: "center",
-  },
-  {
-    number: "03",
-    title: "Modern Hotel",
-    location: "London",
-    category: "Hospitality Architecture",
-    image: "/images/home/banner4.jpg",
-    href: "/projects/modern-hotel",
-    position: "center",
-  },
-  {
-    number: "04",
-    title: "Modern Hotel",
-    location: "London",
-    category: "Luxury Architecture",
-    image: "/images/home/banner5.jpg",
-    href: "/projects/luxury-hotel",
-    position: "center",
-  },
-];
+const projects = homeProjectsData.items;
 
 const AUTOPLAY_DELAY = 5000;
 
@@ -181,7 +135,7 @@ export default function ProjectsSection() {
                 <div className="absolute bottom-7 left-7 flex items-center gap-3 sm:bottom-8 sm:left-8 xl:left-10">
                   <span className="h-7 w-px bg-white/50" />
                   <span className="[writing-mode:vertical-rl] rotate-180 text-[9px] font-medium tracking-[0.32em] text-white sm:text-[10px]">
-                    ARCHITECTURE
+                    {homeProjectsData.verticalLabel}
                   </span>
                 </div>
 
@@ -199,7 +153,7 @@ export default function ProjectsSection() {
         {/* Top-left section label */}
         <div className="pointer-events-none absolute left-6 top-7 z-20 flex items-center gap-4 sm:left-8 lg:left-[4%] lg:top-8">
           <span className="text-[9px] font-medium uppercase tracking-[0.28em] text-white sm:text-[10px]">
-            Our Projects
+            {homeProjectsData.label}
           </span>
           <span className="h-px w-16 bg-[#a80032]" />
         </div>
@@ -213,7 +167,7 @@ export default function ProjectsSection() {
         >
           <ArrowLeft size={17} strokeWidth={1.5} />
           <span className="text-[9px] font-medium tracking-[0.24em]">
-            PREV
+            {homeProjectsData.prevLabel}
           </span>
         </button>
 
@@ -225,7 +179,7 @@ export default function ProjectsSection() {
           className="absolute right-0 top-[45%] z-30 inline-flex h-10 items-center gap-2 bg-[#79001e] px-3 text-white transition-colors hover:bg-[#a0002b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:top-1/2"
         >
           <span className="text-[9px] font-medium tracking-[0.24em]">
-            NEXT
+            {homeProjectsData.nextLabel}
           </span>
           <ArrowRight size={17} strokeWidth={1.5} />
         </button>

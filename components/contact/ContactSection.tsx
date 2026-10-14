@@ -2,9 +2,16 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 
-const contactItems = [
+type ContactItemType = "phone" | "email" | "location";
+
+const contactItems: {
+  title: string;
+  lines: string[];
+  type: ContactItemType;
+  href: string;
+}[] = [
   {
     title: "Call Us",
     lines: ["+1 234 567 8900"],
@@ -25,7 +32,7 @@ const contactItems = [
   },
 ];
 
-function ContactIcon({ type }) {
+function ContactIcon({ type }: { type: ContactItemType }) {
   const common = {
     width: 23,
     height: 23,
@@ -33,8 +40,8 @@ function ContactIcon({ type }) {
     fill: "none",
     stroke: "currentColor",
     strokeWidth: 1.7,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
     "aria-hidden": true,
   };
 
@@ -64,7 +71,7 @@ function ContactIcon({ type }) {
 export default function ContactSection() {
   const reduceMotion = useReducedMotion();
 
-  const reveal = {
+  const reveal: Variants = {
     hidden: reduceMotion ? {} : { opacity: 0, y: 28 },
     visible: {
       opacity: 1,

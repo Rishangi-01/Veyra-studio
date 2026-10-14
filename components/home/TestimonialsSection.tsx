@@ -5,33 +5,9 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { homeTestimonialsData } from "../../data";
 
-const testimonials = [
-  {
-    quote:
-      "Veyra Studio brought our vision to life with incredible attention to detail, creativity and professionalism. The entire experience was seamless from concept to completion.",
-    name: "Priya Mehta",
-    role: "Homeowner, California, USA",
-    avatar: "/images/home/avatar1.png",
-    projectImage: "/images/home/project1.png",
-  },
-  {
-    quote:
-      "The team understood exactly what we wanted. Their thoughtful designs, attention to detail and professional approach transformed our ideas into a beautiful living space.",
-    name: "Aarav Sharma",
-    role: "Homeowner, New Delhi, India",
-    avatar: "/images/home/avatar2.jpg",
-    projectImage: "/images/home/project2.jpg",
-  },
-  {
-    quote:
-      "From the initial concepts to the final finishing touches, every stage was handled with care. The result is timeless, functional and truly reflects our lifestyle.",
-    name: "Ananya Kapoor",
-    role: "Client, Mumbai, India",
-    avatar: "/images/home/avatar3.jpg",
-    projectImage: "/images/home/project3.jpg",
-  },
-];
+const testimonials = homeTestimonialsData.items;
 
 const AUTOPLAY_DELAY = 6000;
 
@@ -96,7 +72,7 @@ export default function TestimonialsSection() {
             className="mb-8 flex items-center gap-7 sm:mb-10"
           >
             <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#850d25] sm:text-xs">
-              Clients Love Us
+              {homeTestimonialsData.eyebrow}
             </span>
             <span className="h-px w-16 bg-[#a8495c]" />
           </motion.div>

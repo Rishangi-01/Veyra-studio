@@ -11,38 +11,16 @@ import {
   X,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import { navbarData } from "../../data";
 
-const navigation = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about-us" },
-  { label: "Team", href: "/our-team" },
-  { label: "Testimonials", href: "/testimonials" },
-  {
-    label: "Services",
-    href: "/services",
-    submenu: [
-      { label: "Architecture", href: "#" },
-      { label: "Interior Design", href: "#" },
-      { label: "Landscape Design", href: "#" },
-    ],
-  },
-  {
-    label: "Projects",
-    href: "/projects",
-    submenu: [
-      { label: "Residential", href: "#" },
-      { label: "Commercial", href: "#" },
-      { label: "Interior Projects", href: "#" },
-    ],
-  },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-];
+const navigation = navbarData.navigation;
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState(
+    navbarData.navigation[0]?.label ?? "Home"
+  );
 
   return (
     <motion.header
@@ -68,7 +46,7 @@ export default function Navbar() {
             className="relative"
           >
             <img
-              src="/images/veyra-logo.png"
+              src={navbarData.logo}
               alt="Veyra Studio — Architecture, Interiors, Design"
               className="h-auto w-[205px] object-contain sm:w-[245px] lg:w-[300px] xl:w-[210px]"
             />
@@ -172,7 +150,7 @@ export default function Navbar() {
 
         {/* Desktop quote button */}
         <div className="hidden shrink-0 items-center border-l border-neutral-200 pl-5 lg:flex xl:pl-8">
-          <Link href="/contact">
+          <Link href={navbarData.quoteButton.href}>
             <motion.span
               whileHover="hover"
               initial="rest"
@@ -186,7 +164,7 @@ export default function Navbar() {
                 }}
                 className="relative z-10"
               >
-                Get a Quote
+                {navbarData.quoteButton.label}
               </motion.span>
 
               <motion.span
@@ -331,16 +309,16 @@ export default function Navbar() {
               ))}
 
               <Link
-                href="/contact"
+                href={navbarData.quoteButton.href}
                 onClick={() => setMobileOpen(false)}
                 className="mt-5 flex items-center justify-between bg-[#850d25] px-5 py-4 text-white transition-colors hover:bg-[#62091b]"
               >
-                <span className="font-medium">Get a Quote</span>
+                <span className="font-medium">{navbarData.quoteButton.label}</span>
                 <ArrowRight size={22} />
               </Link>
 
               <p className="mt-5 text-center text-[10px] uppercase tracking-[0.25em] text-neutral-400">
-                Architecture · Interiors · Design
+                {navbarData.mobileTagline}
               </p>
             </div>
           </motion.div>

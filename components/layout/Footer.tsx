@@ -4,75 +4,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import {
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { RiMapPin2Fill } from "react-icons/ri";
-import { FaFacebookF, FaInstagram, FaPhoneAlt, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaPhoneAlt, FaLinkedinIn, FaYoutube, FaChevronRight } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { CiGlobe } from "react-icons/ci";
-import { FaChevronRight } from "react-icons/fa";
+import { footerData } from "../../data";
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Our Services", href: "/services" },
-  { label: "Our Projects", href: "/projects" },
-  { label: "Our Process", href: "/#process" },
-  { label: "Testimonials", href: "/#testimonials" },
-  { label: "Get a Quote", href: "/get-a-quote" },
-  { label: "Contact Us", href: "/contact-us" },
-];
-const services = [
-  { label: "Architectural Design", href: "/services/architecture" },
-  { label: "Interior Design", href: "/services/interior-design" },
-  { label: "Landscape Design", href: "/services/landscape-design" },
-  { label: "Project Management", href: "/services/project-management" },
-  { label: "Urban Planning", href: "/services/urban-planning" },
-  { label: "Residential Design", href: "/services/residential" },
-  { label: "Commercial Design", href: "/services/commercial" },
-  { label: "Consultation", href: "/contact-us" },
-];
+const iconMap = {
+  RiMapPin2Fill,
+  FaPhoneAlt,
+  MdEmail,
+  CiGlobe,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} as const;
 
-const contactItems = [
-  {
-    icon: RiMapPin2Fill,
-    label: "Address",
-    lines: ["123 Design Avenue,", "New York, NY 10001, USA"],
-    href: "https://maps.google.com/?q=123+Design+Avenue+New+York",
-  },
-  {
-    icon: FaPhoneAlt,
-    label: "Phone",
-    lines: ["+1 234 567 8900"],
-    href: "tel:+12345678900",
-  },
-  {
-    icon: MdEmail,
-    label: "Email",
-    lines: ["info@veyrastudio.com"],
-    href: "mailto:info@veyrastudio.com",
-  },
-  {
-    icon: CiGlobe,
-    label: "Website",
-    lines: ["www.veyrastudio.com"],
-    href: "https://www.veyrastudio.com",
-  },
-];
-
-const socialLinks = [
-  { label: "Facebook", icon: FaFacebookF, href: "https://facebook.com" },
-  { label: "Instagram", icon: FaInstagram, href: "https://instagram.com" },
-  { label: "LinkedIn", icon: FaLinkedinIn, href: "https://linkedin.com" },
-  { label: "YouTube", icon: FaYoutube, href: "https://youtube.com" },
-];
-
-const columns = [
-  { title: "Quick Links", items: quickLinks },
-  { title: "Our Services", items: services },
-];
+const quickLinks = footerData.columns[0].items;
+const services = footerData.columns[1].items;
+const contactItems = footerData.contactItems.map((item) => ({
+  ...item,
+  icon: iconMap[item.icon as keyof typeof iconMap],
+}));
+const socialLinks = footerData.socialLinks.map((item) => ({
+  ...item,
+  icon: iconMap[item.icon as keyof typeof iconMap],
+}));
+const columns = footerData.columns;
 
 export default function Footer() {
   const reduceMotion = useReducedMotion();
@@ -88,7 +49,7 @@ export default function Footer() {
 
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/images/footer.png"
+            src={footerData.backgroundImage}
             alt=""
             fill
             sizes="100vw"
@@ -120,7 +81,7 @@ export default function Footer() {
                 className="group inline-flex max-w-full items-center"
               >
                 <Image
-                  src="/images/veyra-logo.png"
+                  src={footerData.logo}
                   alt="Veyra Studio — Architecture, Interiors, Design"
                   width={310}
                   height={125}
@@ -130,16 +91,14 @@ export default function Footer() {
               </Link>
 
               <p className="mt-6 max-w-[370px] text-[13px] leading-[1.85] text-white/75 sm:text-sm">
-                At Veyra Studio, we design spaces that inspire,
-                function beautifully and elevate everyday living
-                through thoughtful architecture and interiors.
+                {footerData.description}
               </p>
 
               <Link
-                href="/about-us"
+                href={footerData.discoverLink.href}
                 className="group mt-5 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.15em] text-[#e0a2ae] transition-colors hover:text-white"
               >
-                Discover our studio
+                {footerData.discoverLink.label}
                 <ArrowUpRight
                   size={15}
                   className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -194,7 +153,7 @@ export default function Footer() {
             {/* Contact column */}
             <div className="min-w-0 lg:border-l lg:border-white/10 lg:pl-7">
               <h2 className="font-serif text-[19px] text-white sm:text-xl">
-                Contact Us
+                {footerData.contactTitle}
               </h2>
 
               <div className="mb-6 mt-3 h-px w-8 bg-[#a90031]" />
@@ -252,7 +211,7 @@ export default function Footer() {
       <div className="border-t border-[#850d25]/80 bg-[#100f0e]">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-5 px-6 py-6 sm:px-10 md:flex-row md:items-center md:justify-between lg:px-12">
           <p className="text-xs leading-5 text-white/65">
-            © 2026 Veyra Studio. All Rights Reserved.
+            {footerData.copyright}
           </p>
 
           <div className="flex items-center gap-2.5">

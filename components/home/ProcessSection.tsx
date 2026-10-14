@@ -9,33 +9,18 @@ import {
   HardHat,
   ArrowUpRight,
 } from "lucide-react";
+import { processSectionData } from "../../data";
 
-const steps = [
-  {
-    number: "01",
-    title: "Planning & Ideas",
-    description:
-      "We begin by understanding your goals, space requirements and lifestyle to create a clear vision and strategic plan for the project.",
-    icon: PencilRuler,
-    image: "/images/home/banner2.jpg",
-  },
-  {
-    number: "02",
-    title: "Design Development",
-    description:
-      "Our designers create detailed concepts, layouts and 3D visualizations, keeping you involved at every stage for a design that truly fits your vision.",
-    icon: DraftingCompass,
-    image: "/images/home/banner3.jpg",
-  },
-  {
-    number: "03",
-    title: "Execution & Delivery",
-    description:
-      "We manage construction, material selection and quality checks to ensure timely, flawless delivery of your dream space.",
-    icon: HardHat,
-    image: "/images/home/banner4.jpg",
-  },
-];
+const iconMap = {
+  PencilRuler,
+  DraftingCompass,
+  HardHat,
+} as const;
+
+const steps = processSectionData.steps.map((step) => ({
+  ...step,
+  icon: iconMap[step.icon as keyof typeof iconMap],
+}));
 
 export default function ProcessSection() {
   const reduceMotion = useReducedMotion();
@@ -67,23 +52,21 @@ export default function ProcessSection() {
             <span className="h-px w-12 bg-[#b34b61] sm:w-16" />
 
             <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#850d25] sm:text-xs">
-              Our Process
+              {processSectionData.eyebrow}
             </span>
 
             <span className="h-px w-12 bg-[#b34b61] sm:w-16" />
           </div>
 
           <h2 className="font-serif text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.12] tracking-[-0.045em] text-[#17191c]">
-            Our Step-by-Step{" "}
+            {processSectionData.title[0]}{" "}
             <span className="text-[#850d25]">
-              Process Delivers
+              {processSectionData.title[1]}
             </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-[610px] text-sm leading-7 text-[#73747a] sm:text-[15px]">
-            From concept to creation, we follow a structured and
-            transparent process to turn your vision into
-            thoughtfully designed spaces.
+            {processSectionData.description}
           </p>
         </motion.div>
 
@@ -169,11 +152,11 @@ export default function ProcessSection() {
 
                   {/* Optional details link */}
                   <a
-                    href="/contact-us"
-                    aria-label={`Discuss ${step.title} with Veyra Studio`}
+                    href={step.linkHref}
+                    aria-label={`${step.linkLabel} for ${step.title} with Veyra Studio`}
                     className="mt-auto flex w-fit items-center gap-2 pt-5 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#850d25] opacity-80 transition-all duration-300 hover:gap-3 hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#850d25]"
                   >
-                    Discuss your project
+                    {step.linkLabel}
                     <ArrowUpRight size={15} />
                   </a>
                 </div>

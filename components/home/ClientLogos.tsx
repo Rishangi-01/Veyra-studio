@@ -2,34 +2,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-
-const clients = [
-  {
-    name: "CAMPS",
-    subtitle: "",
-    type: "camps",
-  },
-  {
-    name: "Salvatore",
-    subtitle: "new york",
-    type: "salvatore",
-  },
-  {
-    name: "ROVELLA",
-    subtitle: "R O V E L L A",
-    type: "rovella",
-  },
-  {
-    name: "LLOYD",
-    subtitle: "M A N A G E M E N T",
-    type: "lloyd",
-  },
-  {
-    name: "Cupcakes",
-    subtitle: "from new york",
-    type: "cupcakes",
-  },
-];
+import { clientLogos } from "../../data";
 
 export default function ClientLogos() {
   const reduceMotion = useReducedMotion();
@@ -40,7 +13,7 @@ export default function ClientLogos() {
       className="overflow-hidden border-y border-black/[0.035] bg-white px-5 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14 w-[100%]"
     >
       <div className="mx-auto grid max-w-[1500px] grid-cols-2 items-center gap-x-5 gap-y-9 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-5 lg:gap-8">
-        {clients.map((client, index) => (
+        {clientLogos.map((client, index) => (
           <motion.div
             key={client.type}
             initial={

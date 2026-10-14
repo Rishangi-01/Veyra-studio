@@ -11,54 +11,22 @@ import {
   Trees,
   ClipboardList,
   MapPinned,
-  type LucideIcon,
 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { homeServicesData } from "../../data";
 
-type Service = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  href: string;
-};
+const iconMap = {
+  Building2,
+  Sofa,
+  Trees,
+  ClipboardList,
+  MapPinned,
+} as const;
 
-const services: Service[] = [
-  {
-    title: "Architectural Design",
-    description:
-      "Thoughtful and innovative architectural solutions for residential, commercial and mixed-use spaces.",
-    icon: Building2,
-    href: "/services/architectural-design",
-  },
-  {
-    title: "Interior Design",
-    description:
-      "Beautifully balanced interiors combining refined materials, thoughtful details and everyday functionality.",
-    icon: Sofa,
-    href: "/services/interior-design",
-  },
-  {
-    title: "Landscape Design",
-    description:
-      "Harmonious outdoor environments that connect architecture, nature and the way people experience a space.",
-    icon: Trees,
-    href: "/services/landscape-design",
-  },
-  {
-    title: "Project Management",
-    description:
-      "Careful coordination, clear planning and considered execution to keep every project moving forward.",
-    icon: ClipboardList,
-    href: "/services/project-management",
-  },
-  {
-    title: "Urban Planning",
-    description:
-      "Forward-thinking planning that brings communities, infrastructure and sustainable development together.",
-    icon: MapPinned,
-    href: "/services/urban-planning",
-  },
-];
+const services = homeServicesData.items.map((item) => ({
+  ...item,
+  icon: iconMap[item.icon as keyof typeof iconMap],
+}));
 
 export default function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -87,13 +55,13 @@ export default function ServicesSection() {
           >
             <div className="mb-5 flex items-center gap-5 sm:mb-6">
               <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-neutral-600 sm:text-xs">
-                What We Do
+                {homeServicesData.label}
               </span>
               <span className="h-px w-20 bg-[#850d25] sm:w-24" />
             </div>
 
             <h2 className="font-serif text-5xl leading-[1.05] tracking-[-0.045em] text-[#181818] sm:text-6xl xl:text-[68px]">
-              Our Services
+              {homeServicesData.title}
             </h2>
 
             <div className="mt-9 sm:mt-11">
@@ -159,7 +127,7 @@ export default function ServicesSection() {
             </div>
 
             <Link
-              href="/services"
+              href={homeServicesData.viewAllHref}
               className="group mt-6 inline-flex items-center gap-4 sm:mt-7 sm:gap-6"
             >
               <motion.span
@@ -171,7 +139,7 @@ export default function ServicesSection() {
               </motion.span>
 
               <span className="text-sm font-medium text-[#850d25] transition-colors group-hover:text-[#62091b] sm:text-base">
-                View All Services
+                {homeServicesData.viewAllLabel}
               </span>
             </Link>
           </motion.div>
@@ -191,8 +159,8 @@ export default function ServicesSection() {
 
             <div className="relative ml-[16%] aspect-[1.13/1] overflow-hidden bg-[#e6e2da] sm:aspect-[1.28/1] lg:aspect-[1.15/1] xl:aspect-[1.26/1]">
               <Image
-                src="/images/home/services-building.png"
-                alt="Contemporary architecture and landscaped commercial building"
+                src={homeServicesData.image}
+                alt={homeServicesData.imageAlt}
                 fill
                 sizes="(max-width: 1023px) 90vw, 58vw"
                 className="object-cover object-center transition-transform duration-1000 hover:scale-[1.035]"
@@ -202,7 +170,7 @@ export default function ServicesSection() {
 
               <div className="absolute right-4 top-4 hidden items-center gap-2 bg-white/90 px-3 py-2 text-[9px] uppercase tracking-[0.2em] text-[#850d25] backdrop-blur sm:flex">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#850d25]" />
-                Designed with purpose
+                {homeServicesData.badge}
               </div>
             </div>
 

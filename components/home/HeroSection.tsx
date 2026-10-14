@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -77,10 +77,14 @@ export default function HeroSection() {
                 className="mb-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] font-medium uppercase tracking-[0.19em] text-neutral-600 sm:mb-8 sm:gap-x-6 sm:text-xs sm:tracking-[0.2em]"
               >
                 <span>{slide.eyebrow}</span>
-                <span className="h-3 w-px bg-[#850d25]" />
-                <span>INTERIORS</span>
-                <span className="h-3 w-px bg-[#850d25]" />
-                <span>DESIGN</span>
+                {slide.metaLabels?.map((label, index) => (
+                  <Fragment key={`${label}-${current}`}>
+                    {index > 0 && (
+                      <span className="h-3 w-px bg-[#850d25]" />
+                    )}
+                    <span>{label}</span>
+                  </Fragment>
+                ))}
               </motion.div>
             </AnimatePresence>
 
@@ -128,7 +132,7 @@ export default function HeroSection() {
                 className="group inline-flex items-center gap-4 text-sm font-semibold text-[#850d25] sm:text-base"
               >
                 <span className="relative">
-                  Explore Our Work
+                  {slide.ctaLabel}
                   <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#850d25] transition-all duration-300 group-hover:w-full" />
                 </span>
 

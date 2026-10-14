@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MoveUpRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import { aboutSectionData } from "../../data";
 
 export default function AboutSection() {
     const reduceMotion = useReducedMotion();
@@ -43,8 +44,8 @@ export default function AboutSection() {
                             className="absolute inset-0"
                         >
                             <Image
-                                src="/images/home/about-us1.png"
-                                alt="Contemporary Veyra Studio architectural residence"
+                                src={aboutSectionData.images.primary.src}
+                                alt={aboutSectionData.images.primary.alt}
                                 fill
                                 priority={false}
                                 sizes="(max-width: 1023px) 90vw, 48vw"
@@ -66,8 +67,8 @@ export default function AboutSection() {
                     >
                         <div className="relative aspect-[0.72/1] overflow-hidden bg-neutral-200">
                             <Image
-                                src="/images/home/about-us2.png"
-                                alt="Architectural facade and material details"
+                                src={aboutSectionData.images.secondary.src}
+                                alt={aboutSectionData.images.secondary.alt}
                                 fill
                                 sizes="(max-width: 1023px) 28vw, 14vw"
                                 className="object-cover transition-transform duration-700 hover:scale-110"
@@ -89,7 +90,7 @@ export default function AboutSection() {
                 >
                     <div className="mb-6 flex w-full max-w-[365px] items-center gap-6 sm:mb-7">
                         <span className="shrink-0 text-[11px] font-medium uppercase tracking-[0.18em] text-[#850d25] sm:text-sm sm:tracking-[0.2em]">
-                            About Veyra Studio
+                            {aboutSectionData.eyebrow}
                         </span>
 
                         <span className="h-px flex-1 bg-[#850d25]" />
@@ -103,7 +104,7 @@ export default function AboutSection() {
                             transition={{ duration: 0.6 }}
                             className="block"
                         >
-                            Designing a
+                            {aboutSectionData.titleFirstLine}
                         </motion.span>
 
                         <motion.span
@@ -113,7 +114,7 @@ export default function AboutSection() {
                             transition={{ duration: 0.6, delay: 0.12 }}
                             className="mt-1 block text-[#850d25]"
                         >
-                            Better Tomorrow
+                            {aboutSectionData.titleSecondLine}
                         </motion.span>
                     </h2>
 
@@ -124,12 +125,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.65, delay: 0.25 }}
                         className="mt-7 max-w-[620px] text-[15px] leading-[1.75] text-[#686868] sm:text-base sm:leading-[1.75] lg:mt-7"
                     >
-                        We are a multidisciplinary design studio specializing
-                        in architecture, interior design, landscape and
-                        planning. Our approach combines creativity, technical
-                        expertise and a deep understanding of people’s needs
-                        to create spaces that are timeless, sustainable and
-                        uniquely yours.
+                        {aboutSectionData.description}
                     </motion.p>
 
                     <motion.div
@@ -140,11 +136,11 @@ export default function AboutSection() {
                         className="mt-7 sm:mt-8"
                     >
                         <Link
-                            href="/about-us"
+                            href={aboutSectionData.button.href}
                             className="group inline-flex items-center gap-5 text-base font-semibold text-[#850d25] sm:gap-8 sm:text-lg"
                         >
                             <span className="relative">
-                                More About Us
+                                {aboutSectionData.button.label}
                                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#850d25] transition-all duration-300 group-hover:w-full" />
                             </span>
 
@@ -165,7 +161,7 @@ export default function AboutSection() {
 
                     <div className="mt-10 flex items-center gap-3 text-[9px] uppercase tracking-[0.2em] text-neutral-400 sm:mt-12">
                         <MoveUpRight size={14} className="text-[#850d25]" />
-                        <span>Thoughtfully designed. Intentionally built.</span>
+                        <span>{aboutSectionData.tagline}</span>
                     </div>
                 </motion.div>
             </div>

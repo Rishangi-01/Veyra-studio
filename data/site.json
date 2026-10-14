@@ -1,160 +1,1945 @@
 {
-  "navItems": [
-    { "label": "Home", "href": "/" },
-    { "label": "About", "href": "/about-us" },
-    { "label": "Services", "href": "/services" },
-    { "label": "Projects", "href": "/projects" },
-    { "label": "Contact", "href": "/contact" }
-  ],
-  "heroSlides": [
-    {
-      "eyebrow": "ARCHITECTURE",
-      "title": ["Transforming", "Spaces into"],
-      "highlight": "Meaningful Living",
-      "description": "At Veyra Studio, we design spaces that inspire, function beautifully and stand the test of time. From architecture to interiors, we create environments that elevate everyday life.",
-      "image": "/images/home/banner1.png",
-      "featuredImage": "/images/home/banner2.jpg",
-      "project": "The Willow Residence",
-      "location": "California, USA",
-      "year": "2024",
-      "category": "Residential"
+  "Constrix": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Header": "ConstrixHeader1",
+          "Footer": "ConstrixFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "ConstrixBanner1"
+              },
+              {
+                "key": "Services",
+                "component": "ConstrixServices1"
+              },
+              {
+                "key": "About",
+                "component": "ConstrixAbout1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "ConstrixWhyChooseUs1"
+              },
+              {
+                "key": "Projects",
+                "component": "ConstrixProjects1"
+              },
+              {
+                "key": "Process",
+                "component": "ConstrixProcess1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "ConstrixTestimonial1"
+              },
+              {
+                "key": "Cta",
+                "component": "ConstrixCta1"
+              },
+              {
+                "key": "Blog",
+                "component": "ConstrixBlog1"
+              }
+            ]
+          },
+          "about-us": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "About",
+                "component": "ConstrixAbout1"
+              },
+              {
+                "key": "Process",
+                "component": "ConstrixProcess1"
+              },
+              {
+                "key": "Cta",
+                "component": "ConstrixCta1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "ConstrixWhyChooseUs1"
+              }
+            ]
+          },
+          "our-services": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Services",
+                "component": "ConstrixServices1"
+              }
+            ]
+          },
+          "service-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "ServiceDetail",
+                "component": "ConstrixServiceDetail1"
+              }
+            ]
+          },
+          "our-projects": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Projects",
+                "component": "ConstrixProjects1"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Blog",
+                "component": "ConstrixBlog1"
+              }
+            ]
+          },
+          "blog-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "BlogDetail",
+                "component": "ConstrixBlogDetail1"
+              }
+            ]
+          },
+          "contact-us": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "ContactDetails",
+                "component": "ConstrixContact1"
+              }
+            ]
+          },
+          "faq": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "FAQ",
+                "component": "ConstrixFAQ1"
+              }
+            ]
+          },
+          "terms-and-conditions": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Terms",
+                "component": "ConstrixTerms1"
+              }
+            ]
+          },
+          "privacy-policy": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "LegalContent",
+                "component": "ConstrixPrivacyPolicy1"
+              }
+            ]
+          },
+          "sitemap": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "SitemapLinks",
+                "component": "ConstrixSitemap1"
+              }
+            ]
+          },
+          "testimonials": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "ConstrixTestimonial1"
+              }
+            ]
+          },
+          "get-a-quote": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "ConstrixPageBanner1"
+              },
+              {
+                "key": "Quote",
+                "component": "ConstrixQuote1"
+              }
+            ]
+          },
+          "not-found": {
+            "components": [
+              {
+                "key": "NotFound",
+                "component": "ConstrixNotFound1"
+              }
+            ]
+          }
+        }
+      }
     },
-    {
-      "eyebrow": "INTERIOR DESIGN",
-      "title": ["Designed for", "Beautiful"],
-      "highlight": "Everyday Living",
-      "description": "We bring materials, light and thoughtful details together to create interiors that feel timeless, personal and effortlessly sophisticated.",
-      "image": "/images/home/banner3.jpg",
-      "featuredImage": "/images/home/banner4.jpg",
-      "project": "The Solstice House",
-      "location": "Austin, USA",
-      "year": "2025",
-      "category": "Interiors"
-    },
-    {
-      "eyebrow": "CONTEMPORARY DESIGN",
-      "title": ["Beyond the", "Ordinary"],
-      "highlight": "By Design",
-      "description": "Discover a new perspective on contemporary living, where architectural precision meets natural textures and enduring elegance.",
-      "image": "/images/home/banner5.jpg",
-      "featuredImage": "/images/home/banner6.jpg",
-      "project": "The Horizon Villa",
-      "location": "Palm Springs, USA",
-      "year": "2025",
-      "category": "Architecture"
+    "sections": {
+      "Header": {
+        "variants": {
+          "ConstrixHeader1": {
+            "site": {
+              "name": "Constrix",
+              "title": "Constrix | Construction & Infrastructure Solutions",
+              "description": "Comprehensive construction and infrastructure solutions\nfor residential, commercial, industrial and civil projects.",
+              "logo": "/images/logo.png",
+              "logoWhite": "/images/logo-white.png",
+              "bannerImage": "/images/banner.webp",
+              "contact": {
+                "phone": "+1 000-000-0000",
+                "email": "info@xyz.com",
+                "address": [
+                  "123 Demo Street,",
+                  "Springfield, IL 62701, USA"
+                ]
+              }
+            },
+            "header": {
+              "callLabel": "Call Us Now",
+              "emailLabel": "Email Us",
+              "button": {
+                "label": "Request a Quote",
+                "href": "/get-a-quote"
+              }
+            },
+            "nav": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Our Services",
+                "href": "/our-services",
+                "dropdown": true
+              },
+              {
+                "label": "Our Projects",
+                "href": "/our-projects"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact-us"
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "ConstrixFooter1": {
+            "text": "At Constrix, we build more than structures —\nwe create lasting spaces for people, businesses\nand communities. With a commitment to quality,\ninnovation and on-time delivery, we turn your\nvision into reality.",
+            "quickLinksTitle": "Quick Links",
+            "quickLinks": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Our Services",
+                "href": "/our-services"
+              },
+              {
+                "label": "Our Projects",
+                "href": "/our-projects"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Testimonials",
+                "href": "/testimonials"
+              },
+              {
+                "label": "FAQs",
+                "href": "/faq"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact-us"
+              }
+            ],
+            "servicesTitle": "Our Services",
+            "supportLinks": [
+              {
+                "label": "FAQs",
+                "href": "/faq"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "/privacy-policy",
+                "legal": true
+              },
+              {
+                "label": "Terms & Conditions",
+                "href": "/terms-and-conditions",
+                "legal": true
+              },
+              {
+                "label": "Career",
+                "href": "/contact-us"
+              },
+              {
+                "label": "Sitemap",
+                "href": "/sitemap",
+                "legal": true
+              }
+            ],
+            "contactTitle": "Get In Touch",
+            "copyright": "© 2026 All Rights Reserved. Powered by Lestow..",
+            "socials": [
+              {
+                "icon": "facebook",
+                "label": "Facebook",
+                "href": "https://www.facebook.com/"
+              },
+              {
+                "icon": "instagram",
+                "label": "Instagram",
+                "href": "https://www.instagram.com/"
+              },
+              {
+                "icon": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/"
+              },
+              {
+                "icon": "youtube",
+                "label": "YouTube",
+                "href": "https://www.youtube.com/"
+              }
+            ]
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "ConstrixBanner1": {
+            "slides": [
+              {
+                "label": "Building Today For A",
+                "titleTop": "Stronger",
+                "titleBottom": "Tomorrow",
+                "text": "Comprehensive construction and infrastructure solutions\nfor residential, commercial, industrial and civil projects.",
+                "image": "/images/hero.webp"
+              },
+              {
+                "label": "Crafting Quality In",
+                "titleTop": "Every",
+                "titleBottom": "Project",
+                "text": "Skilled engineers, premium materials and strict quality checks\nthat keep every build safe, durable and on schedule.",
+                "image": "/images/cta.webp"
+              },
+              {
+                "label": "Your Vision, Our",
+                "titleTop": "Expert",
+                "titleBottom": "Builders",
+                "text": "From first drawing to final handover, we turn your ideas\ninto landmark spaces built to last for generations.",
+                "image": "/images/banner.webp"
+              }
+            ],
+            "primaryButton": {
+              "label": "Our Services",
+              "href": "/our-services"
+            },
+            "secondaryButton": {
+              "label": "View Projects",
+              "href": "/our-projects"
+            },
+            "features": [
+              {
+                "icon": "home",
+                "title": "Residential",
+                "text": "Construction"
+              },
+              {
+                "icon": "building",
+                "title": "Commercial",
+                "text": "Construction"
+              },
+              {
+                "icon": "factory",
+                "title": "Industrial",
+                "text": "Construction"
+              },
+              {
+                "icon": "bridge",
+                "title": "Infrastructure",
+                "text": "Development"
+              }
+            ]
+          }
+        }
+      },
+      "PageBanner": {
+        "variants": {
+          "ConstrixPageBanner1": {
+            "homeLabel": "Home",
+            "pages": {
+              "aboutUs": {
+                "title": "About Us"
+              },
+              "ourServices": {
+                "title": "Our Services"
+              },
+              "serviceDetail": {
+                "title": "Services Details"
+              },
+              "ourProjects": {
+                "title": "Our Projects"
+              },
+              "blog": {
+                "title": "Blog"
+              },
+              "blogDetail": {
+                "title": "Blogs Detail"
+              },
+              "contactUs": {
+                "title": "Contact Us"
+              },
+              "getAQuote": {
+                "title": "Get a Quote"
+              },
+              "testimonials": {
+                "title": "Testimonials"
+              }
+            }
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "ConstrixAbout1": {
+            "label": "About Us",
+            "titleTop": "Building Spaces",
+            "titleBottom": "That",
+            "highlight": "Last.",
+            "text": "At Constrix, we are committed to delivering high-quality construction\nand infrastructure solutions that create lasting value. With a strong\nfocus on safety, innovation and excellence, we turn ideas into\nwell-built realities for a stronger, more sustainable future.",
+            "points": [
+              "Quality construction with precision and care.",
+              "Experienced and skilled professionals.",
+              "On-time project delivery with complete transparency.",
+              "Sustainable and future-ready construction solutions."
+            ],
+            "moreText": "At Constrix, we are committed to delivering high-quality construction\nand infrastructure solutions that create lasting value. With a strong\nfocus on safety, innovation and excellence, we turn ideas into\nwell-built realities for a stronger, more sustainable future.",
+            "button": {
+              "label": "Read More",
+              "href": "/about-us"
+            },
+            "imageLeft": "/images/about-building.webp",
+            "imageRight": "/images/about-worker.webp",
+            "badgeValue": "25+",
+            "badgeText": "Years of Experience",
+            "imageLeftAlt": "Building under construction",
+            "imageRightAlt": "Construction worker on site"
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "ConstrixServices1": {
+            "label": "Our Services",
+            "titleTop": "Complete Construction",
+            "titleBottom": "Solutions",
+            "highlight": "Under One Roof",
+            "text": "From residential buildings to large-scale infrastructure, we deliver end-to-end\nconstruction solutions with quality, innovation and reliability.",
+            "items": [
+              {
+                "slug": "residential-construction",
+                "title": "Residential Construction",
+                "icon": "home",
+                "text": "Custom homes, villas, apartments\nand housing projects built with\nquality and precision.",
+                "image": "/images/service-residential.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Building Homes",
+                  "titleBottom": "For",
+                  "highlight": "A Better Tomorrow",
+                  "text": "Our residential construction services are designed to turn your vision into\nbeautiful and functional homes. From initial planning and design to final\nconstruction, we handle every detail with precision, quality materials and\nskilled craftsmanship. Whether it's a modern villa, a family home or a custom\nresidence, we create spaces that are comfortable, durable and built for the future.",
+                  "image": "/images/service-detail.webp"
+                }
+              },
+              {
+                "slug": "commercial-construction",
+                "title": "Commercial Construction",
+                "icon": "building",
+                "text": "Offices, shopping complexes,\nshowrooms and commercial\nspaces for modern businesses.",
+                "image": "/images/service-commercial.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Building Spaces",
+                  "titleBottom": "For",
+                  "highlight": "Modern Businesses",
+                  "text": "Our commercial construction services deliver offices, retail spaces, showrooms and business complexes that are built to perform. From planning and approvals to construction and handover, we manage every stage with precision, quality materials and strict timelines so your business can move in with confidence.",
+                  "image": "/images/project-tower.webp"
+                }
+              },
+              {
+                "slug": "industrial-construction",
+                "title": "Industrial Construction",
+                "icon": "factory",
+                "text": "Factories, warehouses and\nindustrial facilities designed\nfor efficiency and growth.",
+                "image": "/images/service-industrial.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Building Facilities",
+                  "titleBottom": "For",
+                  "highlight": "Efficiency And Growth",
+                  "text": "Our industrial construction services cover factories, warehouses and production facilities engineered for efficiency, safety and long-term growth. We combine strong structural engineering with practical layouts and durable materials to deliver facilities that keep your operations running smoothly.",
+                  "image": "/images/project-industrial.webp"
+                }
+              },
+              {
+                "slug": "infrastructure-development",
+                "title": "Infrastructure Development",
+                "icon": "bridge",
+                "text": "Roads, bridges, flyovers and\ncivil infrastructure for stronger\ncommunities.",
+                "image": "/images/service-infrastructure.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Building Infrastructure",
+                  "titleBottom": "For",
+                  "highlight": "Stronger Communities",
+                  "text": "Our infrastructure development services include roads, bridges, flyovers and civil works that connect people and power growth. With experienced engineers, modern equipment and strict quality control, we deliver infrastructure that is safe, durable and built to serve communities for decades.",
+                  "image": "/images/project-highway.webp"
+                }
+              },
+              {
+                "slug": "renovation-remodeling",
+                "title": "Renovation & Remodeling",
+                "icon": "tools",
+                "text": "Transforming existing spaces\nwith innovative renovation\nand remodeling solutions.",
+                "image": "/images/service-renovation.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Transforming Spaces",
+                  "titleBottom": "For",
+                  "highlight": "A Fresh Start",
+                  "text": "Our renovation and remodeling services breathe new life into existing homes and commercial spaces. From structural upgrades to complete interior makeovers, we plan carefully, work cleanly and deliver results that improve comfort, functionality and value.",
+                  "image": "/images/service-detail.webp"
+                }
+              },
+              {
+                "slug": "architecture-design",
+                "title": "Architecture & Design",
+                "icon": "drafting",
+                "text": "Creative architectural design,\nplanning and 3D visualization\nfor innovative spaces.",
+                "image": "/images/service-architecture.webp",
+                "showInGrid": true,
+                "showInMenu": false,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Designing Spaces",
+                  "titleBottom": "For",
+                  "highlight": "Inspired Living",
+                  "text": "Our architecture and design team turns ideas into practical, beautiful plans. With creative concepts, detailed drawings and 3D visualization, we help you see your project before it is built and make confident decisions at every step.",
+                  "image": "/images/service-detail.webp"
+                }
+              },
+              {
+                "slug": "interior-fit-out",
+                "title": "Interior Fit-Out",
+                "icon": "sofa",
+                "text": "Complete interior fit-out\nsolutions for residential\nand commercial spaces.",
+                "image": "/images/service-interior.webp",
+                "showInGrid": true,
+                "showInMenu": false,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Crafting Interiors",
+                  "titleBottom": "For",
+                  "highlight": "Everyday Comfort",
+                  "text": "Our interior fit-out services deliver complete, ready-to-use spaces for homes and businesses. From partitions, ceilings and flooring to lighting, joinery and finishes, we manage every trade to create interiors that look great and work even better.",
+                  "image": "/images/service-detail.webp"
+                }
+              },
+              {
+                "slug": "civil-engineering-works",
+                "title": "Civil Engineering Works",
+                "icon": "bricks",
+                "text": "Structural and general civil\nconstruction with high engineering\nstandards.",
+                "image": "/images/service-civil.webp",
+                "showInGrid": true,
+                "showInMenu": false,
+                "showInNav": true,
+                "showInFooter": true,
+                "detail": {
+                  "titleTop": "Engineering Structures",
+                  "titleBottom": "For",
+                  "highlight": "Lasting Strength",
+                  "text": "Our civil engineering works cover foundations, structural frames and general civil construction delivered to high engineering standards. We focus on sound design, quality materials and careful execution so every structure stands strong for years to come.",
+                  "image": "/images/project-industrial.webp"
+                }
+              },
+              {
+                "slug": "project-management",
+                "title": "Project Management",
+                "icon": "planning",
+                "text": "End-to-end project management\nthat keeps your build on time\nand within budget.",
+                "image": "/images/service-commercial.webp",
+                "showInGrid": true,
+                "showInMenu": true,
+                "showInNav": false,
+                "showInFooter": false,
+                "detail": {
+                  "titleTop": "Managing Projects",
+                  "titleBottom": "For",
+                  "highlight": "On-Time Delivery",
+                  "text": "Our project management services keep every part of your build moving in the right direction. We coordinate planning, budgets, contractors, quality checks and timelines so your project is delivered smoothly, transparently and without surprises.",
+                  "image": "/images/project-tower.webp"
+                }
+              },
+              {
+                "slug": "building-maintenance",
+                "title": "Building Maintenance",
+                "icon": "gear",
+                "text": "Scheduled upkeep, repairs and\ninspections that keep your\nproperty safe and in top shape.",
+                "image": "/images/service-renovation.webp",
+                "showInGrid": true,
+                "showInMenu": false,
+                "showInNav": false,
+                "showInFooter": false,
+                "detail": {
+                  "titleTop": "Maintaining Buildings",
+                  "titleBottom": "For",
+                  "highlight": "Lasting Value",
+                  "text": "Our building maintenance services keep homes, offices and facilities safe, efficient and looking their best. From routine inspections and preventive upkeep to repairs and upgrades, we take care of your property so small issues never turn into costly problems.",
+                  "image": "/images/service-detail.webp"
+                }
+              }
+            ],
+            "detail": {
+              "overviewLabel": "Service Overview",
+              "featuresLabel": "Key Features",
+              "featuresTitleTop": "What's Included",
+              "featuresTitleBottom": "in Our",
+              "features": [
+                {
+                  "icon": "home",
+                  "title": "Custom Home Design",
+                  "text": "Tailored designs to match\nyour lifestyle and needs."
+                },
+                {
+                  "icon": "gear",
+                  "title": "End-to-End Management",
+                  "text": "From planning and approvals\nto final handover."
+                },
+                {
+                  "icon": "gear",
+                  "title": "Quality Materials",
+                  "text": "We use premium and\nlong-lasting materials."
+                },
+                {
+                  "icon": "shield",
+                  "title": "On-Time Delivery",
+                  "text": "Committed to project timelines."
+                },
+                {
+                  "icon": "users",
+                  "title": "Skilled Workforce",
+                  "text": "Experienced professionals\nensure top-quality construction."
+                },
+                {
+                  "icon": "leaf",
+                  "title": "Sustainable Solutions",
+                  "text": "Energy-efficient and eco-friendly\nconstruction practices."
+                }
+              ],
+              "sidebarTitle": "Our Services",
+              "help": {
+                "title": "Need Help?",
+                "text": "Have questions about this service?\nOur team is here to help.",
+                "button": {
+                  "label": "Contact Us",
+                  "href": "/contact-us"
+                }
+              },
+              "band": {
+                "label": "Modern Homes",
+                "titleTop": "Built For",
+                "highlight": "Modern Living",
+                "text": "We focus on quality, functionality\nand design to create homes that\nbring comfort, style and value for\nyears to come.",
+                "image": "/images/modern-living.webp",
+                "button": {
+                  "label": "Get a Quote",
+                  "href": "/get-a-quote"
+                },
+                "imageAlt": "Modern living room interior"
+              }
+            },
+            "button": {
+              "label": "View All",
+              "href": "/our-services"
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "ConstrixWhyChooseUs1": {
+            "label": "Why Choose Constrix",
+            "titleTop": "Construction & Engineering",
+            "highlight": "Real",
+            "titleBottom": "Solutions.",
+            "text": "We deliver innovative, reliable and cost-effective construction solutions\nbacked by experience, quality and a client-first approach.",
+            "image": "/images/why-choose.webp",
+            "points": [
+              {
+                "title": "Experienced Team",
+                "text": "Skilled professionals with proven expertise."
+              },
+              {
+                "title": "Quality Assurance",
+                "text": "Superior quality at every stage of construction."
+              },
+              {
+                "title": "On-Time Delivery",
+                "text": "Committed to project timelines with efficient planning."
+              },
+              {
+                "title": "End-to-End Support",
+                "text": "From planning to project handover, we're with you at every step."
+              }
+            ],
+            "imageAlt": "Engineer reviewing plans on a construction site"
+          }
+        }
+      },
+      "Projects": {
+        "variants": {
+          "ConstrixProjects1": {
+            "label": "Our Projects",
+            "title": "Featured Construction",
+            "highlight": "Projects",
+            "watermark": "Projects",
+            "allLabel": "All",
+            "categories": [
+              "Residential",
+              "Commercial",
+              "Industrial",
+              "Infrastructure"
+            ],
+            "items": [
+              {
+                "title": "Modern Villa Residence",
+                "category": "Residential",
+                "image": "/images/project-villa.webp"
+              },
+              {
+                "title": "Skyline Residences",
+                "category": "Residential",
+                "image": "/images/service-residential.webp"
+              },
+              {
+                "title": "Corporate Headquarters",
+                "category": "Commercial",
+                "image": "/images/project-tower.webp"
+              },
+              {
+                "title": "Retail Plaza Complex",
+                "category": "Commercial",
+                "image": "/images/service-commercial.webp"
+              },
+              {
+                "title": "Manufacturing Plant Upgrade",
+                "category": "Industrial",
+                "image": "/images/project-industrial.webp"
+              },
+              {
+                "title": "Logistics Distribution Hub",
+                "category": "Industrial",
+                "image": "/images/service-industrial.webp"
+              },
+              {
+                "title": "Metro Corridor Expansion",
+                "category": "Infrastructure",
+                "image": "/images/project-highway.webp"
+              },
+              {
+                "title": "Bridge & Drainage Works",
+                "category": "Infrastructure",
+                "image": "/images/service-infrastructure.webp"
+              },
+              {
+                "title": "Lakeside Family Homes",
+                "category": "Residential",
+                "image": "/images/project-lakeside.webp"
+              },
+              {
+                "title": "Downtown Business Center",
+                "category": "Commercial",
+                "image": "/images/project-downtown.webp"
+              }
+            ],
+            "button": {
+              "label": "View All",
+              "href": "/our-projects"
+            }
+          }
+        }
+      },
+      "Process": {
+        "variants": {
+          "ConstrixProcess1": {
+            "label": "Our Work Process",
+            "title": "How Constrix",
+            "highlight": "Works",
+            "text": "We follow a structured and transparent process to ensure every project is delivered\nwith quality, efficiency and complete client satisfaction.",
+            "steps": [
+              {
+                "icon": "planning",
+                "title": "Project Planning",
+                "text": "Understanding your requirements\nand creating a detailed plan for\nsuccessful execution.",
+                "image": "/images/step-planning.webp"
+              },
+              {
+                "icon": "monitor",
+                "title": "Design & Development",
+                "text": "Turning concepts into practical\ndesigns with innovation and\ntechnical expertise.",
+                "image": "/images/step-design.webp"
+              },
+              {
+                "icon": "hardhat",
+                "title": "Construction & Execution",
+                "text": "Our skilled team brings the\ndesign to life with precision,\nquality and safety.",
+                "image": "/images/step-construction.webp"
+              },
+              {
+                "icon": "award",
+                "title": "Completion & Handover",
+                "text": "Quality checks, final inspections\nand on-time handover for\nyour complete satisfaction.",
+                "image": "/images/step-handover.webp"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "ConstrixTestimonial1": {
+            "home": {
+              "label": "Testimonials",
+              "title": "What Our",
+              "highlight": "Clients Say",
+              "sideText": "Testimonials",
+              "backgroundImage": "/images/testimonial-site.webp",
+              "items": [
+                {
+                  "name": "Rohit Mehta",
+                  "role": "Client",
+                  "image": "/images/client-rohit.webp",
+                  "quote": "Constrix exceeded our expectations with their professionalism, quality\nof work and attention to detail. From planning to final handover, the entire\nprocess was smooth and transparent. Their team delivered the project\non time with excellent craftsmanship. We are extremely satisfied with\nthe results and highly recommend Constrix for any construction project."
+                },
+                {
+                  "name": "Amit Verma",
+                  "role": "Property Investor",
+                  "image": "/images/about-worker.webp",
+                  "quote": "From design to handover, the Constrix team made the entire process seamless. Their expertise and commitment to quality really show in the final result. I highly recommend them for anyone looking for a reliable construction partner."
+                },
+                {
+                  "name": "Vikram Singh",
+                  "role": "Industrial Client",
+                  "image": "/images/recent-company.webp",
+                  "quote": "Constrix exceeded our expectations with their innovative solutions and high-quality construction. The communication throughout the project was excellent, and the team ensured everything was completed on schedule."
+                }
+              ]
+            },
+            "page": {
+              "label": "Testimonials",
+              "title": "What Our",
+              "highlight": "Clients Say",
+              "text": "Our clients trust us for our quality, commitment and ability to deliver projects\nthat exceed their expectations. Here's what they have to say about working with Constrix.",
+              "items": [
+                {
+                  "name": "Rohit Sharma",
+                  "role": "Homeowner",
+                  "rating": 5,
+                  "quote": "Constrix delivered our dream home with\nexceptional quality and professionalism. The entire\nteam was supportive, transparent and completed\nthe project on time. We couldn't be happier with\nthe result."
+                },
+                {
+                  "name": "Priya Mehta",
+                  "role": "Business Owner",
+                  "rating": 5,
+                  "quote": "We partnered with Constrix for our commercial\nbuilding, and the experience was outstanding.\nTheir attention to detail, planning and execution\nwere top-notch. The team maintained clear\ncommunication throughout the process."
+                },
+                {
+                  "name": "Amit Verma",
+                  "role": "Property Investor",
+                  "rating": 5,
+                  "quote": "From design to handover, the Constrix team made\nthe entire process seamless. Their expertise and\ncommitment to quality really show in the final\nresult. I highly recommend them for anyone\nlooking for a reliable construction partner."
+                },
+                {
+                  "name": "Karan Malhotra",
+                  "role": "Restaurant Owner",
+                  "rating": 5,
+                  "quote": "Professional, reliable and highly skilled team.\nConstrix understood our requirements perfectly\nand delivered a space that fits our needs and\nbrand image. Their work quality and project\nmanagement are truly impressive."
+                },
+                {
+                  "name": "Neha Kapoor",
+                  "role": "Homeowner",
+                  "rating": 5,
+                  "quote": "We are extremely satisfied with the quality of work\nand the timely delivery. Constrix turns ideas into\nreality with great precision and professionalism.\nTheir team is knowledgeable, responsive and\neasy to work with."
+                },
+                {
+                  "name": "Vikram Singh",
+                  "role": "Industrial Client",
+                  "rating": 5,
+                  "quote": "Constrix exceeded our expectations with their\ninnovative solutions and high-quality construction.\nThe communication throughout the project was\nexcellent, and the team ensured everything was\ncompleted on schedule."
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Cta": {
+        "variants": {
+          "ConstrixCta1": {
+            "label": "Let's Build Together",
+            "titleTop": "Ready to Start",
+            "highlight": "Your Next Project?",
+            "text": "Whether it's residential, commercial or industrial, Constrix is here to\nturn your vision into reality with trusted expertise and quality execution.",
+            "image": "/images/cta.webp",
+            "button": {
+              "label": "Contact Us",
+              "href": "/contact-us"
+            }
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "ConstrixBlog1": {
+            "label": "Our Latest Blogs",
+            "title": "News &",
+            "highlight": "Insights",
+            "text": "Stay updated with the latest trends, tips and insights from the construction industry\nto help you make informed decisions.",
+            "button": {
+              "label": "View All Blogs",
+              "href": "/blog"
+            },
+            "readMore": "Read More",
+            "posts": [
+              {
+                "slug": "essential-steps-for-a-successful-construction-project",
+                "day": "15",
+                "monthYear": "Mar 2026",
+                "category": "Construction Tips",
+                "title": "Essential Steps for a Successful\nConstruction Project",
+                "text": "A well-planned construction project saves time, reduces\ncosts and ensures better quality outcomes. Here are\nsome key steps to keep in mind...",
+                "image": "/images/blog-steps.webp"
+              },
+              {
+                "slug": "top-modern-construction-design-trends-in-2026",
+                "day": "22",
+                "monthYear": "Mar 2026",
+                "category": "Design Ideas",
+                "title": "Top Modern Construction\nDesign Trends in 2026",
+                "text": "Discover the latest design trends that are shaping the\nfuture of residential, commercial and industrial\nconstruction projects...",
+                "image": "/images/blog-trends.webp"
+              },
+              {
+                "slug": "how-to-manage-construction-costs-effectively",
+                "day": "28",
+                "monthYear": "Mar 2026",
+                "category": "Industry Insights",
+                "title": "How to Manage Construction\nCosts Effectively",
+                "text": "Learn practical tips and strategies to control\nconstruction costs without compromising on quality\nand timelines...",
+                "image": "/images/blog-costs.webp"
+              },
+              {
+                "slug": "choosing-the-right-materials-for-durable-buildings",
+                "day": "09",
+                "monthYear": "Apr 2026",
+                "category": "Material Guide",
+                "title": "Choosing the Right Materials\nfor Durable Buildings",
+                "text": "The longevity of any structure depends heavily on the\nmaterials selected. Learn how to balance quality, cost\nand sustainability for long-term performance...",
+                "image": "/images/service-civil.webp"
+              },
+              {
+                "slug": "sustainable-design-practices-for-modern-buildings",
+                "day": "14",
+                "monthYear": "Apr 2026",
+                "category": "Sustainability",
+                "title": "Sustainable Design Practices\nfor Modern Buildings",
+                "text": "Sustainability is becoming a core requirement in modern\nconstruction. Explore design choices that reduce waste\nand improve efficiency...",
+                "image": "/images/blog-sustainable.webp"
+              },
+              {
+                "slug": "how-to-streamline-project-planning-and-delivery",
+                "day": "21",
+                "monthYear": "Apr 2026",
+                "category": "Project Management",
+                "title": "How to Streamline Project\nPlanning and Delivery",
+                "text": "Strong planning and communication can keep projects on\ntrack. Discover practical steps to improve scheduling,\ncoordination and execution...",
+                "image": "/images/step-planning.webp"
+              },
+              {
+                "slug": "safety-first-practices-on-construction-sites",
+                "day": "03",
+                "monthYear": "May 2026",
+                "category": "Site Safety",
+                "title": "Safety-First Practices\nfor Construction Sites",
+                "text": "A safe job site protects workers, reduces delays and\nbuilds trust with clients. Learn the most effective safety\nmeasures to implement on site...",
+                "image": "/images/blog-safety.webp"
+              },
+              {
+                "slug": "commercial-space-design-that-drives-business-growth",
+                "day": "11",
+                "monthYear": "May 2026",
+                "category": "Business Growth",
+                "title": "Commercial Space Design\nThat Drives Business Growth",
+                "text": "A well-designed commercial space improves customer\nexperience and operational efficiency. Explore design\nchoices that support long-term growth...",
+                "image": "/images/service-interior.webp"
+              }
+            ],
+            "detail": {
+              "image": "/images/blog-detail.webp",
+              "introTitle": "Introduction",
+              "intro": "Building a home is one of the most important investments of your life. A well-planned residential\nconstruction project not only gives you a beautiful living space but also ensures long-term durability,\ncomfort, and value. From initial planning to final handover, every step plays a crucial role in achieving\na successful outcome.",
+              "steps": [
+                {
+                  "title": "Define Your Requirements",
+                  "text": "Start by identifying your needs, lifestyle and budget. Consider the size of the home, number\nof rooms, design preferences and future requirements. A clear vision helps in better\nplanning and avoids changes during construction."
+                },
+                {
+                  "title": "Choose the Right Location",
+                  "text": "The location of your home affects convenience, connectivity and long-term value. Evaluate\nfactors like accessibility, nearby amenities, environment and future development in the area\nbefore finalising the site."
+                },
+                {
+                  "title": "Work with Experienced Professionals",
+                  "text": "Partnering with a trusted construction company ensures expert guidance, quality materials\nand efficient project management. Experienced professionals help you avoid common\npitfalls and ensure your project is completed on time and within budget."
+                },
+                {
+                  "title": "Focus on Quality and Sustainability",
+                  "text": "Use high-quality materials and modern construction practices to ensure durability and\nsafety. Incorporating energy-efficient solutions not only reduces long-term costs but also\ncreates a more comfortable and eco-friendly home."
+                }
+              ],
+              "conclusionTitle": "Conclusion",
+              "conclusion": "A successful residential construction project is the result of careful planning, the right team, quality\nmaterials and a focus on long-term value. With the right approach, you can create a home that perfectly\nmatches your lifestyle and stands the test of time.",
+              "recentTitle": "Recent Posts",
+              "help": {
+                "titleTop": "Need Expert",
+                "titleMiddle": "Advice For Your",
+                "highlight": "Next Project?",
+                "text": "Our team is here to guide you with\nthe best solutions.",
+                "image": "/images/cta.webp",
+                "button": {
+                  "label": "Contact Us",
+                  "href": "/contact-us"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Contact": {
+        "variants": {
+          "ConstrixContact1": {
+            "cards": [
+              {
+                "icon": "phoneFill",
+                "title": "Call Us",
+                "source": "phone"
+              },
+              {
+                "icon": "mail",
+                "title": "Email Us",
+                "source": "email"
+              },
+              {
+                "icon": "pinFill",
+                "title": "Visit Our Office",
+                "source": "address"
+              }
+            ],
+            "form": {
+              "label": "Send Us a Message",
+              "title": "Get In",
+              "highlight": "Touch",
+              "text": "Fill out the form below and our team will get back to you shortly.",
+              "nameLabel": "Full Name",
+              "namePlaceholder": "Enter your full name",
+              "emailLabel": "Email Address",
+              "emailPlaceholder": "Enter your email",
+              "phoneLabel": "Phone Number",
+              "phonePlaceholder": "Enter your phone number",
+              "subjectLabel": "Subject",
+              "subjectPlaceholder": "Select subject",
+              "subjects": [
+                "General Enquiry",
+                "Residential Project",
+                "Commercial Project",
+                "Industrial Project",
+                "Careers"
+              ],
+              "messageLabel": "Message",
+              "messagePlaceholder": "Tell us about your project or query...",
+              "button": "Send Message",
+              "success": "Thank you! Your message has been received. Our team will get back to you shortly."
+            },
+            "location": {
+              "label": "Our Location",
+              "title": "Find Us",
+              "highlight": "Here",
+              "text": "Visit our office or find us on the map. We're always happy to\nmeet and discuss your construction needs.",
+              "offices": [
+                {
+                  "title": "Head Office",
+                  "source": "address"
+                }
+              ],
+              "mapTitle": "Office location map"
+            }
+          }
+        }
+      },
+      "Quote": {
+        "variants": {
+          "ConstrixQuote1": {
+            "label": "Request a Quote",
+            "titleTop": "Let's Build",
+            "highlight": "Your Vision",
+            "titleBottom": "Together",
+            "text": "Whether it's a residential, commercial or industrial project, our team\nis here to provide you with a detailed and transparent quote tailored\nto your requirements.",
+            "features": [
+              {
+                "icon": "file",
+                "title": "Custom Solutions",
+                "text": "Quotes tailored to your project needs."
+              },
+              {
+                "icon": "gear",
+                "title": "Transparent Pricing",
+                "text": "Clear and detailed cost breakdown."
+              },
+              {
+                "icon": "usersFill",
+                "title": "Expert Consultation",
+                "text": "Get guidance from our experienced team."
+              },
+              {
+                "icon": "clock",
+                "title": "Quick Response",
+                "text": "We get back to you within 24 hours."
+              }
+            ],
+            "form": {
+              "label": "Get a Free Quote",
+              "title": "Project",
+              "highlight": "Details",
+              "text": "Fill out the form below and our team will get in touch with you soon.",
+              "nameLabel": "Full Name",
+              "namePlaceholder": "Enter your name",
+              "emailLabel": "Email Address",
+              "emailPlaceholder": "Enter your email",
+              "phoneLabel": "Phone Number",
+              "phonePlaceholder": "Enter your phone number",
+              "typeLabel": "Project Type",
+              "typePlaceholder": "Select project type",
+              "types": [
+                "Residential",
+                "Commercial",
+                "Industrial",
+                "Infrastructure",
+                "Renovation & Remodeling"
+              ],
+              "locationLabel": "Project Location",
+              "locationPlaceholder": "Enter project location",
+              "detailsLabel": "Project Details",
+              "detailsPlaceholder": "Tell us about your project (e.g. size, requirements, timeline, etc.)",
+              "button": "Submit Request",
+              "success": "Thank you! Your request has been received. Our team will get in touch with you soon."
+            },
+            "benefits": [
+              {
+                "icon": "coins",
+                "title": "No Hidden Costs",
+                "lines": [
+                  "Clear and transparent",
+                  "quotations."
+                ]
+              },
+              {
+                "icon": "starFill",
+                "title": "Tailored to Your Needs",
+                "lines": [
+                  "Customized solutions",
+                  "for every project."
+                ]
+              },
+              {
+                "icon": "shieldFill",
+                "title": "Trusted Expertise",
+                "lines": [
+                  "Backed by years",
+                  "of experience."
+                ]
+              },
+              {
+                "icon": "headset",
+                "title": "Dedicated Support",
+                "lines": [
+                  "From planning to",
+                  "project completion."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "FAQ": {
+        "variants": {
+          "ConstrixFAQ1": {
+            "title": "Frequently Asked Questions",
+            "intro": "Find quick answers to common questions about our construction process, cost estimates, timelines, municipal approvals, and post-handover warranties.",
+            "items": [
+              {
+                "question": "What types of construction projects does Constrix handle?",
+                "answer": "Constrix handles residential homes and villas, commercial towers and office complexes, industrial factories and warehouses, as well as civil infrastructure projects such as roads and bridges. We also offer full renovation and architectural planning services."
+              },
+              {
+                "question": "How do I get a cost estimate for my project?",
+                "answer": "You can reach out through our 'Request a Quote' page or contact our team directly. Once we understand your requirements, built-up area, and location, we provide a detailed, itemized Bill of Quantities (BOQ) with transparent pricing."
+              },
+              {
+                "question": "Do you assist with municipal building permits and approvals?",
+                "answer": "Yes, our team assists with preparing architectural drawings, submitting municipal sanctions, and coordinating approvals to ensure full compliance with the National Building Code (NBC) and local bylaws."
+              },
+              {
+                "question": "What is the typical timeline for constructing a residential home?",
+                "answer": "A standard residential project typically takes 8 to 14 months depending on total area, design complexity, and finish selections. We provide a milestone-based project schedule prior to starting construction."
+              },
+              {
+                "question": "What payment structure do you follow?",
+                "answer": "We follow a milestone-based payment schedule tied to actual progress on-site (such as foundation completion, slab casting per level, masonry, MEP works, and final finishes). You only pay as each stage is completed and verified."
+              },
+              {
+                "question": "What warranty do you offer after project completion?",
+                "answer": "We provide a 10-year structural warranty on core concrete and RCC frameworks, along with a 12-month Defect Liability Period covering plumbing, electrical works, and waterproofing after handover."
+              },
+              {
+                "question": "Can I make design changes after construction has started?",
+                "answer": "Yes, changes can be accommodated through a formal Variation Order. Our engineering team reviews the requested changes for structural feasibility and provides an updated estimate and timeline for your approval."
+              },
+              {
+                "question": "How do you ensure material quality on-site?",
+                "answer": "We procure materials only from certified manufacturers (such as Tata Steel and UltraTech Cement) and conduct regular laboratory cube tests on concrete and steel to ensure high structural strength."
+              }
+            ],
+            "metaTitle": "Frequently Asked Questions (FAQ)",
+            "metaDescription": "Find clear answers to common questions about Constrix construction services, costs, timelines, and warranties."
+          }
+        }
+      },
+      "Terms": {
+        "variants": {
+          "ConstrixTerms1": {
+            "title": "Terms & Conditions",
+            "intro": "These terms apply when you access the Constrix website or engage our construction services. By using this site or approving an estimate, you agree to comply with these terms lawfully and in a manner that respects our contractual and safety standards.",
+            "items": [
+              {
+                "title": "Website information",
+                "content": "We aim to keep website information useful, accurate and current, but project descriptions, service estimates and other content are provided for general information and may change without prior notice. They do not constitute a formal binding construction contract, financial guarantee, or legal advice until a formal agreement is executed."
+              },
+              {
+                "title": "Scope of construction services",
+                "content": "Constrix provides residential, commercial, industrial and civil infrastructure construction solutions. Specific project deliverables, material specifications, architectural designs and timelines will be defined in a separate written contract and Bill of Quantities (BOQ) signed between Constrix and the client."
+              },
+              {
+                "title": "Estimates and milestone payments",
+                "content": "All cost estimates and quotations remain valid for 30 calendar days from the date of issue. Payments are linked to verified physical construction milestones (such as foundation, slab casting, masonry, MEP installations, and final handover) as outlined in the signed agreement. Invoices must be cleared within the agreed payment window to prevent site mobilization delays."
+              },
+              {
+                "title": "Client responsibilities and site access",
+                "content": "The client is responsible for providing unhindered physical access to the project site, confirming legal ownership of the property, securing necessary initial water and electricity connections, and granting prompt written approvals for architectural selections and material finishes."
+              },
+              {
+                "title": "Regulatory compliance and building permits",
+                "content": "All works executed by Constrix comply with the National Building Code (NBC) and local municipal bylaws. Where liaison services are engaged, Constrix assists with filing and documentation; however, official municipal scrutiny fees, taxes and statutory charges remain the client's responsibility."
+              },
+              {
+                "title": "Project timelines and delays",
+                "content": "Estimated delivery schedules are based on normal working conditions. Extensions of time may be granted in instances of Force Majeure (such as extreme natural disasters, government lockdowns, or unseasonal heavy rains) or client-requested architectural variations outside the original scope."
+              },
+              {
+                "title": "Quality standards and warranty",
+                "content": "Constrix provides a 10-year structural warranty on core RCC and concrete frameworks, along with a 12-month Defect Liability Period covering plumbing, electrical works, waterproofing, and surface finishes from the formal handover date. Unauthorized structural modifications by third parties will void the warranty."
+              },
+              {
+                "title": "Intellectual property",
+                "content": "Architectural drawings, structural engineering plans, 3D renderings and technical designs created by Constrix remain our intellectual property until all contractual dues are settled. Upon full payment, the client receives a license to use these plans exclusively for the constructed property."
+              },
+              {
+                "title": "Limitation of liability",
+                "content": "To the maximum extent permitted by applicable law, Constrix shall not be liable for any indirect, incidental, or consequential damages resulting from third-party actions, unauthorized alterations, or delays outside our direct contractual control."
+              },
+              {
+                "title": "Governing law and dispute resolution",
+                "content": "These terms and any disputes arising out of construction agreements shall be governed by the laws of India. Any unresolved disputes shall be subject to arbitration in accordance with the Arbitration and Conciliation Act, 1996, with the venue in New Delhi, India."
+              }
+            ],
+            "metaTitle": "Terms and Conditions",
+            "metaDescription": "Terms and conditions governing the use of Constrix website and construction services."
+          }
+        }
+      },
+      "PrivacyPolicy": {
+        "variants": {
+          "ConstrixPrivacyPolicy1": {
+            "title": "Privacy Policy",
+            "intro": "At Constrix, we respect your privacy and are committed to safeguarding the personal information and property details you share with us. This policy outlines how we handle, store, and protect your data.",
+            "items": [
+              {
+                "title": "Information we collect",
+                "content": "We collect information necessary to provide accurate construction estimates, architectural designs, and project management services. This includes your name, contact telephone number, email address, physical address, property survey documents, CAD drawings, site photographs, and transaction details provided during inquiries or contract execution."
+              },
+              {
+                "title": "How we use your information",
+                "content": "Your information is used strictly to prepare Bills of Quantities (BOQ), communicate project milestones, manage on-site material deliveries, coordinate with statutory municipal authorities for plan approvals, issue warranty certifications, and respond to your service inquiries."
+              },
+              {
+                "title": "Information sharing and third parties",
+                "content": "We do not sell, rent, or trade your personal details to external marketing agencies. Project drawings and specifications may be shared only with certified subcontractors, structural testing laboratories (for NABL concrete and steel testing), and municipal bodies strictly on a need-to-know basis to fulfill construction deliverables."
+              },
+              {
+                "title": "Data protection and security",
+                "content": "We implement industry-standard technical and organizational security measures to protect your personal and project records from unauthorized access, modification, or disclosure. All digital transmissions through our website are secured with SSL encryption."
+              },
+              {
+                "title": "Cookies and website analytics",
+                "content": "Our website uses basic session and analytics cookies to ensure smooth navigation, load pages efficiently, and understand how visitors interact with our services. You can manage or disable cookies through your browser settings at any time without restricting access to general website content."
+              },
+              {
+                "title": "Your rights and data control",
+                "content": "You have the right to request access to the personal information we hold about you, request corrections to outdated contact details, or ask for the deletion of non-statutory records by writing to us at {email}."
+              },
+              {
+                "title": "Data retention",
+                "content": "We retain client project records, engineering calculations, and warranty documents for the duration required to fulfill our 10-year structural warranty commitments and applicable statutory audit obligations. General inquiry details that do not result in a contract are removed after 24 months."
+              },
+              {
+                "title": "Contact and grievance redressal",
+                "content": "If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please contact our administrative desk at {email} or call {phone} during standard working hours."
+              }
+            ],
+            "metaTitle": "Privacy Policy",
+            "metaDescription": "Learn how Constrix collects, uses, and protects your personal and project information."
+          }
+        }
+      },
+      "Sitemap": {
+        "variants": {
+          "ConstrixSitemap1": {
+            "title": "Sitemap",
+            "intro": "A quick and organized directory of all pages, specialized construction services, portfolio projects, blog posts, and legal policies on the Constrix website.",
+            "metaTitle": "Sitemap",
+            "metaDescription": "Browse all pages, construction services, project categories, and articles on the Constrix website.",
+            "testimonialsLink": {
+              "label": "Client Testimonials",
+              "href": "/testimonials"
+            },
+            "projectLinkSuffix": "Construction Projects",
+            "projectsHref": "/our-projects",
+            "groups": {
+              "main": {
+                "title": "Main Pages",
+                "text": "Primary navigation and essential company destinations:"
+              },
+              "services": {
+                "title": "Construction Services",
+                "text": "Turnkey civil, residential, commercial, and industrial engineering solutions:"
+              },
+              "projects": {
+                "title": "Projects & Portfolio",
+                "text": "Completed and ongoing construction works by sector:"
+              },
+              "blog": {
+                "title": "Blog & Industry Articles",
+                "text": "Construction tips, design ideas, and industry insights:"
+              },
+              "support": {
+                "title": "Support & Legal Information",
+                "text": "Contractual terms, privacy commitments, and customer assistance:"
+              }
+            }
+          }
+        }
+      }
     }
-  ],
-  "services": [
-    {
-      "title": "Architectural Design",
-      "description": "Thoughtful and innovative architectural solutions for residential, commercial and mixed-use spaces.",
-      "href": "/services/architectural-design"
-    },
-    {
-      "title": "Interior Design",
-      "description": "Beautifully balanced interiors combining refined materials, thoughtful details and everyday functionality.",
-      "href": "/services/interior-design"
-    },
-    {
-      "title": "Landscape Design",
-      "description": "Harmonious outdoor environments that connect architecture, nature and the way people experience a space.",
-      "href": "/services/landscape-design"
-    },
-    {
-      "title": "Project Management",
-      "description": "Careful coordination, clear planning and considered execution to keep every project moving forward.",
-      "href": "/services/project-management"
-    },
-    {
-      "title": "Urban Planning",
-      "description": "Forward-thinking planning that brings communities, infrastructure and sustainable development together.",
-      "href": "/services/urban-planning"
+  },
+  "Veyra": {
+    "home": {
+      "about": {
+        "eyebrow": "About Veyra Studio",
+        "titleFirstLine": "Designing a",
+        "titleSecondLine": "Better Tomorrow",
+        "description": "We are a multidisciplinary design studio specializing in architecture, interior design, landscape and planning. Our approach combines creativity, technical expertise and a deep understanding of people’s needs to create spaces that are timeless, sustainable and uniquely yours.",
+        "button": {
+          "label": "More About Us",
+          "href": "/about-us"
+        },
+        "tagline": "Thoughtfully designed. Intentionally built.",
+        "images": {
+          "primary": {
+            "src": "/images/home/about-us1.png",
+            "alt": "Contemporary Veyra Studio architectural residence"
+          },
+          "secondary": {
+            "src": "/images/home/about-us2.png",
+            "alt": "Architectural facade and material details"
+          }
+        }
+      },
+      "navbar": {
+        "logo": "/images/veyra-logo.png",
+        "navigation": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About",
+            "href": "/about-us"
+          },
+          {
+            "label": "Team",
+            "href": "/our-team"
+          },
+          {
+            "label": "Testimonials",
+            "href": "/testimonials"
+          },
+          {
+            "label": "Services",
+            "href": "/services",
+            "submenu": [
+              {
+                "label": "Architecture",
+                "href": "#"
+              },
+              {
+                "label": "Interior Design",
+                "href": "#"
+              },
+              {
+                "label": "Landscape Design",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "label": "Projects",
+            "href": "/projects",
+            "submenu": [
+              {
+                "label": "Residential",
+                "href": "#"
+              },
+              {
+                "label": "Commercial",
+                "href": "#"
+              },
+              {
+                "label": "Interior Projects",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
+        ],
+        "quoteButton": {
+          "label": "Get a Quote",
+          "href": "/contact"
+        },
+        "mobileTagline": "Architecture ? Interiors ? Design"
+      },
+      "footer": {
+        "backgroundImage": "/images/footer.png",
+        "logo": "/images/veyra-logo.png",
+        "description": "At Veyra Studio, we design spaces that inspire, function beautifully and elevate everyday living through thoughtful architecture and interiors.",
+        "discoverLink": {
+          "label": "Discover our studio",
+          "href": "/about-us"
+        },
+        "columns": [
+          {
+            "title": "Quick Links",
+            "items": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Our Services",
+                "href": "/services"
+              },
+              {
+                "label": "Our Projects",
+                "href": "/projects"
+              },
+              {
+                "label": "Our Process",
+                "href": "/#process"
+              },
+              {
+                "label": "Testimonials",
+                "href": "/#testimonials"
+              },
+              {
+                "label": "Get a Quote",
+                "href": "/get-a-quote"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact-us"
+              }
+            ]
+          },
+          {
+            "title": "Our Services",
+            "items": [
+              {
+                "label": "Architectural Design",
+                "href": "/services/architecture"
+              },
+              {
+                "label": "Interior Design",
+                "href": "/services/interior-design"
+              },
+              {
+                "label": "Landscape Design",
+                "href": "/services/landscape-design"
+              },
+              {
+                "label": "Project Management",
+                "href": "/services/project-management"
+              },
+              {
+                "label": "Urban Planning",
+                "href": "/services/urban-planning"
+              },
+              {
+                "label": "Residential Design",
+                "href": "/services/residential"
+              },
+              {
+                "label": "Commercial Design",
+                "href": "/services/commercial"
+              },
+              {
+                "label": "Consultation",
+                "href": "/contact-us"
+              }
+            ]
+          }
+        ],
+        "contactTitle": "Contact Us",
+        "contactItems": [
+          {
+            "label": "Address",
+            "lines": [
+              "123 Design Avenue,",
+              "New York, NY 10001, USA"
+            ],
+            "href": "https://maps.google.com/?q=123+Design+Avenue+New+York",
+            "icon": "RiMapPin2Fill"
+          },
+          {
+            "label": "Phone",
+            "lines": [
+              "+1 234 567 8900"
+            ],
+            "href": "tel:+12345678900",
+            "icon": "FaPhoneAlt"
+          },
+          {
+            "label": "Email",
+            "lines": [
+              "info@veyrastudio.com"
+            ],
+            "href": "mailto:info@veyrastudio.com",
+            "icon": "MdEmail"
+          },
+          {
+            "label": "Website",
+            "lines": [
+              "www.veyrastudio.com"
+            ],
+            "href": "https://www.veyrastudio.com",
+            "icon": "CiGlobe"
+          }
+        ],
+        "socialLinks": [
+          {
+            "label": "Facebook",
+            "href": "https://facebook.com",
+            "icon": "FaFacebookF"
+          },
+          {
+            "label": "Instagram",
+            "href": "https://instagram.com",
+            "icon": "FaInstagram"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://linkedin.com",
+            "icon": "FaLinkedinIn"
+          },
+          {
+            "label": "YouTube",
+            "href": "https://youtube.com",
+            "icon": "FaYoutube"
+          }
+        ],
+        "copyright": "? 2026 Veyra Studio. All Rights Reserved."
+      },
+      "clientLogos": [
+        {
+          "name": "CAMPS",
+          "subtitle": "",
+          "type": "camps"
+        },
+        {
+          "name": "Salvatore",
+          "subtitle": "new york",
+          "type": "salvatore"
+        },
+        {
+          "name": "ROVELLA",
+          "subtitle": "R O V E L L A",
+          "type": "rovella"
+        },
+        {
+          "name": "LLOYD",
+          "subtitle": "M A N A G E M E N T",
+          "type": "lloyd"
+        },
+        {
+          "name": "Cupcakes",
+          "subtitle": "from new york",
+          "type": "cupcakes"
+        }
+      ],
+      "hero": {
+        "slides": [
+          {
+            "eyebrow": "ARCHITECTURE",
+            "title": [
+              "Transforming",
+              "Spaces into"
+            ],
+            "highlight": "Meaningful Living",
+            "description": "At Veyra Studio, we design spaces that inspire, function beautifully and stand the test of time. From architecture to interiors, we create environments that elevate everyday life.",
+            "image": "/images/home/banner1.png",
+            "featuredImage": "/images/home/banner2.jpg",
+            "project": "The Willow Residence",
+            "location": "California, USA",
+            "year": "2024",
+            "category": "Residential",
+            "metaLabels": [
+              "INTERIORS",
+              "DESIGN"
+            ],
+            "ctaLabel": "Explore Our Work"
+          },
+          {
+            "eyebrow": "INTERIOR DESIGN",
+            "title": [
+              "Designed for",
+              "Beautiful"
+            ],
+            "highlight": "Everyday Living",
+            "description": "We bring materials, light and thoughtful details together to create interiors that feel timeless, personal and effortlessly sophisticated.",
+            "image": "/images/home/banner3.jpg",
+            "featuredImage": "/images/home/banner4.jpg",
+            "project": "The Solstice House",
+            "location": "Austin, USA",
+            "year": "2025",
+            "category": "Interiors",
+            "metaLabels": [
+              "INTERIORS",
+              "DESIGN"
+            ],
+            "ctaLabel": "Explore Our Work"
+          },
+          {
+            "eyebrow": "CONTEMPORARY DESIGN",
+            "title": [
+              "Beyond the",
+              "Ordinary"
+            ],
+            "highlight": "By Design",
+            "description": "Discover a new perspective on contemporary living, where architectural precision meets natural textures and enduring elegance.",
+            "image": "/images/home/banner5.jpg",
+            "featuredImage": "/images/home/banner6.jpg",
+            "project": "The Horizon Villa",
+            "location": "Palm Springs, USA",
+            "year": "2025",
+            "category": "Architecture",
+            "metaLabels": [
+              "INTERIORS",
+              "DESIGN"
+            ],
+            "ctaLabel": "Explore Our Work"
+          }
+        ]
+      },
+      "process": {
+        "eyebrow": "Our Process",
+        "title": [
+          "Our Step-by-Step",
+          "Process Delivers"
+        ],
+        "description": "From concept to creation, we follow a structured and transparent process to turn your vision into thoughtfully designed spaces.",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Planning & Ideas",
+            "description": "We begin by understanding your goals, space requirements and lifestyle to create a clear vision and strategic plan for the project.",
+            "image": "/images/home/banner2.jpg",
+            "icon": "PencilRuler",
+            "linkLabel": "Discuss your project",
+            "linkHref": "/contact-us"
+          },
+          {
+            "number": "02",
+            "title": "Design Development",
+            "description": "Our designers create detailed concepts, layouts and 3D visualizations, keeping you involved at every stage for a design that truly fits your vision.",
+            "image": "/images/home/banner3.jpg",
+            "icon": "DraftingCompass",
+            "linkLabel": "Discuss your project",
+            "linkHref": "/contact-us"
+          },
+          {
+            "number": "03",
+            "title": "Execution & Delivery",
+            "description": "We manage construction, material selection and quality checks to ensure timely, flawless delivery of your dream space.",
+            "image": "/images/home/banner4.jpg",
+            "icon": "HardHat",
+            "linkLabel": "Discuss your project",
+            "linkHref": "/contact-us"
+          }
+        ]
+      },
+      "projects": {
+        "label": "Our Projects",
+        "items": [
+          {
+            "number": "01",
+            "title": "Residential Project",
+            "location": "Paris",
+            "category": "Residential Architecture",
+            "image": "/images/home/banner2.jpg",
+            "href": "/projects/residential-paris",
+            "position": "center"
+          },
+          {
+            "number": "02",
+            "title": "Concert Hall",
+            "location": "New York",
+            "category": "Cultural Architecture",
+            "image": "/images/home/banner3.jpg",
+            "href": "/projects/concert-hall",
+            "position": "center"
+          },
+          {
+            "number": "03",
+            "title": "Modern Hotel",
+            "location": "London",
+            "category": "Hospitality Architecture",
+            "image": "/images/home/banner4.jpg",
+            "href": "/projects/modern-hotel",
+            "position": "center"
+          },
+          {
+            "number": "04",
+            "title": "Modern Hotel",
+            "location": "London",
+            "category": "Luxury Architecture",
+            "image": "/images/home/banner5.jpg",
+            "href": "/projects/luxury-hotel",
+            "position": "center"
+          }
+        ],
+        "prevLabel": "PREV",
+        "nextLabel": "NEXT",
+        "verticalLabel": "ARCHITECTURE"
+      },
+      "services": {
+        "label": "What We Do",
+        "title": "Our Services",
+        "viewAllLabel": "View All Services",
+        "viewAllHref": "/services",
+        "image": "/images/home/services-building.png",
+        "imageAlt": "Contemporary architecture and landscaped commercial building",
+        "badge": "Designed with purpose",
+        "items": [
+          {
+            "title": "Architectural Design",
+            "description": "Thoughtful and innovative architectural solutions for residential, commercial and mixed-use spaces.",
+            "icon": "Building2",
+            "href": "/services/architectural-design"
+          },
+          {
+            "title": "Interior Design",
+            "description": "Beautifully balanced interiors combining refined materials, thoughtful details and everyday functionality.",
+            "icon": "Sofa",
+            "href": "/services/interior-design"
+          },
+          {
+            "title": "Landscape Design",
+            "description": "Harmonious outdoor environments that connect architecture, nature and the way people experience a space.",
+            "icon": "Trees",
+            "href": "/services/landscape-design"
+          },
+          {
+            "title": "Project Management",
+            "description": "Careful coordination, clear planning and considered execution to keep every project moving forward.",
+            "icon": "ClipboardList",
+            "href": "/services/project-management"
+          },
+          {
+            "title": "Urban Planning",
+            "description": "Forward-thinking planning that brings communities, infrastructure and sustainable development together.",
+            "icon": "MapPinned",
+            "href": "/services/urban-planning"
+          }
+        ]
+      },
+      "testimonials": {
+        "eyebrow": "Clients Love Us",
+        "items": [
+          {
+            "quote": "Veyra Studio brought our vision to life with incredible attention to detail, creativity and professionalism. The entire experience was seamless from concept to completion.",
+            "name": "Priya Mehta",
+            "role": "Homeowner, California, USA",
+            "avatar": "/images/home/avatar1.png",
+            "projectImage": "/images/home/project1.png"
+          },
+          {
+            "quote": "The team understood exactly what we wanted. Their thoughtful designs, attention to detail and professional approach transformed our ideas into a beautiful living space.",
+            "name": "Aarav Sharma",
+            "role": "Homeowner, New Delhi, India",
+            "avatar": "/images/home/avatar2.jpg",
+            "projectImage": "/images/home/project2.jpg"
+          },
+          {
+            "quote": "From the initial concepts to the final finishing touches, every stage was handled with care. The result is timeless, functional and truly reflects our lifestyle.",
+            "name": "Ananya Kapoor",
+            "role": "Client, Mumbai, India",
+            "avatar": "/images/home/avatar3.jpg",
+            "projectImage": "/images/home/project3.jpg"
+          }
+        ]
+      },
+      "contactCta": {
+        "eyebrow": "Let's Create Together",
+        "title": [
+          "Have a Project",
+          "in Mind?"
+        ],
+        "description": "Get in touch with our team and let's turn your ideas into extraordinary spaces.",
+        "button": {
+          "label": "Get in Touch",
+          "href": "/contact-us"
+        },
+        "image": "/images/home/contact-interior.png",
+        "imageAlt": "Contemporary luxury interior with warm wooden finishes and garden views"
+      }
     }
-  ],
-  "projects": [
-    {
-      "number": "01",
-      "title": "Residential Project",
-      "location": "Paris",
-      "category": "Residential Architecture",
-      "image": "/images/home/banner2.jpg",
-      "href": "/projects/residential-paris",
-      "position": "center"
-    },
-    {
-      "number": "02",
-      "title": "Concert Hall",
-      "location": "New York",
-      "category": "Cultural Architecture",
-      "image": "/images/home/banner3.jpg",
-      "href": "/projects/concert-hall",
-      "position": "center"
-    },
-    {
-      "number": "03",
-      "title": "Modern Hotel",
-      "location": "London",
-      "category": "Hospitality Architecture",
-      "image": "/images/home/banner4.jpg",
-      "href": "/projects/modern-hotel",
-      "position": "center"
-    },
-    {
-      "number": "04",
-      "title": "Modern Hotel",
-      "location": "London",
-      "category": "Luxury Architecture",
-      "image": "/images/home/banner5.jpg",
-      "href": "/projects/luxury-hotel",
-      "position": "center"
-    }
-  ],
-  "stats": [
-    { "label": "Years of experience", "value": "14+" },
-    { "label": "Projects delivered", "value": "120" },
-    { "label": "Client satisfaction", "value": "96%" },
-    { "label": "Global footprint", "value": "18 cities" }
-  ],
-  "testimonials": [
-    {
-      "name": "Sofia Martinez",
-      "role": "Private Client",
-      "quote": "Every detail felt beautifully considered. The studio translated our vision into a home that feels both timeless and deeply personal.",
-      "avatar": "/images/home/avatar-1.jpg"
-    },
-    {
-      "name": "Daniel Brooks",
-      "role": "Developer & Investor",
-      "quote": "Their process was clear, collaborative and incredibly thoughtful. The result exceeded expectations in both impact and functionality.",
-      "avatar": "/images/home/avatar-2.jpg"
-    },
-    {
-      "name": "Alicia Chen",
-      "role": "Hospitality Founder",
-      "quote": "We wanted an elevated guest experience and Veyra Studio delivered exactly that—refined, warm and memorable.",
-      "avatar": "/images/home/avatar-3.jpg"
-    }
-  ],
-  "processSteps": [
-    {
-      "number": "01",
-      "title": "Discovery",
-      "description": "We listen, map aspirations and establish the vision, goals and constraints for your project."
-    },
-    {
-      "number": "02",
-      "title": "Concept Design",
-      "description": "We develop guiding ideas, spatial strategies and early design narratives that shape the project."
-    },
-    {
-      "number": "03",
-      "title": "Detailed Design",
-      "description": "We refine material palettes, layouts and technical resolutions to bring the concept into focus."
-    },
-    {
-      "number": "04",
-      "title": "Delivery",
-      "description": "We support construction, coordination and final realization to ensure a seamless result."
-    }
-  ]
+  }
 }
