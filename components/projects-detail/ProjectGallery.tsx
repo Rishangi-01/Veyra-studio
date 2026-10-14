@@ -5,41 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-
-const projects = [
-  {
-    image: "/images/projects/gallery1.png",
-    title: "Contemporary Living Room",
-    category: "Interior Design",
-    alt: "Luxury contemporary living room with warm wood finishes",
-  },
-  {
-    image: "/images/projects/gallery2.png",
-    title: "Modern Kitchen",
-    category: "Interior Design",
-    alt: "Modern kitchen with a wooden island and pendant lighting",
-  },
-  {
-    image: "/images/projects/gallery3.png",
-    title: "Luxury Bedroom",
-    category: "Residential Design",
-    alt: "Elegant bedroom with natural wood and floor-to-ceiling windows",
-  },
-  {
-    image: "/images/projects/gallery2.png",
-    title: "Modern Family Residence",
-    category: "Architecture",
-    alt: "Contemporary residential architecture",
-  },
-  {
-    image: "/images/projects/gallery3.png",
-    title: "Refined Living Spaces",
-    category: "Interior Design",
-    alt: "Refined contemporary interior with natural materials",
-  },
-];
+import { projectDetailGalleryData } from "../../data";
 
 export default function ProjectGallery() {
+  const data = projectDetailGalleryData;
+  const projects = data.items;
   const [startIndex, setStartIndex] = useState(0);
   const reduceMotion = useReducedMotion();
 
@@ -89,7 +59,7 @@ export default function ProjectGallery() {
         >
           <div>
             <h2 className="font-serif text-3xl tracking-tight text-[#17191f] sm:text-4xl lg:text-[42px]">
-              Project <span className="text-[#94102b]">Gallery</span>
+              {data.titleFirst} <span className="text-[#94102b]">{data.titleHighlight}</span>
             </h2>
             <span className="mt-3 block h-[2px] w-12 bg-[#94102b]" />
           </div>
@@ -98,7 +68,7 @@ export default function ProjectGallery() {
             <button
               type="button"
               onClick={previous}
-              aria-label="Previous projects"
+              aria-label={data.previousLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ead8d9] text-[#94102b] transition-all duration-300 hover:border-[#94102b] hover:bg-[#94102b] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#94102b] sm:h-12 sm:w-12"
             >
               <FiArrowLeft size={21} />
@@ -107,7 +77,7 @@ export default function ProjectGallery() {
             <button
               type="button"
               onClick={next}
-              aria-label="Next projects"
+              aria-label={data.nextLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ead8d9] text-[#94102b] transition-all duration-300 hover:border-[#94102b] hover:bg-[#94102b] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#94102b] sm:h-12 sm:w-12"
             >
               <FiArrowRight size={21} />
@@ -171,7 +141,7 @@ export default function ProjectGallery() {
               onClick={() =>
                 setStartIndex(Math.min(index, maxStart))
               }
-              aria-label={`Go to project ${index + 1}`}
+              aria-label={`${data.goToProjectLabel} ${index + 1}`}
               aria-current={startIndex === index ? "true" : undefined}
               className={`h-[5px] rounded-full transition-all duration-300 ${
                 startIndex === index

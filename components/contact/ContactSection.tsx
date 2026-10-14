@@ -4,33 +4,11 @@
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 
+import { contactSectionData } from "../../data";
+
 type ContactItemType = "phone" | "email" | "location";
 
-const contactItems: {
-  title: string;
-  lines: string[];
-  type: ContactItemType;
-  href: string;
-}[] = [
-  {
-    title: "Call Us",
-    lines: ["+1 234 567 8900"],
-    type: "phone",
-    href: "tel:+12345678900",
-  },
-  {
-    title: "Email Us",
-    lines: ["info@veyrastudio.com"],
-    type: "email",
-    href: "mailto:info@veyrastudio.com",
-  },
-  {
-    title: "Visit Us",
-    lines: ["123 Design Avenue,", "New York, NY 10001, USA"],
-    type: "location",
-    href: "https://maps.google.com/?q=123+Design+Avenue+New+York",
-  },
-];
+const contactItems = contactSectionData.items;
 
 function ContactIcon({ type }: { type: ContactItemType }) {
   const common = {
@@ -100,7 +78,7 @@ export default function ContactSection() {
           {/* Eyebrow */}
           <div className="mb-5 flex items-center gap-5 sm:mb-6">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#850d25] sm:text-sm">
-              Contact Us
+              {contactSectionData.eyebrow}
             </span>
 
             <span className="h-[2px] w-20 bg-[#850d25]/50 sm:w-28" />
@@ -111,11 +89,11 @@ export default function ContactSection() {
             id="contact-section-heading"
             className="max-w-[700px] font-serif text-[clamp(2.5rem,5vw,5rem)] font-normal leading-[1.04] tracking-[-0.055em] text-[#111318]"
           >
-            Let’s Discuss
+            {contactSectionData.titleFirst}
             <br />
-            Your{" "}
+            {contactSectionData.titleSecond}{" "}
             <span className="text-[#850d25]">
-              Next Project
+              {contactSectionData.titleHighlight}
             </span>
           </h2>
 
@@ -124,8 +102,7 @@ export default function ContactSection() {
             variants={reveal}
             className="mt-5 max-w-[620px] text-base leading-7 text-[#85858c] sm:mt-6 sm:text-lg sm:leading-[1.65]"
           >
-            We’d love to hear about your ideas, answer your
-            questions and help you create exceptional spaces.
+            {contactSectionData.description}
           </motion.p>
 
           {/* Contact details */}
@@ -221,8 +198,8 @@ export default function ContactSection() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/contact/project-detail.png"
-                alt="Contemporary luxury architecture with warm lighting, glass walls, and landscaped gardens"
+                src={contactSectionData.image}
+                alt={contactSectionData.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1023px) 100vw, 48vw"

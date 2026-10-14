@@ -9,36 +9,13 @@ import {
   Lightbulb,
   PanelsTopLeft,
 } from "lucide-react";
+import { serviceKeyFeaturesData } from "../../data";
 
-const features = [
-  {
-    number: "01",
-    title: "Custom Design Solutions",
-    description: "Tailored designs to match your unique needs and vision.",
-    Icon: Palette,
-  },
-  {
-    number: "02",
-    title: "Sustainable Approach",
-    description: "Eco-friendly and energy-efficient design practices.",
-    Icon: Leaf,
-  },
-  {
-    number: "03",
-    title: "Functional & Aesthetic",
-    description: "Spaces that blend beauty with everyday functionality.",
-    Icon: Lightbulb,
-  },
-  {
-    number: "04",
-    title: "End-to-End Support",
-    description: "From concept to completion, with expert guidance at every step.",
-    Icon: PanelsTopLeft,
-  },
-];
+const featureIcons = { Palette, Leaf, Lightbulb, PanelsTopLeft };
 
 export default function KeyFeatures() {
   const reduceMotion = useReducedMotion();
+  const data = serviceKeyFeaturesData;
 
   const containerVariants = {
     hidden: {},
@@ -83,8 +60,8 @@ export default function KeyFeatures() {
         >
           <div className="relative aspect-[1.65/1] w-full overflow-hidden bg-[#e9e4df]">
             <Image
-              src="/images/services/residence1.png"
-              alt="Contemporary living room with floor-to-ceiling glass windows and warm wooden interiors"
+              src={data.image}
+              alt={data.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
@@ -119,13 +96,13 @@ export default function KeyFeatures() {
             className="flex items-center gap-4 border-b border-[#e8e2df] pb-5 sm:flex-col sm:items-start sm:gap-5 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-5"
           >
             <span className="font-serif text-xl font-semibold text-[#8b102d]">
-              02
+              {data.sectionNumber}
             </span>
 
             <div className="h-px w-10 bg-[#8b102d] sm:h-16 sm:w-px" />
 
             <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#777479] sm:leading-4">
-              Key Features
+              {data.label}
             </span>
           </motion.div>
 
@@ -137,7 +114,9 @@ export default function KeyFeatures() {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 sm:gap-x-7"
           >
-            {features.map(({ number, title, description, Icon }, index) => (
+            {data.items.map(({ number, title, description, icon }, index) => {
+              const Icon = featureIcons[icon];
+              return (
               <motion.article
                 key={number}
                 variants={itemVariants}
@@ -178,7 +157,8 @@ export default function KeyFeatures() {
                   </p>
                 </div>
               </motion.article>
-            ))}
+              );
+            })}
           </motion.div>
         </div>
       </div>

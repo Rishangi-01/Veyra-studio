@@ -3,57 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const recentBlogs = [
-  {
-    title: "How Modern Architecture Shapes Better Living Spaces",
-    date: "18 Sep 2026",
-    image: "/images/blogs/gallery3.png",
-    href: "/blog/modern-architecture",
-  },
-  {
-    title: "Top Interior Design Trends to Watch in 2026",
-    date: "12 Sep 2026",
-    image: "/images/blogs/gallery1.png",
-    href: "/blog/interior-design-trends",
-  },
-  {
-    title: "Creating Outdoor Spaces that Inspire Relaxation",
-    date: "05 Sep 2026",
-    image: "/images/blogs/gallery2.png",
-    href: "/blog/landscape-design",
-  },
-  {
-    title: "Sustainable Design for a Better Tomorrow",
-    date: "28 Aug 2026",
-    image: "/images/blogs/project-detail.png",
-    href: "/blog/sustainable-design",
-  },
-];
-
-const categories = [
-  "Architecture",
-  "Interior Design",
-  "Landscape Design",
-  "Project Management",
-  "Sustainable Design",
-  "Urban Planning",
-];
-
-const features = [
-  {
-    title: "Overview",
-    text: "Modern architecture is more than just a visual style — it's a thoughtful approach to creating spaces that improve the way we live. By combining innovative design, functional layouts and sustainable practices, modern homes and commercial spaces can be both beautiful and practical.",
-  },
-  {
-    title: "Functionality Meets Aesthetics",
-    text: "Modern architectural design focuses on open spaces, natural light and clean lines. These elements not only create a visually appealing environment but also make spaces more functional, comfortable and efficient for everyday living.",
-  },
-  {
-    title: "Sustainable and Future-Ready",
-    text: "Sustainability is a key part of modern architecture. From energy-efficient materials to environmentally conscious design practices, modern spaces are built to reduce environmental impact while providing long-term comfort and value.",
-  },
-];
+import { blogDetailsData } from "../../data";
 
 function Reveal({
   children,
@@ -117,29 +67,15 @@ function SidebarCard({
 }
 
 export default function BlogDetails() {
-  const articleTitle =
-    "How Modern Architecture Shapes Better Living Spaces";
+  const { article, sidebar } = blogDetailsData;
 
   const shareUrl =
     typeof window !== "undefined" ? window.location.href : "";
 
-  const shareLinks = [
-    {
-      label: "Facebook",
-      icon: "f",
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-    },
-    {
-      label: "Instagram",
-      icon: "◎",
-      href: "https://www.instagram.com/",
-    },
-    {
-      label: "LinkedIn",
-      icon: "in",
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
-    },
-  ];
+  const shareLinks = sidebar.shareLinks.map((social) => ({
+    ...social,
+    href: social.href.replace("{url}", encodeURIComponent(shareUrl)),
+  }));
 
   return (
     <main className="min-h-screen bg-[#faf9f6] py-10 sm:py-14 lg:py-16">
@@ -148,20 +84,19 @@ export default function BlogDetails() {
         <article className="min-w-0">
           <Reveal>
             <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#850d29] sm:text-xs">
-              <span>Architecture</span>
+              <span>{article.category}</span>
               <span className="h-px w-10 bg-[#a99da0]" />
-              <time dateTime="2026-09-18" className="text-[#85858a]">
-                18 Sep 2026
+              <time dateTime={article.dateTime} className="text-[#85858a]">
+                {article.date}
               </time>
             </div>
 
             <h1 className="max-w-4xl font-serif text-3xl leading-[1.13] tracking-tight text-[#15151c] sm:text-4xl lg:text-[48px]">
-              {articleTitle}
+              {article.title}
             </h1>
 
             <p className="mt-4 max-w-3xl text-sm leading-6 text-[#7c7c82] sm:text-base sm:leading-7">
-              Discover how thoughtful architectural design can enhance
-              everyday living with functionality, aesthetics and sustainability.
+              {article.description}
             </p>
           </Reveal>
 
@@ -169,8 +104,8 @@ export default function BlogDetails() {
           <Reveal delay={100}>
             <div className="blog-featured-image relative mt-6 aspect-[1.55/1] w-full overflow-hidden bg-[#e8e4de] sm:aspect-[1.58/1]">
               <Image
-                src="/images/blogs/gallery3.png"
-                alt="Modern luxury residence with illuminated glass windows and landscaped gardens"
+                src={article.image}
+                alt={article.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1023px) 100vw, 68vw"
@@ -181,7 +116,7 @@ export default function BlogDetails() {
 
           {/* Article sections */}
           <div className="mt-7 space-y-6 sm:mt-8 sm:space-y-7">
-            {features.map((feature, index) => (
+            {article.features.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 100}>
                 <section>
                   <h2 className="font-serif text-[23px] leading-tight tracking-tight text-[#19191f] sm:text-[27px]">
@@ -206,8 +141,7 @@ export default function BlogDetails() {
                     “
                   </span>
                   <p className="font-serif text-base italic leading-7 text-[#303037] sm:text-lg">
-                    Great architecture goes beyond appearance — it creates
-                    spaces that inspire, support and elevate everyday life.
+                    {article.quote}
                   </p>
                 </div>
               </blockquote>
@@ -216,24 +150,17 @@ export default function BlogDetails() {
             {/* Supporting images */}
             <Reveal>
               <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-[1.5/1] overflow-hidden bg-[#e8e4de]">
-                  <Image
-                    src="/images/blogs/gallery1.png"
-                    alt="Contemporary living room with natural materials"
-                    fill
-                    sizes="(max-width: 1023px) 50vw, 34vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-                <div className="relative aspect-[1.5/1] overflow-hidden bg-[#e8e4de]">
-                  <Image
-                    src="/images/blogs/gallery2.png"
-                    alt="Modern kitchen with wooden cabinetry and natural light"
-                    fill
-                    sizes="(max-width: 1023px) 50vw, 34vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
+                {article.gallery.map((image) => (
+                  <div key={image.image} className="relative aspect-[1.5/1] overflow-hidden bg-[#e8e4de]">
+                    <Image
+                      src={image.image}
+                      alt={image.imageAlt}
+                      fill
+                      sizes="(max-width: 1023px) 50vw, 34vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>
@@ -241,9 +168,9 @@ export default function BlogDetails() {
 
         {/* Sidebar */}
         <aside className="flex min-w-0 flex-col gap-4 lg:sticky lg:top-8">
-          <SidebarCard title="Recent Blogs">
+          <SidebarCard title={sidebar.recentBlogsTitle}>
             <div className="space-y-3">
-              {recentBlogs.map((blog) => (
+              {sidebar.recentBlogs.map((blog) => (
                 <Link
                   href={blog.href}
                   key={blog.title}
@@ -271,12 +198,12 @@ export default function BlogDetails() {
             </div>
           </SidebarCard>
 
-          <SidebarCard title="Categories" delay={100}>
-            <nav aria-label="Blog categories" className="space-y-0.5">
-              {categories.map((category) => (
+          <SidebarCard title={sidebar.categoriesTitle} delay={100}>
+            <nav aria-label={sidebar.categoriesAriaLabel} className="space-y-0.5">
+              {sidebar.categories.map((category) => (
                 <Link
                   key={category}
-                  href={`/blog/category/${category.toLowerCase().replaceAll(" ", "-")}`}
+                  href={`${sidebar.categoryHrefPrefix}${category.toLowerCase().replaceAll(" ", "-")}`}
                   className="group flex items-center justify-between border-b border-[#eeece9] py-2 text-xs text-[#393940] last:border-0 hover:text-[#850d29]"
                 >
                   {category}
@@ -288,7 +215,7 @@ export default function BlogDetails() {
             </nav>
           </SidebarCard>
 
-          <SidebarCard title="Share This Post" delay={200}>
+          <SidebarCard title={sidebar.shareTitle} delay={200}>
             <div className="flex flex-wrap gap-2">
               {shareLinks.map((social) => (
                 <a
@@ -296,7 +223,7 @@ export default function BlogDetails() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Share on ${social.label}`}
+                  aria-label={`${sidebar.shareOnLabelPrefix} ${social.label}`}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e7e0df] text-xs font-semibold text-[#850d29] transition-all duration-300 hover:-translate-y-1 hover:border-[#850d29] hover:bg-[#850d29] hover:text-white"
                 >
                   {social.icon}
@@ -304,7 +231,7 @@ export default function BlogDetails() {
               ))}
               <button
                 type="button"
-                aria-label="Copy article link"
+                aria-label={sidebar.copyLinkLabel}
                 onClick={() => {
                   if (typeof window !== "undefined") {
                     void navigator.clipboard.writeText(window.location.href);
@@ -317,17 +244,16 @@ export default function BlogDetails() {
             </div>
           </SidebarCard>
 
-          <SidebarCard title="Need a Consultation?" delay={300}>
+          <SidebarCard title={sidebar.consultationTitle} delay={300}>
             <p className="text-xs leading-[1.8] text-[#77777d]">
-              Let’s discuss your project and turn your vision into exceptional
-              spaces.
+              {sidebar.consultationDescription}
             </p>
 
             <Link
-              href="/contact"
+              href={sidebar.consultationHref}
               className="mt-4 inline-flex min-h-10 items-center gap-5 bg-[#850d29] px-4 py-2 text-xs font-medium text-white transition-colors duration-300 hover:bg-[#65081e]"
             >
-              Get in Touch
+              {sidebar.consultationButton}
               <span aria-hidden="true" className="text-lg leading-none">
                 →
               </span>

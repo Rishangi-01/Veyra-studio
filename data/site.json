@@ -1940,6 +1940,1009 @@
         "image": "/images/home/contact-interior.png",
         "imageAlt": "Contemporary luxury interior with warm wooden finishes and garden views"
       }
+    },
+    "pages": {
+      "heroes": {
+        "about": {
+          "title": "About Us",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "blog": {
+          "title": "Blogs",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "blogDetails": {
+          "title": "Blogs Detail",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "contact": {
+          "title": "Contact Us",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "quote": {
+          "title": "Get a Quote",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "team": {
+          "title": "Our Team",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "projects": {
+          "title": "Projects",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "projectsDetail": {
+          "title": "Projects Detail",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "services": {
+          "title": "Services",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "servicesDetail": {
+          "title": "Services Detail",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        },
+        "testimonials": {
+          "title": "Testimonials",
+          "image": "/images/hero-banner.png",
+          "imageAlt": "Contemporary architecture beside a natural rocky landscape"
+        }
+      },
+      "blog": {
+        "eyebrow": "OUR BLOGS",
+        "titleFirst": "Insights &",
+        "titleHighlight": "Inspiration",
+        "description": "Explore our latest thoughts, design ideas and expert insights on architecture, interiors and modern living.",
+        "readArticleLabelPrefix": "Read",
+        "readMoreLabel": "Read More",
+        "detailsHref": "/blog/blog-details",
+        "items": [
+          {
+            "date": "18",
+            "month": "SEP 2026",
+            "category": "ARCHITECTURE",
+            "title": "How Modern Architecture Shapes Better Living Spaces",
+            "description": "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
+            "image": "/images/blogs/gallery1.png",
+            "href": "/blog/modern-architecture"
+          },
+          {
+            "date": "12",
+            "month": "SEP 2026",
+            "category": "INTERIOR DESIGN",
+            "title": "Top Interior Design Trends to Watch in 2026",
+            "description": "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
+            "image": "/images/blogs/project-detail.png",
+            "href": "/blog/interior-design-trends"
+          },
+          {
+            "date": "05",
+            "month": "SEP 2026",
+            "category": "LANDSCAPE DESIGN",
+            "title": "Creating Outdoor Spaces that Inspire Relaxation",
+            "description": "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
+            "image": "/images/blogs/gallery3.png",
+            "href": "/blog/landscape-design"
+          },
+          {
+            "date": "18",
+            "month": "SEP 2026",
+            "category": "ARCHITECTURE",
+            "title": "How Modern Architecture Shapes Better Living Spaces",
+            "description": "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
+            "image": "/images/blogs/gallery1.png",
+            "href": "/blog/house-design-architecture"
+          },
+          {
+            "date": "12",
+            "month": "SEP 2026",
+            "category": "INTERIOR DESIGN",
+            "title": "Top Interior Design Trends to Watch in 2026",
+            "description": "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
+            "image": "/images/blogs/project-detail.png",
+            "href": "/blog/office-interior-design"
+          },
+          {
+            "date": "05",
+            "month": "SEP 2026",
+            "category": "LANDSCAPE DESIGN",
+            "title": "Creating Outdoor Spaces that Inspire Relaxation",
+            "description": "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
+            "image": "/images/blogs/gallery3.png",
+            "href": "/blog/living-space-design"
+          }
+        ]
+      },
+      "blogDetails": {
+        "article": {
+          "category": "Architecture",
+          "dateTime": "2026-09-18",
+          "date": "18 Sep 2026",
+          "title": "How Modern Architecture Shapes Better Living Spaces",
+          "description": "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
+          "image": "/images/blogs/gallery3.png",
+          "imageAlt": "Modern luxury residence with illuminated glass windows and landscaped gardens",
+          "features": [
+            {
+              "title": "Overview",
+              "text": "Modern architecture is more than just a visual style — it's a thoughtful approach to creating spaces that improve the way we live. By combining innovative design, functional layouts and sustainable practices, modern homes and commercial spaces can be both beautiful and practical."
+            },
+            {
+              "title": "Functionality Meets Aesthetics",
+              "text": "Modern architectural design focuses on open spaces, natural light and clean lines. These elements not only create a visually appealing environment but also make spaces more functional, comfortable and efficient for everyday living."
+            },
+            {
+              "title": "Sustainable and Future-Ready",
+              "text": "Sustainability is a key part of modern architecture. From energy-efficient materials to environmentally conscious design practices, modern spaces are built to reduce environmental impact while providing long-term comfort and value."
+            }
+          ],
+          "quote": "Great architecture goes beyond appearance — it creates spaces that inspire, support and elevate everyday life.",
+          "gallery": [
+            {
+              "image": "/images/blogs/gallery1.png",
+              "imageAlt": "Contemporary living room with natural materials"
+            },
+            {
+              "image": "/images/blogs/gallery2.png",
+              "imageAlt": "Modern kitchen with wooden cabinetry and natural light"
+            }
+          ]
+        },
+        "sidebar": {
+          "recentBlogs": [
+            {
+              "title": "How Modern Architecture Shapes Better Living Spaces",
+              "date": "18 Sep 2026",
+              "image": "/images/blogs/gallery3.png",
+              "href": "/blog/modern-architecture"
+            },
+            {
+              "title": "Top Interior Design Trends to Watch in 2026",
+              "date": "12 Sep 2026",
+              "image": "/images/blogs/gallery1.png",
+              "href": "/blog/interior-design-trends"
+            },
+            {
+              "title": "Creating Outdoor Spaces that Inspire Relaxation",
+              "date": "05 Sep 2026",
+              "image": "/images/blogs/gallery2.png",
+              "href": "/blog/landscape-design"
+            },
+            {
+              "title": "Sustainable Design for a Better Tomorrow",
+              "date": "28 Aug 2026",
+              "image": "/images/blogs/project-detail.png",
+              "href": "/blog/sustainable-design"
+            }
+          ],
+          "categories": [
+            "Architecture",
+            "Interior Design",
+            "Landscape Design",
+            "Project Management",
+            "Sustainable Design",
+            "Urban Planning"
+          ],
+          "categoryHrefPrefix": "/blog/category/",
+          "categoriesAriaLabel": "Blog categories",
+          "recentBlogsTitle": "Recent Blogs",
+          "categoriesTitle": "Categories",
+          "shareTitle": "Share This Post",
+          "shareOnLabelPrefix": "Share on",
+          "shareLinks": [
+            {
+              "label": "Facebook",
+              "icon": "f",
+              "kind": "facebook",
+              "href": "https://www.facebook.com/sharer/sharer.php?u={url}"
+            },
+            {
+              "label": "Instagram",
+              "icon": "◎",
+              "kind": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "label": "LinkedIn",
+              "icon": "in",
+              "kind": "linkedin",
+              "href": "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+            }
+          ],
+          "copyLinkLabel": "Copy article link",
+          "consultationTitle": "Need a Consultation?",
+          "consultationDescription": "Let’s discuss your project and turn your vision into exceptional spaces.",
+          "consultationButton": "Get in Touch",
+          "consultationHref": "/contact"
+        }
+      },
+      "contact": {
+        "section": {
+          "eyebrow": "Contact Us",
+          "titleFirst": "Let’s Discuss",
+          "titleSecond": "Your",
+          "titleHighlight": "Next Project",
+          "description": "We’d love to hear about your ideas, answer your questions and help you create exceptional spaces.",
+          "items": [
+            {
+              "title": "Call Us",
+              "lines": [
+                "+1 234 567 8900"
+              ],
+              "type": "phone",
+              "href": "tel:+12345678900"
+            },
+            {
+              "title": "Email Us",
+              "lines": [
+                "info@veyrastudio.com"
+              ],
+              "type": "email",
+              "href": "mailto:info@veyrastudio.com"
+            },
+            {
+              "title": "Visit Us",
+              "lines": [
+                "123 Design Avenue,",
+                "New York, NY 10001, USA"
+              ],
+              "type": "location",
+              "href": "https://maps.google.com/?q=123+Design+Avenue+New+York"
+            }
+          ],
+          "image": "/images/contact/project-detail.png",
+          "imageAlt": "Contemporary luxury architecture with warm lighting, glass walls, and landscaped gardens"
+        },
+        "form": {
+          "ariaLabel": "Contact our studio",
+          "sendMessageEyebrow": "Send a Message",
+          "titleFirst": "Get In",
+          "titleHighlight": "Touch",
+          "description": "Fill out the form below and our team will get back to you as soon as possible.",
+          "fields": {
+            "fullName": {
+              "label": "Full Name",
+              "placeholder": "Enter your name"
+            },
+            "email": {
+              "label": "Email Address",
+              "placeholder": "Enter your email"
+            },
+            "phone": {
+              "label": "Phone Number",
+              "placeholder": "Enter your phone number"
+            },
+            "projectType": {
+              "label": "Project Type",
+              "placeholder": "Select project type"
+            },
+            "location": {
+              "label": "Project Location",
+              "placeholder": "Enter your project location"
+            },
+            "message": {
+              "label": "Message",
+              "placeholder": "Tell us about your project requirements..."
+            }
+          },
+          "projectTypes": [
+            "Residential Design",
+            "Commercial Design",
+            "Interior Design",
+            "Architecture",
+            "Renovation",
+            "Other"
+          ],
+          "submitLabel": "Send Message",
+          "submittingLabel": "Sending...",
+          "successMessage": "Demo submission completed. Connect your backend to deliver this enquiry to your inbox.",
+          "locationEyebrow": "Our Location",
+          "locationTitleFirst": "Visit Our",
+          "locationTitleHighlight": "Studio",
+          "locationDescription": "We’re conveniently located in the heart of New York. Stop by our studio to discuss your project in person.",
+          "mapTitle": "Veyra Studio location map in New York",
+          "mapUrl": "https://maps.google.com/maps?q=123%20Design%20Avenue%2C%20New%20York%2C%20NY%2010001&t=&z=13&ie=UTF8&iwloc=&output=embed",
+          "studioName": "Veyra Studio",
+          "addressLines": [
+            "123 Design Avenue,",
+            "New York, NY 10001, USA"
+          ],
+          "mapAddressLines": [
+            "123 Design Avenue,",
+            "New York, NY 10001"
+          ],
+          "officeEyebrow": "Our Office",
+          "officeImage": "/images/contact/gallery1.png",
+          "officeImageAlt": "Warm and contemporary Veyra Studio office interior",
+          "phone": "+1 234 567 8900",
+          "phoneHref": "tel:+12345678900",
+          "email": "info@veyrastudio.com",
+          "emailHref": "mailto:info@veyrastudio.com",
+          "hours": [
+            "Mon - Sat: 9:00 AM - 6:00 PM",
+            "Sunday: Closed"
+          ]
+        }
+      },
+      "quote": {
+        "eyebrow": "Get a Quote",
+        "titleFirst": "Let’s Bring Your",
+        "titleSecond": "Vision to",
+        "titleHighlight": "Life",
+        "description": "Share your requirements with us and our team will get back to you with a customised quote tailored to your project.",
+        "image": "/images/get-quote/banner4.jpg",
+        "imageAlt": "Contemporary luxury residence designed by Veyra Studio",
+        "benefits": [
+          {
+            "title": "Customised Quote",
+            "description": "Tailored to your needs and budget.",
+            "icon": "FileText"
+          },
+          {
+            "title": "Expert Guidance",
+            "description": "Consult with our design specialists.",
+            "icon": "MessageCircle"
+          },
+          {
+            "title": "Quick Response",
+            "description": "We'll get back to you shortly.",
+            "icon": "CheckCircle2"
+          }
+        ],
+        "formTitleFirst": "Request a",
+        "formTitleHighlight": "Quote",
+        "formDescription": "Fill out the form below and tell us about your project. Our team will reach out with a personalised quote.",
+        "fields": {
+          "fullName": {
+            "label": "Full Name",
+            "placeholder": "Enter your name"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "placeholder": "Enter phone number"
+          },
+          "projectType": {
+            "label": "Project Type",
+            "placeholder": "Select project type"
+          },
+          "location": {
+            "label": "Project Location",
+            "placeholder": "Enter your location"
+          },
+          "budget": {
+            "label": "Estimated Budget",
+            "placeholder": "Select budget range"
+          },
+          "timeline": {
+            "label": "Preferred Timeline",
+            "placeholder": "Select timeline"
+          },
+          "details": {
+            "label": "Project Details",
+            "placeholder": "Tell us about your project requirements..."
+          }
+        },
+        "projectTypes": [
+          "Architectural Design",
+          "Interior Design",
+          "Landscape Design",
+          "Residential Design",
+          "Commercial Design",
+          "Project Management",
+          "Consultation"
+        ],
+        "budgets": [
+          "Below ₹5 Lakhs",
+          "₹5–10 Lakhs",
+          "₹10–25 Lakhs",
+          "₹25–50 Lakhs",
+          "₹50 Lakhs–1 Crore",
+          "Above ₹1 Crore"
+        ],
+        "timelines": [
+          "Immediately",
+          "Within 1 Month",
+          "1–3 Months",
+          "3–6 Months",
+          "Flexible"
+        ],
+        "uploadTitle": "Upload Files (Optional)",
+        "uploadDescription": "Upload reference images, floor plans or any other document. Max 10 MB total, JPG, PNG, PDF.",
+        "invalidFilesMessage": "Please select JPG, PNG or PDF files within a combined 10 MB limit.",
+        "invalidPhoneMessage": "Please enter a valid phone number.",
+        "apiErrorMessage": "Unable to submit your request.",
+        "submitLabel": "Request a Quote",
+        "submittingLabel": "Submitting...",
+        "successMessage": "Your quote request has been submitted successfully!",
+        "defaultErrorMessage": "Something went wrong. Please try again.",
+        "privacyMessage": "Your project details will be handled with care."
+      },
+      "team": {
+        "about": {
+          "eyebrow": "Our Team",
+          "titleFirst": "Meet Our",
+          "titleHighlight": "Expert Team",
+          "description": "A passionate team of architects, designers and project specialists working together to create spaces that inspire and elevate everyday living.",
+          "image": "/images/team/about-team.png",
+          "imageAlt": "Contemporary architectural interior with natural stone and warm wood finishes",
+          "imageBadgeLines": [
+            "People",
+            "Behind",
+            "Exceptional",
+            "Spaces"
+          ],
+          "featureLines": [
+            "Designing",
+            "People-Centric",
+            "Spaces"
+          ],
+          "previousLabel": "Previous team members",
+          "nextLabel": "Next team members",
+          "linkedInLabel": "on LinkedIn",
+          "instagramLabel": "on Instagram",
+          "emailLabelPrefix": "Email",
+          "goToSlideLabel": "Go to team slide"
+        },
+        "members": [
+          {
+            "name": "Arjun Mehta",
+            "role": "Principal Architect",
+            "image": "/images/team/team1.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:arjun@example.com"
+          },
+          {
+            "name": "Neha Kapoor",
+            "role": "Interior Designer",
+            "image": "/images/team/team2.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:neha@example.com"
+          },
+          {
+            "name": "Rohan Sinha",
+            "role": "Project Manager",
+            "image": "/images/team/team3.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:rohan@example.com"
+          },
+          {
+            "name": "Kavya Rao",
+            "role": "Design Consultant",
+            "image": "/images/team/team4.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:kavya@example.com"
+          },
+          {
+            "name": "Vikram Sharma",
+            "role": "Senior Architect",
+            "image": "/images/team/team3.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:vikram@example.com"
+          },
+          {
+            "name": "Ananya Verma",
+            "role": "Interior Stylist",
+            "image": "/images/team/team1.png",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "emailHref": "mailto:ananya@example.com"
+          }
+        ]
+      },
+      "featuredWork": {
+        "eyebrow": "Featured Work",
+        "titleFirst": "Our",
+        "titleHighlight": "Projects",
+        "description": "A collection of thoughtfully designed spaces that reflect our commitment to quality, functionality and timeless design.",
+        "filterLabel": "Filter projects by category",
+        "detailsHref": "/projects/projects-detail",
+        "categories": [
+          "All",
+          "Residential",
+          "Commercial",
+          "Interior",
+          "Landscape"
+        ],
+        "items": [
+          {
+            "title": "The Willow Residence",
+            "category": "Residential",
+            "location": "California, USA",
+            "image": "/images/home/banner2.jpg",
+            "imageAlt": "Contemporary residence framed by a landscaped garden"
+          },
+          {
+            "title": "Horizon Office",
+            "category": "Commercial",
+            "location": "New York, USA",
+            "image": "/images/home/banner3.jpg",
+            "imageAlt": "Modern glass-fronted commercial building"
+          },
+          {
+            "title": "Urban Luxe",
+            "category": "Interior",
+            "location": "Miami, USA",
+            "image": "/images/home/banner4.jpg",
+            "imageAlt": "Warm, contemporary living room with natural finishes"
+          },
+          {
+            "title": "Cedar Ridge Retreat",
+            "category": "Landscape",
+            "location": "Oregon, USA",
+            "image": "/images/home/banner5.jpg",
+            "imageAlt": "A modern retreat integrated with its surrounding landscape"
+          },
+          {
+            "title": "The Courtyard House",
+            "category": "Residential",
+            "location": "Austin, USA",
+            "image": "/images/home/banner6.jpg",
+            "imageAlt": "Modern family home with a private courtyard"
+          },
+          {
+            "title": "The Glass Pavilion",
+            "category": "Commercial",
+            "location": "Seattle, USA",
+            "image": "/images/home/banner7.jpg",
+            "imageAlt": "Contemporary pavilion with expansive glass walls"
+          }
+        ]
+      },
+      "projectDetails": {
+        "titleFirst": "Modern Family",
+        "titleHighlight": "Residence",
+        "description": "A contemporary home designed to offer a perfect balance of elegance, functionality and comfort for modern family living.",
+        "heroImage": "/images/projects/project-detail.png",
+        "heroImageAlt": "Modern family residence with contemporary architecture, warm lighting and landscaped gardens",
+        "overviewTitleFirst": "Project",
+        "overviewTitleHighlight": "Overview",
+        "overview": "The Modern Family Residence is a thoughtfully designed home that blends contemporary architecture with warm, functional interiors. The project focuses on creating open, airy spaces, seamlessly connecting indoor and outdoor living while maintaining privacy and comfort for a modern family lifestyle.",
+        "approachTitleFirst": "Design",
+        "approachTitleHighlight": "Approach",
+        "approach": "Our design approach centers on minimal aesthetics, natural materials and abundant natural light. Every element, from spatial planning to material selection, is carefully considered to ensure a cohesive, elegant and timeless design that enhances everyday living.",
+        "details": [
+          {
+            "icon": "FiHome",
+            "label": "Project Name",
+            "value": "Modern Family Residence"
+          },
+          {
+            "icon": "FiMapPin",
+            "label": "Location",
+            "value": "New York, USA"
+          },
+          {
+            "icon": "FiLayers",
+            "label": "Project Type",
+            "value": "Residential"
+          },
+          {
+            "icon": "FiMaximize",
+            "label": "Project Area",
+            "value": "4,200 Sq. Ft."
+          },
+          {
+            "icon": "FiCalendar",
+            "label": "Year Completed",
+            "value": "2024"
+          },
+          {
+            "icon": "FiSettings",
+            "label": "Services",
+            "value": "Architecture, Interior Design, Landscape Design"
+          }
+        ],
+        "features": [
+          "Spacious open-plan living area",
+          "Floor-to-ceiling glass windows",
+          "Modern kitchen with premium finishes",
+          "Outdoor lounge and landscaped garden",
+          "Sustainable and energy-efficient design"
+        ],
+        "principles": [
+          {
+            "icon": "FaLeaf",
+            "title": "Sustainable Design",
+            "description": "Energy-efficient solutions for a greener future."
+          },
+          {
+            "icon": "FiAward",
+            "title": "Premium Materials",
+            "description": "High-quality materials for lasting beauty."
+          },
+          {
+            "icon": "FiUsers",
+            "title": "Client-Centric",
+            "description": "Designed around the client's lifestyle and needs."
+          }
+        ],
+        "projectOverviewHeading": "Project",
+        "projectDetailsHeading": "Project",
+        "projectDetailsHeadingHighlight": "Details",
+        "keyFeaturesHeading": "Key",
+        "keyFeaturesHeadingHighlight": "Features",
+        "ctaEyebrow": "Like this project?",
+        "ctaTitleFirst": "Let's Discuss",
+        "ctaTitleSecond": "Your Project",
+        "ctaButton": "Get a Quote",
+        "ctaHref": "/contact-us"
+      },
+      "projectDetailGallery": {
+        "titleFirst": "Project",
+        "titleHighlight": "Gallery",
+        "previousLabel": "Previous projects",
+        "nextLabel": "Next projects",
+        "goToProjectLabel": "Go to project",
+        "items": [
+          {
+            "image": "/images/projects/gallery1.png",
+            "title": "Contemporary Living Room",
+            "category": "Interior Design",
+            "alt": "Luxury contemporary living room with warm wood finishes"
+          },
+          {
+            "image": "/images/projects/gallery2.png",
+            "title": "Modern Kitchen",
+            "category": "Interior Design",
+            "alt": "Modern kitchen with a wooden island and pendant lighting"
+          },
+          {
+            "image": "/images/projects/gallery3.png",
+            "title": "Luxury Bedroom",
+            "category": "Residential Design",
+            "alt": "Elegant bedroom with natural wood and floor-to-ceiling windows"
+          },
+          {
+            "image": "/images/projects/gallery2.png",
+            "title": "Modern Family Residence",
+            "category": "Architecture",
+            "alt": "Contemporary residential architecture"
+          },
+          {
+            "image": "/images/projects/gallery3.png",
+            "title": "Refined Living Spaces",
+            "category": "Interior Design",
+            "alt": "Refined contemporary interior with natural materials"
+          }
+        ]
+      },
+      "services": {
+        "showcase": {
+          "image": "/images/services/residence2.png",
+          "imageAlt": "Contemporary architectural residence designed by Veyra Studio",
+          "secondaryImage": "/images/services/residence1.png",
+          "secondaryImageAlt": "Architectural facade and landscaped outdoor space",
+          "eyebrow": "Our Services",
+          "titleFirst": "Transform",
+          "titleSecond": "Your Space",
+          "titleHighlight": "with Veyra Studio",
+          "experience": "Since 2000",
+          "discipline": "Architecture & Interior",
+          "description": "We offer end-to-end architectural and interior design services to create functional, aesthetic and timeless spaces. Every detail is thoughtfully considered to bring your vision to life.",
+          "items": [
+            {
+              "number": "01",
+              "title": "Architectural Design",
+              "href": "/services/architectural-design"
+            },
+            {
+              "number": "02",
+              "title": "Interior Design",
+              "href": "/services/interior-design"
+            },
+            {
+              "number": "03",
+              "title": "Landscape Design",
+              "href": "/services/landscape-design"
+            },
+            {
+              "number": "04",
+              "title": "Project Management",
+              "href": "/services/project-management"
+            },
+            {
+              "number": "05",
+              "title": "Urban Planning",
+              "href": "/services/urban-planning"
+            },
+            {
+              "number": "06",
+              "title": "Residential Design",
+              "href": "/services/residential-design"
+            },
+            {
+              "number": "07",
+              "title": "Commercial Design",
+              "href": "/services/commercial-design"
+            },
+            {
+              "number": "08",
+              "title": "Consultation",
+              "href": "/contact-us"
+            }
+          ],
+          "ctaLabel": "Discuss Your Project",
+          "ctaHref": "/services/services-detail"
+        },
+        "architecturalDesign": {
+          "sectionNumber": "01",
+          "sideLabel": "About Service",
+          "eyebrow": "Architecture & Design",
+          "titleFirst": "Designing Spaces",
+          "titleSecond": "for a",
+          "titleHighlight": "Better Tomorrow",
+          "description": "Our architectural design services focus on creating spaces that are innovative, functional and sustainable. We combine aesthetics with practicality to design environments that reflect your vision and meet modern lifestyle needs.",
+          "ctaLabel": "Enquire Now",
+          "ctaHref": "/contact-us",
+          "image": "/images/services/residence1.png",
+          "imageAlt": "Contemporary modern architectural residence",
+          "secondaryImage": "/images/services/residence2.png",
+          "secondaryImageAlt": "Architectural facade and landscaped entrance detail"
+        },
+        "keyFeatures": {
+          "sectionNumber": "02",
+          "label": "Key Features",
+          "image": "/images/services/residence1.png",
+          "imageAlt": "Contemporary living room with floor-to-ceiling glass windows and warm wooden interiors",
+          "items": [
+            {
+              "number": "01",
+              "title": "Custom Design Solutions",
+              "description": "Tailored designs to match your unique needs and vision.",
+              "icon": "Palette"
+            },
+            {
+              "number": "02",
+              "title": "Sustainable Approach",
+              "description": "Eco-friendly and energy-efficient design practices.",
+              "icon": "Leaf"
+            },
+            {
+              "number": "03",
+              "title": "Functional & Aesthetic",
+              "description": "Spaces that blend beauty with everyday functionality.",
+              "icon": "Lightbulb"
+            },
+            {
+              "number": "04",
+              "title": "End-to-End Support",
+              "description": "From concept to completion, with expert guidance at every step.",
+              "icon": "PanelsTopLeft"
+            }
+          ]
+        },
+        "designProcess": {
+          "sectionNumber": "03",
+          "label": "Our Process",
+          "titleFirst": "Our",
+          "titleHighlight": "Design Process",
+          "description": "A structured and collaborative approach to bring your vision to life, from the first conversation to the final finishing touches.",
+          "items": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "description": "Understanding your goals, requirements and lifestyle."
+            },
+            {
+              "number": "02",
+              "title": "Concept & Planning",
+              "description": "Creating initial concepts and detailed plans."
+            },
+            {
+              "number": "03",
+              "title": "Design Development",
+              "description": "Refining designs with 3D visualizations and materials."
+            },
+            {
+              "number": "04",
+              "title": "Final Delivery",
+              "description": "Completed design with full documentation."
+            }
+          ]
+        },
+        "projectGallery": {
+          "sectionNumber": "04",
+          "labelFirst": "Project",
+          "labelSecond": "Gallery",
+          "viewMoreNumber": "01",
+          "viewMoreFirst": "View",
+          "viewMoreSecond": "More Projects",
+          "viewMoreHref": "/projects",
+          "images": {
+            "featured": {
+              "src": "/images/services/gallery1.png",
+              "alt": "Contemporary luxury residence with landscaped gardens"
+            },
+            "living": {
+              "src": "/images/services/gallery2.png",
+              "alt": "Elegant modern living room with natural light"
+            },
+            "kitchen": {
+              "src": "/images/services/residence1.png",
+              "alt": "Contemporary kitchen and dining interior"
+            }
+          }
+        },
+        "relatedServices": {
+          "sectionNumber": "05",
+          "labelFirst": "Related",
+          "labelSecond": "Services",
+          "titleFirst": "Explore Other",
+          "titleHighlight": "Services",
+          "previousLabel": "Previous services",
+          "nextLabel": "Next services",
+          "groupLabel": "Go to service group",
+          "items": [
+            {
+              "title": "Interior Design",
+              "image": "/images/services/gallery1.png",
+              "description": "Thoughtfully designed interiors for modern living.",
+              "href": "/services/interior-design"
+            },
+            {
+              "title": "Landscape Design",
+              "image": "/images/services/gallery2.png",
+              "description": "Beautiful outdoor spaces inspired by nature.",
+              "href": "/services/landscape-design"
+            },
+            {
+              "title": "Project Management",
+              "image": "/images/services/residence1.png",
+              "description": "Expert coordination from concept to completion.",
+              "href": "/services/project-management"
+            },
+            {
+              "title": "Residential Design",
+              "image": "/images/services/project-detail.png",
+              "description": "Timeless homes tailored to your lifestyle.",
+              "href": "/services/residential-design"
+            },
+            {
+              "title": "Commercial Design",
+              "image": "/images/services/gallery2.png",
+              "description": "Functional, refined spaces for modern businesses.",
+              "href": "/services/commercial-design"
+            },
+            {
+              "title": "Architectural Design",
+              "image": "/images/services/residence1.png",
+              "description": "Distinctive architecture with purpose and character.",
+              "href": "/services/architectural-design"
+            }
+          ]
+        }
+      },
+      "testimonials": {
+        "intro": {
+          "image": "/images/testimonials/testimonials-bg.png",
+          "eyebrow": "Client Testimonials",
+          "titleFirst": "What Our",
+          "titleHighlight": "Clients Say",
+          "description": "Stories from our clients who trusted Veyra Studio to bring their spaces to life. Their satisfaction inspires us to create more meaningful, functional and beautiful environments.",
+          "stats": [
+            {
+              "value": "100+",
+              "label": "Happy Clients"
+            },
+            {
+              "value": "4.9/5",
+              "label": "Average Rating"
+            },
+            {
+              "value": "98%",
+              "label": "Client Satisfaction"
+            }
+          ]
+        },
+        "reviews": {
+          "rating": 5,
+          "ratingLabel": "5 out of 5 stars",
+          "profileAltSuffix": "profile",
+          "items": [
+            {
+              "image": "/images/testimonials/residence1.png",
+              "imageAlt": "Contemporary luxury residential architecture",
+              "quote": "Veyra Studio transformed our vision into a home that feels both luxurious and livable. Their attention to detail and design sense is truly exceptional.",
+              "name": "Rahul Mehta",
+              "role": "Homeowner",
+              "location": "New York",
+              "avatar": "/images/testimonials/avatar1.png"
+            },
+            {
+              "image": "/images/testimonials/residence2.png",
+              "imageAlt": "Warm contemporary living room interior",
+              "quote": "The team understood our lifestyle and created a space that perfectly balances aesthetics and functionality. Highly professional and creative throughout.",
+              "name": "Priya Sharma",
+              "role": "Homeowner",
+              "location": "California",
+              "avatar": "/images/testimonials/avatar2.png"
+            },
+            {
+              "image": "/images/testimonials/residence3.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amit Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar3.png"
+            },
+            {
+              "image": "/images/testimonials/residence4.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amitl Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar2.png"
+            },
+            {
+              "image": "/images/testimonials/residence5.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amits Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar3.png"
+            },
+            {
+              "image": "/images/testimonials/residence6.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amiti Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar1.png"
+            },
+            {
+              "image": "/images/testimonials/residence7.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amitu Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar3.png"
+            },
+            {
+              "image": "/images/testimonials/residence8.png",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amite Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar1.png"
+            },
+            {
+              "image": "/images/testimonials/residence9.jpg",
+              "imageAlt": "Modern office interior with natural wood finishes",
+              "quote": "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
+              "name": "Amita Kapoor",
+              "role": "Business Owner",
+              "location": "Texas",
+              "avatar": "/images/testimonials/avatar2.png"
+            }
+          ]
+        }
+      }
     }
   }
 }

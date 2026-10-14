@@ -8,47 +8,11 @@ import {
   motion,
   useReducedMotion,
 } from "framer-motion";
-
-const services = [
-  {
-    title: "Interior Design",
-    image: "/images/services/gallery1.png",
-    description: "Thoughtfully designed interiors for modern living.",
-    href: "/services/interior-design",
-  },
-  {
-    title: "Landscape Design",
-    image: "/images/services/gallery2.png",
-    description: "Beautiful outdoor spaces inspired by nature.",
-    href: "/services/landscape-design",
-  },
-  {
-    title: "Project Management",
-    image: "/images/services/residence1.png",
-    description: "Expert coordination from concept to completion.",
-    href: "/services/project-management",
-  },
-  {
-    title: "Residential Design",
-    image: "/images/services/project-detail.png",
-    description: "Timeless homes tailored to your lifestyle.",
-    href: "/services/residential-design",
-  },
-  {
-    title: "Commercial Design",
-    image: "/images/services/gallery2.png",
-    description: "Functional, refined spaces for modern businesses.",
-    href: "/services/commercial-design",
-  },
-  {
-    title: "Architectural Design",
-    image: "/images/services/residence1.png",
-    description: "Distinctive architecture with purpose and character.",
-    href: "/services/architectural-design",
-  },
-];
+import { relatedServicesData } from "../../data";
 
 export default function RelatedServices() {
+  const data = relatedServicesData;
+  const services = data.items;
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
   const reduceMotion = useReducedMotion();
@@ -123,7 +87,7 @@ export default function RelatedServices() {
           >
             <div>
               <span className="font-serif text-3xl font-semibold text-[#870c2d]">
-                05
+                {data.sectionNumber}
               </span>
 
               <div className="mt-4 hidden h-20 w-px bg-gradient-to-b from-[#870c2d] to-[#ead8dd] lg:block" />
@@ -131,9 +95,9 @@ export default function RelatedServices() {
               <div className="mt-3 h-px w-10 bg-[#870c2d]/40 lg:hidden" />
 
               <p className="mt-3 text-[10px] font-semibold uppercase leading-[1.7] tracking-[0.15em] text-[#77747a]">
-                Related
+                {data.labelFirst}
                 <br />
-                Services
+                {data.labelSecond}
               </p>
             </div>
 
@@ -151,15 +115,15 @@ export default function RelatedServices() {
                 transition={{ duration: reduceMotion ? 0 : 0.65 }}
                 className="font-serif text-2xl font-medium tracking-tight text-[#171719] sm:text-3xl md:text-4xl"
               >
-                Explore Other{" "}
-                <span className="text-[#870c2d]">Services</span>
+                {data.titleFirst}{" "}
+                <span className="text-[#870c2d]">{data.titleHighlight}</span>
               </motion.h2>
 
               <div className="flex shrink-0 items-center gap-2">
                 <button
                   type="button"
                   onClick={prevSlide}
-                  aria-label="Previous services"
+                  aria-label={data.previousLabel}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-[#ead8dd] text-[#870c2d] transition-all duration-300 hover:border-[#870c2d] hover:bg-[#870c2d] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#870c2d] sm:h-10 sm:w-10"
                 >
                   <svg
@@ -181,7 +145,7 @@ export default function RelatedServices() {
                 <button
                   type="button"
                   onClick={nextSlide}
-                  aria-label="Next services"
+                  aria-label={data.nextLabel}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-[#ead8dd] text-[#870c2d] transition-all duration-300 hover:border-[#870c2d] hover:bg-[#870c2d] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#870c2d] sm:h-10 sm:w-10"
                 >
                   <svg
@@ -289,7 +253,7 @@ export default function RelatedServices() {
                     key={index}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    aria-label={`Go to service group ${index + 1}`}
+                    aria-label={`${data.groupLabel} ${index + 1}`}
                     aria-current={activeIndex === index ? "step" : undefined}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
                       activeIndex === index

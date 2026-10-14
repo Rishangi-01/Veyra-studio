@@ -28,7 +28,7 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="relative isolate overflow-hidden bg-[#fdfcfb] px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      className="relative isolate overflow-hidden bg-[#fdfcfb] px-5 py-12 sm:px-8 sm:py-12 lg:px-12 lg:py-16"
     >
       {/* Subtle architectural background */}
       <div
@@ -46,7 +46,7 @@ export default function ProcessSection() {
             duration: 0.75,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mx-auto mb-12 max-w-4xl text-center sm:mb-16 lg:mb-20"
+          className="mx-auto mb-12 max-w-4xl text-center sm:mb-16 lg:mb-12"
         >
           <div className="mb-4 flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-[#b34b61] sm:w-16" />
@@ -190,11 +190,8 @@ export default function ProcessSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 flex items-center justify-center gap-3 text-center text-[9px] uppercase tracking-[0.22em] text-[#969398] sm:mt-24 lg:mt-28"
+          className="mt-6 flex items-center justify-center gap-3 text-center text-[9px] uppercase tracking-[0.22em] text-[#969398] sm:mt-24 lg:mt-28"
         >
-          <span className="h-px w-7 bg-[#850d25]/40" />
-          <span>Thoughtfully planned. Beautifully delivered.</span>
-          <span className="h-px w-7 bg-[#850d25]/40" />
         </motion.div>
       </div>
     </section>

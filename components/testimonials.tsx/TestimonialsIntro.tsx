@@ -3,31 +3,18 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-
-const stats = [
-  {
-    value: "100+",
-    label: "Happy Clients",
-  },
-  {
-    value: "4.9/5",
-    label: "Average Rating",
-  },
-  {
-    value: "98%",
-    label: "Client Satisfaction",
-  },
-];
+import { testimonialsIntroData } from "../../data";
 
 export default function TestimonialsIntro() {
   const reduceMotion = useReducedMotion();
+  const data = testimonialsIntroData;
 
   return (
     <section className="relative isolate overflow-hidden lg:mt-12">
       {/* Architectural background */}
       <div className="absolute inset-y-0 right-0 -z-20 w-full lg:w-[55%]">
         <Image
-          src="/images/testimonials/testimonials-bg.png"
+          src={data.image}
           alt=""
           fill
           priority
@@ -58,7 +45,7 @@ export default function TestimonialsIntro() {
           {/* Eyebrow */}
           <div className="mb-5 flex items-center gap-5">
             <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#850d25] sm:text-xs sm:tracking-[0.2em]">
-              Client Testimonials
+              {data.eyebrow}
             </span>
 
             <span className="h-[2px] w-16 bg-[#a7a1a2]" />
@@ -66,9 +53,9 @@ export default function TestimonialsIntro() {
 
           {/* Heading */}
           <h2 className="max-w-[800px] font-serif text-[clamp(2.5rem,4.8vw,5rem)] leading-[1.04] tracking-[-0.055em] text-[#111820]">
-            What Our{" "}
+            {data.titleFirst}{" "}
             <span className="text-[#850d25]">
-              Clients Say
+              {data.titleHighlight}
             </span>
           </h2>
 
@@ -80,17 +67,14 @@ export default function TestimonialsIntro() {
             transition={{ duration: 0.7, delay: 0.18 }}
             className="mt-5 max-w-[710px] text-base leading-[1.7] text-[#777980] sm:text-lg lg:text-[21px] lg:leading-[1.55]"
           >
-            Stories from our clients who trusted Veyra Studio to
-            bring their spaces to life. Their satisfaction inspires
-            us to create more meaningful, functional and beautiful
-            environments.
+            {data.description}
           </motion.p>
         </motion.div>
 
         {/* Right statistics */}
         <div className="relative lg:border-l lg:border-[#d1ccca] lg:pl-4 xl:pl-6">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-0">
-            {stats.map((stat, index) => (
+            {data.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={

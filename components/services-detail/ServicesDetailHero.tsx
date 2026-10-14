@@ -3,9 +3,11 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
+import { pageHeroData } from "../../data";
 
 export default function ServicesDetailsHero() {
   const reduceMotion = useReducedMotion();
+  const hero = pageHeroData.servicesDetail;
 
   return (
     <section
@@ -22,8 +24,8 @@ export default function ServicesDetailsHero() {
         className="absolute inset-0 -z-20"
       >
         <Image
-          src="/images/hero-banner.png"
-          alt="Contemporary architecture beside a natural rocky landscape"
+          src={hero.image}
+          alt={hero.imageAlt}
           fill
           priority
           sizes="100vw"
@@ -48,10 +50,10 @@ export default function ServicesDetailsHero() {
           }}
         >
           <h1
-            id="-heading"
+            id="services-detail-heading"
             className="font-sans text-4xl font-medium tracking-[-0.055em] text-white drop-shadow-md sm:text-5xl md:text-[56px] lg:text-[64px] xl:text-[70px]"
           >
-            Services Detail
+            {hero.title}
           </h1>
 
           <motion.div

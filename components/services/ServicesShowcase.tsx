@@ -4,20 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-
-const services = [
-  { number: "01", title: "Architectural Design", href: "/services/architectural-design" },
-  { number: "02", title: "Interior Design", href: "/services/interior-design" },
-  { number: "03", title: "Landscape Design", href: "/services/landscape-design" },
-  { number: "04", title: "Project Management", href: "/services/project-management" },
-  { number: "05", title: "Urban Planning", href: "/services/urban-planning" },
-  { number: "06", title: "Residential Design", href: "/services/residential-design" },
-  { number: "07", title: "Commercial Design", href: "/services/commercial-design" },
-  { number: "08", title: "Consultation", href: "/contact-us" },
-];
+import { serviceShowcaseData } from "../../data";
 
 export default function ServicesShowcase() {
   const reduceMotion = useReducedMotion();
+  const data = serviceShowcaseData;
 
   const reveal = {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 35 },
@@ -56,8 +47,8 @@ export default function ServicesShowcase() {
 
           <div className="group relative z-10 aspect-[4/5] overflow-hidden bg-stone-200">
             <Image
-              src="/images/services/residence2.png"
-              alt="Contemporary architectural residence designed by Veyra Studio"
+              src={data.image}
+              alt={data.imageAlt}
               fill
               priority={false}
               sizes="(max-width: 1024px) 90vw, 42vw"
@@ -79,8 +70,8 @@ export default function ServicesShowcase() {
           >
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/services/residence1.png"
-                alt="Architectural facade and landscaped outdoor space"
+                src={data.secondaryImage}
+                alt={data.secondaryImageAlt}
                 fill
                 sizes="(max-width: 1024px) 40vw, 18vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -103,7 +94,7 @@ export default function ServicesShowcase() {
           {/* Eyebrow */}
           <div className="mb-5 flex items-center gap-4">
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#850c2b] sm:text-sm">
-              Our Services
+              {data.eyebrow}
             </span>
             <span className="h-px w-16 bg-[#850c2b]/70 sm:w-24" />
           </div>
@@ -111,35 +102,33 @@ export default function ServicesShowcase() {
           {/* Heading */}
           <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
             <h2 className="max-w-[650px] font-serif text-4xl font-medium leading-[1.08] tracking-[-0.045em] text-[#151519] sm:text-5xl lg:text-5xl xl:text-[58px]">
-              Transform
+              {data.titleFirst}
               <br />
-              Your Space
+              {data.titleSecond}
               <br />
               <span className="text-[#850c2b]">
                 <span className="mr-2 text-stone-300">/</span>
-                with Veyra Studio
+                {data.titleHighlight}
               </span>
             </h2>
 
             {/* Experience detail */}
             <div className="shrink-0 border-l border-stone-300 pl-4 text-sm leading-6 text-stone-500 xl:mt-2">
               <span className="block font-medium text-[#252329]">
-                Since 2000
+                {data.experience}
               </span>
-              <span>Architecture &amp; Interior</span>
+              <span>{data.discipline}</span>
             </div>
           </div>
 
           {/* Description */}
           <p className="mt-6 max-w-[570px] text-sm leading-7 text-stone-500 sm:text-base sm:leading-7">
-            We offer end-to-end architectural and interior design services to
-            create functional, aesthetic and timeless spaces. Every detail is
-            thoughtfully considered to bring your vision to life.
+            {data.description}
           </p>
 
           {/* Services list */}
           <div className="mt-9 grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:mt-12 xl:gap-x-12">
-            {services.map((service, index) => (
+            {data.items.map((service, index) => (
               <motion.div
                 key={service.number}
                 initial={{
@@ -185,10 +174,10 @@ export default function ServicesShowcase() {
             className="mt-8"
           >
             <Link
-              href="/services/services-detail"
+              href={data.ctaHref}
               className="group inline-flex items-center gap-5 bg-[#850c2b] px-6 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#650720] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#850c2b] focus-visible:ring-offset-4"
             >
-              Discuss Your Project
+              {data.ctaLabel}
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#850c2b] transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight size={18} />
               </span>

@@ -38,10 +38,10 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="overflow-hidden bg-[#faf9f6] px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16 w-[100%]"
+      className="overflow-hidden bg-[#faf9f6] px-5 py-6 sm:px-8 sm:py-24 lg:px-12 lg:pb-16 lg:pt-10 xl:px-16 w-[100%]"
     >
       <div className="mx-auto max-w-[1600px]">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
 
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, x: -35 }}

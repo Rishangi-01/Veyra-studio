@@ -11,70 +11,10 @@ import {
   FiInstagram,
   FiMail,
 } from "react-icons/fi";
-
-type TeamMember = {
-  name: string;
-  role: string;
-  image: string;
-  linkedin?: string;
-  instagram?: string;
-  email?: string;
-};
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Arjun Mehta",
-    role: "Principal Architect",
-    image: "/images/team/team1.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "arjun@example.com",
-  },
-  {
-    name: "Neha Kapoor",
-    role: "Interior Designer",
-    image: "/images/team/team2.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "neha@example.com",
-  },
-  {
-    name: "Rohan Sinha",
-    role: "Project Manager",
-    image: "/images/team/team3.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "rohan@example.com",
-  },
-  {
-    name: "Kavya Rao",
-    role: "Design Consultant",
-    image: "/images/team/team4.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "kavya@example.com",
-  },
-  {
-    name: "Vikram Sharma",
-    role: "Senior Architect",
-    image: "/images/team/team3.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "vikram@example.com",
-  },
-  {
-    name: "Ananya Verma",
-    role: "Interior Stylist",
-    image: "/images/team/team1.png",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    email: "ananya@example.com",
-  },
-];
-
-const burgundy = "#850d25";
+import { teamMembersData, teamAboutData } from "../../data";
 
 export default function OurTeamMembers() {
+  const teamMembers = teamMembersData;
   const [startIndex, setStartIndex] = useState(0);
   const reduceMotion = useReducedMotion();
 
@@ -126,7 +66,7 @@ export default function OurTeamMembers() {
           <button
             type="button"
             onClick={previous}
-            aria-label="Previous team members"
+            aria-label={teamAboutData.previousLabel}
             className="flex h-11 w-11 items-center justify-center rounded-full border border-[#850d25]/70 text-[#850d25] transition-all duration-300 hover:bg-[#850d25] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#850d25]"
           >
             <FiChevronLeft size={22} />
@@ -184,7 +124,7 @@ export default function OurTeamMembers() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noreferrer"
-                        aria-label={`${member.name} on LinkedIn`}
+                        aria-label={`${member.name} ${teamAboutData.linkedInLabel}`}
                         className="transition-colors hover:text-[#850d25] focus-visible:outline-2 focus-visible:outline-[#850d25]"
                       >
                         <FiLinkedin size={19} />
@@ -196,7 +136,7 @@ export default function OurTeamMembers() {
                         href={member.instagram}
                         target="_blank"
                         rel="noreferrer"
-                        aria-label={`${member.name} on Instagram`}
+                        aria-label={`${member.name} ${teamAboutData.instagramLabel}`}
                         className="transition-colors hover:text-[#850d25] focus-visible:outline-2 focus-visible:outline-[#850d25]"
                       >
                         <FiInstagram size={19} />
@@ -205,8 +145,8 @@ export default function OurTeamMembers() {
                       <span className="h-4 w-px bg-[#d8d5d2]" />
 
                       <a
-                        href={`mailto:${member.email}`}
-                        aria-label={`Email ${member.name}`}
+                        href={member.emailHref}
+                        aria-label={`${teamAboutData.emailLabelPrefix} ${member.name}`}
                         className="transition-colors hover:text-[#850d25] focus-visible:outline-2 focus-visible:outline-[#850d25]"
                       >
                         <FiMail size={19} />
@@ -219,7 +159,7 @@ export default function OurTeamMembers() {
           <button
             type="button"
             onClick={next}
-            aria-label="Next team members"
+            aria-label={teamAboutData.nextLabel}
             className="flex h-11 w-11 items-center justify-center rounded-full border border-[#850d25]/70 text-[#850d25] transition-all duration-300 hover:bg-[#850d25] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#850d25]"
           >
             <FiChevronRight size={22} />
@@ -233,7 +173,7 @@ export default function OurTeamMembers() {
             <button
               type="button"
               onClick={previous}
-              aria-label="Previous team members"
+              aria-label={teamAboutData.previousLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-[#850d25]/60 text-[#850d25] transition hover:bg-[#850d25] hover:text-white"
             >
               <FiChevronLeft size={21} />
@@ -242,7 +182,7 @@ export default function OurTeamMembers() {
             <button
               type="button"
               onClick={next}
-              aria-label="Next team members"
+              aria-label={teamAboutData.nextLabel}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-[#850d25]/60 text-[#850d25] transition hover:bg-[#850d25] hover:text-white"
             >
               <FiChevronRight size={21} />
@@ -261,7 +201,7 @@ export default function OurTeamMembers() {
                   key={index}
                   type="button"
                   onClick={() => goTo(index)}
-                  aria-label={`Go to team slide ${index + 1}`}
+                  aria-label={`${teamAboutData.goToSlideLabel} ${index + 1}`}
                   aria-current={startIndex === index ? "step" : undefined}
                   className={`h-[6px] rounded-full transition-all duration-300 ${startIndex === index
                       ? "w-9 bg-[#850d25]"

@@ -4,117 +4,16 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { FiStar } from "react-icons/fi";
-
-type Testimonial = {
-  image: string;
-  imageAlt: string;
-  quote: string;
-  name: string;
-  role: string;
-  location: string;
-  avatar: string;
-};
-
-const testimonials: Testimonial[] = [
-  {
-    image: "/images/testimonials/residence1.png",
-    imageAlt: "Contemporary luxury residential architecture",
-    quote:
-      "Veyra Studio transformed our vision into a home that feels both luxurious and livable. Their attention to detail and design sense is truly exceptional.",
-    name: "Rahul Mehta",
-    role: "Homeowner",
-    location: "New York",
-    avatar: "/images/testimonials/avatar1.png",
-  },
-  {
-    image: "/images/testimonials/residence2.png",
-    imageAlt: "Warm contemporary living room interior",
-    quote:
-      "The team understood our lifestyle and created a space that perfectly balances aesthetics and functionality. Highly professional and creative throughout.",
-    name: "Priya Sharma",
-    role: "Homeowner",
-    location: "California",
-    avatar: "/images/testimonials/avatar2.png",
-  },
-  {
-    image: "/images/testimonials/residence3.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amit Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar3.png",
-  },
-  {
-    image: "/images/testimonials/residence4.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amitl Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar2.png",
-  },
-  {
-    image: "/images/testimonials/residence5.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amits Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar3.png",
-  },
-  {
-    image: "/images/testimonials/residence6.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amiti Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar1.png",
-  },
-  {
-    image: "/images/testimonials/residence7.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amitu Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar3.png",
-  },
-  {
-    image: "/images/testimonials/residence8.png",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amite Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar1.png",
-  },
-  {
-    image: "/images/testimonials/residence9.jpg",
-    imageAlt: "Modern office interior with natural wood finishes",
-    quote:
-      "Working with Veyra Studio was a seamless experience. They delivered a workspace that reflects our brand and enhances productivity.",
-    name: "Amita Kapoor",
-    role: "Business Owner",
-    location: "Texas",
-    avatar: "/images/testimonials/avatar2.png",
-  },
-];
+import { testimonialReviewsData } from "../../data";
 
 export default function TestimonialsReview() {
   const reduceMotion = useReducedMotion();
+  const data = testimonialReviewsData;
 
   return (
     <section className="overflow-hidden bg-[#faf9f7] px-4 py-12 sm:px-7 sm:py-16 lg:px-10 lg:pb-20">
       <div className="mx-auto grid max-w-[1700px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-5">
-        {testimonials.map((item, index) => (
+        {data.items.map((item, index) => (
           <motion.article
             key={item.name}
             initial={
@@ -167,9 +66,9 @@ export default function TestimonialsReview() {
               {/* Rating */}
               <div
                 className="mt-4 flex items-center gap-1 text-[#850d25]"
-                aria-label="5 out of 5 stars"
+                aria-label={data.ratingLabel}
               >
-                {Array.from({ length: 5 }).map((_, starIndex) => (
+                {Array.from({ length: data.rating }).map((_, starIndex) => (
                   <FiStar
                     key={starIndex}
                     size={16}
@@ -184,7 +83,7 @@ export default function TestimonialsReview() {
                 <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#eee9e3] ring-1 ring-[#e7e1db] sm:h-11 sm:w-11">
                   <Image
                     src={item.avatar}
-                    alt={`${item.name} profile`}
+                    alt={`${item.name} ${data.profileAltSuffix}`}
                     fill
                     sizes="48px"
                     className="object-cover"

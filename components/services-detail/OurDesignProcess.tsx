@@ -1,36 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-
-const steps = [
-  {
-    number: "01",
-    title: "Consultation",
-    description:
-      "Understanding your goals, requirements and lifestyle.",
-  },
-  {
-    number: "02",
-    title: "Concept & Planning",
-    description:
-      "Creating initial concepts and detailed plans.",
-  },
-  {
-    number: "03",
-    title: "Design Development",
-    description:
-      "Refining designs with 3D visualizations and materials.",
-  },
-  {
-    number: "04",
-    title: "Final Delivery",
-    description:
-      "Completed design with full documentation.",
-  },
-];
+import { serviceDesignProcessData } from "../../data";
 
 export default function OurDesignProcess() {
   const shouldReduceMotion = useReducedMotion();
+  const data = serviceDesignProcessData;
 
   const fadeUp = {
     hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 28 },
@@ -64,16 +39,16 @@ export default function OurDesignProcess() {
           >
             <div>
               <span className="font-serif text-3xl font-semibold text-[#800d2b] sm:text-4xl">
-                03
+                {data.sectionNumber}
               </span>
 
               <div className="mt-4 hidden h-20 w-px bg-gradient-to-b from-[#800d2b] to-[#e9d9dd] lg:block" />
               <div className="mt-3 h-px w-12 bg-[#800d2b]/40 lg:hidden" />
 
               <p className="mt-3 text-[10px] font-semibold uppercase leading-[1.8] tracking-[0.2em] text-[#77747a] sm:text-xs lg:mt-4">
-                Our
+                {data.label.split(" ")[0]}
                 <br />
-                Process
+                {data.label.split(" ")[1]}
               </p>
             </div>
 
@@ -95,16 +70,14 @@ export default function OurDesignProcess() {
             >
 
               <h2 className="font-serif text-3xl font-medium leading-tight tracking-[-0.04em] text-[#171719] sm:text-4xl md:text-5xl lg:text-[52px]">
-                Our{" "}
+                {data.titleFirst}{" "}
                 <span className="text-[#800d2b]">
-                  Design Process
+                  {data.titleHighlight}
                 </span>
               </h2>
 
               <p className="mt-2 max-w-2xl text-sm leading-7 text-[#77747a] sm:text-base">
-                A structured and collaborative approach to bring
-                your vision to life, from the first conversation
-                to the final finishing touches.
+                {data.description}
               </p>
             </motion.div>
 
@@ -123,7 +96,7 @@ export default function OurDesignProcess() {
               />
 
               <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-4 lg:gap-5">
-                {steps.map((step, index) => (
+                {data.items.map((step, index) => (
                   <motion.article
                     key={step.number}
                     variants={fadeUp}

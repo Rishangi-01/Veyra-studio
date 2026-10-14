@@ -3,24 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-
-const projects = {
-  featured: {
-    src: "/images/services/gallery1.png",
-    alt: "Contemporary luxury residence with landscaped gardens",
-  },
-  living: {
-    src: "/images/services/gallery2.png",
-    alt: "Elegant modern living room with natural light",
-  },
-  kitchen: {
-    src: "/images/services/residence1.png",
-    alt: "Contemporary kitchen and dining interior",
-  },
-};
+import { serviceProjectGalleryData } from "../../data";
 
 export default function ProjectGallery() {
   const reduceMotion = useReducedMotion();
+  const data = serviceProjectGalleryData;
+  const projects = data.images;
 
   const reveal = {
     hidden: {
@@ -55,7 +43,7 @@ export default function ProjectGallery() {
           >
             <div>
               <span className="font-serif text-3xl font-semibold text-[#870c2d]">
-                04
+                {data.sectionNumber}
               </span>
 
               <div className="mt-4 hidden h-20 w-px bg-gradient-to-b from-[#870c2d] to-[#ead8dd] lg:block" />
@@ -63,9 +51,9 @@ export default function ProjectGallery() {
               <div className="mt-3 h-px w-10 bg-[#870c2d]/40 lg:hidden" />
 
               <p className="mt-3 text-[10px] font-semibold uppercase leading-[1.7] tracking-[0.15em] text-[#77747a]">
-                Project
+                {data.labelFirst}
                 <br />
-                Gallery
+                {data.labelSecond}
               </p>
             </div>
 
@@ -170,20 +158,20 @@ export default function ProjectGallery() {
                 />
 
                 <span className="text-xs font-medium tracking-[0.16em] text-white/90">
-                  01
+                  {data.viewMoreNumber}
                 </span>
 
                 <div>
                   <div className="mb-4 h-8 w-px bg-white/60" />
 
                   <Link
-                    href="/projects"
+                    href={data.viewMoreHref}
                     className="group/link inline-flex items-center gap-2 text-sm font-medium leading-5 transition-colors hover:text-white/75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                   >
                     <span>
-                      View
+                      {data.viewMoreFirst}
                       <br />
-                      More Projects
+                      {data.viewMoreSecond}
                     </span>
 
                     <span

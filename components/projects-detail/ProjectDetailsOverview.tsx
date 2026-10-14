@@ -16,67 +16,28 @@ import {
   FiUsers,
   FiArrowUpRight,
 } from "react-icons/fi";
-
 import { FaLeaf } from "react-icons/fa";
+import type { IconType } from "react-icons";
+import {
+  projectDetailsData,
+  type ProjectDetailIconName,
+  type ProjectPrincipleIconName,
+} from "../../data";
 
-const projectDetails = [
-  {
-    icon: FiHome,
-    label: "Project Name",
-    value: "Modern Family Residence",
-  },
-  {
-    icon: FiMapPin,
-    label: "Location",
-    value: "New York, USA",
-  },
-  {
-    icon: FiLayers,
-    label: "Project Type",
-    value: "Residential",
-  },
-  {
-    icon: FiMaximize,
-    label: "Project Area",
-    value: "4,200 Sq. Ft.",
-  },
-  {
-    icon: FiCalendar,
-    label: "Year Completed",
-    value: "2024",
-  },
-  {
-    icon: FiSettings,
-    label: "Services",
-    value: "Architecture, Interior Design, Landscape Design",
-  },
-];
+const projectDetailIcons: Record<ProjectDetailIconName, IconType> = {
+  FiHome,
+  FiMapPin,
+  FiLayers,
+  FiMaximize,
+  FiCalendar,
+  FiSettings,
+};
 
-const features = [
-  "Spacious open-plan living area",
-  "Floor-to-ceiling glass windows",
-  "Modern kitchen with premium finishes",
-  "Outdoor lounge and landscaped garden",
-  "Sustainable and energy-efficient design",
-];
-
-const designPrinciples = [
-  {
-    icon: FaLeaf,
-    title: "Sustainable Design",
-    description: "Energy-efficient solutions for a greener future.",
-  },
-  {
-    icon: FiAward,
-    title: "Premium Materials",
-    description: "High-quality materials for lasting beauty.",
-  },
-  {
-    icon: FiUsers,
-    title: "Client-Centric",
-    description: "Designed around the client's lifestyle and needs.",
-  },
-];
+const projectPrincipleIcons: Record<ProjectPrincipleIconName, IconType> = {
+  FaLeaf,
+  FiAward,
+  FiUsers,
+};
 
 function SectionHeading({
   children,
@@ -95,6 +56,7 @@ function SectionHeading({
 
 export default function ProjectDetailsOverview() {
   const reduceMotion = useReducedMotion();
+  const data = projectDetailsData;
 
   const reveal = {
     hidden: {
@@ -126,14 +88,12 @@ export default function ProjectDetailsOverview() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <h1 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-[42px]">
-              Modern Family{" "}
-              <span className="text-[#94102b]">Residence</span>
+              {data.titleFirst}{" "}
+              <span className="text-[#94102b]">{data.titleHighlight}</span>
             </h1>
 
             <p className="mt-2 max-w-2xl text-sm leading-6 text-[#777980] sm:text-base">
-              A contemporary home designed to offer a perfect
-              balance of elegance, functionality and comfort
-              for modern family living.
+              {data.description}
             </p>
           </motion.div>
 
@@ -151,8 +111,8 @@ export default function ProjectDetailsOverview() {
             className="group relative mt-5 aspect-[1.8/1] w-full overflow-hidden bg-[#eae5df]"
           >
             <Image
-              src="/images/projects/project-detail.png"
-              alt="Modern family residence with contemporary architecture, warm lighting and landscaped gardens"
+              src={data.heroImage}
+              alt={data.heroImageAlt}
               fill
               priority
               sizes="(max-width: 1023px) 100vw, 70vw"
@@ -171,16 +131,12 @@ export default function ProjectDetailsOverview() {
             className="mt-5"
           >
             <SectionHeading>
-              Project <span className="text-[#94102b]">Overview</span>
+              {data.overviewTitleFirst}{" "}
+              <span className="text-[#94102b]">{data.overviewTitleHighlight}</span>
             </SectionHeading>
 
             <p className="text-sm leading-[1.75] text-[#777980]">
-              The Modern Family Residence is a thoughtfully
-              designed home that blends contemporary architecture
-              with warm, functional interiors. The project focuses
-              on creating open, airy spaces, seamlessly connecting
-              indoor and outdoor living while maintaining privacy
-              and comfort for a modern family lifestyle.
+              {data.overview}
             </p>
           </motion.div>
 
@@ -193,22 +149,19 @@ export default function ProjectDetailsOverview() {
             className="mt-5"
           >
             <SectionHeading>
-              Design <span className="text-[#94102b]">Approach</span>
+              {data.approachTitleFirst}{" "}
+              <span className="text-[#94102b]">{data.approachTitleHighlight}</span>
             </SectionHeading>
 
             <p className="text-sm leading-[1.75] text-[#777980]">
-              Our design approach centers on minimal aesthetics,
-              natural materials and abundant natural light. Every
-              element, from spatial planning to material selection,
-              is carefully considered to ensure a cohesive, elegant
-              and timeless design that enhances everyday living.
+              {data.approach}
             </p>
           </motion.div>
 
           {/* Design principles */}
           <div className="mt-5 grid grid-cols-1 divide-y divide-[#eeece8] border border-[#eeece8] bg-white sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            {designPrinciples.map((principle, index) => {
-              const Icon = principle.icon;
+            {data.principles.map((principle, index) => {
+              const Icon = projectPrincipleIcons[principle.icon];
 
               return (
                 <motion.div
@@ -251,12 +204,13 @@ export default function ProjectDetailsOverview() {
             className="bg-[#f7f3ef] p-5 sm:p-6"
           >
             <SectionHeading>
-              Project <span className="text-[#94102b]">Details</span>
+              {data.projectDetailsHeading}{" "}
+              <span className="text-[#94102b]">{data.projectDetailsHeadingHighlight}</span>
             </SectionHeading>
 
             <div className="mt-3">
-              {projectDetails.map((detail, index) => {
-                const Icon = detail.icon;
+              {data.details.map((detail, index) => {
+                const Icon = projectDetailIcons[detail.icon];
 
                 return (
                   <motion.div
@@ -300,11 +254,12 @@ export default function ProjectDetailsOverview() {
             viewport={{ once: true, amount: 0.15 }}
           >
             <SectionHeading>
-              Key <span className="text-[#94102b]">Features</span>
+              {data.keyFeaturesHeading}{" "}
+              <span className="text-[#94102b]">{data.keyFeaturesHeadingHighlight}</span>
             </SectionHeading>
 
             <ul className="space-y-3 pt-1">
-              {features.map((feature, index) => (
+              {data.features.map((feature, index) => (
                 <motion.li
                   key={feature}
                   initial={{
@@ -341,20 +296,20 @@ export default function ProjectDetailsOverview() {
 
             <div className="relative">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a01b35]">
-                Like this project?
+                {data.ctaEyebrow}
               </p>
 
               <h2 className="mt-2 font-serif text-[27px] leading-[1.15] tracking-tight">
-                Let&apos;s Discuss
+                {data.ctaTitleFirst}
                 <br />
-                <span className="text-[#94102b]">Your Project</span>
+                <span className="text-[#94102b]">{data.ctaTitleSecond}</span>
               </h2>
 
               <Link
-                href="/contact-us"
+                href={data.ctaHref}
                 className="group mt-4 inline-flex min-h-10 items-center justify-between gap-5 bg-[#8d0c28] px-4 py-2 text-xs font-semibold text-white transition-colors duration-300 hover:bg-[#68071d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8d0c28] focus-visible:ring-offset-2"
               >
-                Get a Quote
+                {data.ctaButton}
 
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#8d0c28] transition-transform duration-300 group-hover:translate-x-1">
                   <FiArrowUpRight size={17} />

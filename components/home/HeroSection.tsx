@@ -144,7 +144,7 @@ export default function HeroSection() {
                 </motion.span>
               </Link>
 
-              <div className="flex items-center gap-3 text-xs text-neutral-500">
+              {/* <div className="flex items-center gap-3 text-xs text-neutral-500">
                 <span className="font-medium text-[#850d25]">
                   {String(current + 1).padStart(2, "0")}
                 </span>
@@ -157,7 +157,7 @@ export default function HeroSection() {
                   />
                 </span>
                 <span>{String(slides.length).padStart(2, "0")}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -276,7 +276,7 @@ export default function HeroSection() {
               <span className="mt-3 block h-[2px] w-8 bg-[#850d25]" />
             </div>
 
-            <div className="grid grid-cols-2 gap-x-5 gap-y-5 border-t border-white/15 pt-5 sm:grid-cols-3 lg:flex lg:items-center lg:gap-0 lg:border-l lg:border-t-0 lg:pt-0">
+            <div className="grid grid-cols-3 gap-x-5 gap-y-5 border-t border-white/15 pt-5 sm:grid-cols-3 lg:flex lg:items-center lg:gap-0 lg:border-l lg:border-t-0 lg:pt-0">
               <ProjectDetail label="Location" value={slide.location} />
               <ProjectDetail label="Year" value={slide.year} />
               <ProjectDetail label="Category" value={slide.category} />
@@ -294,20 +294,6 @@ export default function HeroSection() {
             </Link>
           </div>
         </motion.div>
-      </div>
-
-      <div className="flex items-center justify-between px-6 py-5 sm:px-12 lg:px-20">
-        <span className="text-[9px] uppercase tracking-[0.25em] text-neutral-400 sm:text-[10px]">
-          Thoughtful spaces. Timeless design.
-        </span>
-
-        <button
-          type="button"
-          onClick={nextSlide}
-          className="flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-[#850d25] transition-opacity hover:opacity-60"
-        >
-          Next project <ArrowRight size={15} />
-        </button>
       </div>
     </section>
   );

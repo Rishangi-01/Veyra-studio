@@ -3,9 +3,11 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
+import { teamAboutData } from "../../data";
 
 export default function AboutTeam() {
   const reduceMotion = useReducedMotion();
+  const data = teamAboutData;
 
   return (
     <section className="relative isolate overflow-hidden bg-[#faf9f7] w-[100%] lg:mt-[35px]">
@@ -20,7 +22,7 @@ export default function AboutTeam() {
             className="mb-5 flex items-center gap-4"
           >
             <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#850d25] sm:text-xs">
-              Our Team
+              {data.eyebrow}
             </span>
             <span className="h-px w-14 bg-[#b17a83]" />
           </motion.div>
@@ -35,10 +37,10 @@ export default function AboutTeam() {
             }}
             className="max-w-[650px] font-serif text-[clamp(2.8rem,6vw,5rem)] leading-[0.91] tracking-[-0.055em] text-[#111a20]"
           >
-            Meet Our
+            {data.titleFirst}
             <br />
             <span className="text-[#850d25]">
-              Expert Team
+              {data.titleHighlight}
             </span>
           </motion.h1>
 
@@ -48,9 +50,7 @@ export default function AboutTeam() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-5 max-w-[620px] font-serif text-base leading-[1.55] text-[#626268] sm:text-lg"
           >
-            A passionate team of architects, designers and project
-            specialists working together to create spaces that
-            inspire and elevate everyday living.
+            {data.description}
           </motion.p>
         </div>
 
@@ -66,8 +66,8 @@ export default function AboutTeam() {
             className="absolute inset-0"
           >
             <Image
-              src="/images/team/about-team.png"
-              alt="Contemporary architectural interior with natural stone and warm wood finishes"
+              src={data.image}
+              alt={data.imageAlt}
               fill
               priority
               sizes="(max-width: 1023px) 100vw, 40vw"
@@ -84,13 +84,12 @@ export default function AboutTeam() {
             className="absolute left-0 top-8 hidden w-[145px] border-l border-[#a6a19c] bg-[#faf9f7]/85 px-5 py-1 backdrop-blur-sm sm:block lg:left-[-130px] lg:top-[24%] lg:w-[205px] lg:border-l-3"
           >
             <p className="text-[14px] uppercase leading-[2] tracking-[0.22em] text-[#77777c] font-semibold">
-              People
-              <br />
-              Behind
-              <br />
-              Exceptional
-              <br />
-              Spaces
+              {data.imageBadgeLines.map((line, index) => (
+                <span key={line}>
+                  {index > 0 && <br />}
+                  {line}
+                </span>
+              ))}
             </p>
             <span className="mt-3 block h-[2px] w-9 bg-[#850d25]" />
           </motion.div>
@@ -106,11 +105,12 @@ export default function AboutTeam() {
             className="absolute bottom-0 right-0 w-[200px] bg-[#850d25] px-6 py-7 text-white shadow-2xl sm:bottom-0 sm:w-[225px] sm:px-7 sm:py-9 lg:bottom-0 lg:w-[230px] lg:px-8 lg:py-10"
           >
             <p className="text-[10px] font-medium uppercase leading-[1.9] tracking-[0.24em] sm:text-[11px]">
-              Designing
-              <br />
-              People-Centric
-              <br />
-              Spaces
+              {data.featureLines.map((line, index) => (
+                <span key={line}>
+                  {index > 0 && <br />}
+                  {line}
+                </span>
+              ))}
             </p>
 
             <motion.span

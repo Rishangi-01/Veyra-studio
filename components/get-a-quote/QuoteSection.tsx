@@ -10,51 +10,13 @@ import {
   Paperclip,
   Upload,
 } from "lucide-react";
+import { quoteSectionData } from "../../data";
 
-const projectTypes = [
-  "Architectural Design",
-  "Interior Design",
-  "Landscape Design",
-  "Residential Design",
-  "Commercial Design",
-  "Project Management",
-  "Consultation",
-];
-
-const budgets = [
-  "Below ₹5 Lakhs",
-  "₹5–10 Lakhs",
-  "₹10–25 Lakhs",
-  "₹25–50 Lakhs",
-  "₹50 Lakhs–1 Crore",
-  "Above ₹1 Crore",
-];
-
-const timelines = [
-  "Immediately",
-  "Within 1 Month",
-  "1–3 Months",
-  "3–6 Months",
-  "Flexible",
-];
-
-const benefits = [
-  {
-    icon: FileText,
-    title: "Customised Quote",
-    description: "Tailored to your needs and budget.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Expert Guidance",
-    description: "Consult with our design specialists.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Quick Response",
-    description: "We'll get back to you shortly.",
-  },
-];
+const benefitIcons = {
+  FileText,
+  MessageCircle,
+  CheckCircle2,
+} as const;
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -62,6 +24,7 @@ const fadeUp = {
 };
 
 export default function QuoteSection() {
+  const data = quoteSectionData;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -83,7 +46,7 @@ export default function QuoteSection() {
     const phone = String(formData.get("phone") ?? "").trim();
 
     if (!/^[+]?[\d\s()-]{10,18}$/.test(phone)) {
-      setError("Please enter a valid phone number.");
+      setError(data.invalidPhoneMessage);
       return;
     }
 
@@ -99,7 +62,7 @@ export default function QuoteSection() {
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.message || "Unable to submit your request.");
+        throw new Error(result.message || data.apiErrorMessage);
       }
 
       setSubmitted(true);
@@ -109,7 +72,7 @@ export default function QuoteSection() {
       setError(
         err instanceof Error
           ? err.message
-          : "Something went wrong. Please try again."
+          : data.defaultErrorMessage
       );
     } finally {
       setLoading(false);
@@ -135,22 +98,20 @@ export default function QuoteSection() {
         >
           <div className="mb-5 flex items-center gap-4">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#850d27] sm:text-sm">
-              Get a Quote
+              {data.eyebrow}
             </span>
             <span className="h-px w-16 bg-[#850d27]/70 sm:w-24" />
           </div>
 
           <h1 className="max-w-2xl font-serif text-4xl font-medium leading-[1.12] tracking-[-0.045em] text-[#15151d] sm:text-5xl md:text-6xl xl:text-[68px]">
-            Let’s Bring Your
+            {data.titleFirst}
             <br />
-            Vision to{" "}
-            <span className="text-[#850d27]">Life</span>
+            {data.titleSecond}{" "}
+            <span className="text-[#850d27]">{data.titleHighlight}</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[#85838b] sm:text-lg sm:leading-8">
-            Share your requirements with us and our team will get
-            back to you with a customised quote tailored to your
-            project.
+            {data.description}
           </p>
 
           <motion.div
@@ -162,8 +123,8 @@ export default function QuoteSection() {
           >
             <div className="aspect-[1.15/1] overflow-hidden sm:aspect-[1.25/1] lg:aspect-[1.1/1] xl:aspect-[1.2/1]">
               <img
-                src="/images/get-quote/banner4.jpg"
-                alt="Contemporary luxury residence designed by Veyra Studio"
+                src={data.image}
+                alt={data.imageAlt}
                 className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.045]"
               />
             </div>
@@ -172,8 +133,8 @@ export default function QuoteSection() {
 
           {/* Benefits */}
           <div className="mt-7 grid grid-cols-1 divide-y divide-[#e9e6e3] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+            {data.benefits.map((benefit, index) => {
+              const Icon = benefitIcons[benefit.icon];
 
               return (
                 <motion.div
@@ -216,15 +177,14 @@ export default function QuoteSection() {
           <div className="pointer-events-none absolute right-0 top-0 h-28 w-28 bg-gradient-to-bl from-[#850d27]/[0.045] to-transparent" />
 
           <h2 className="relative font-serif text-3xl font-medium tracking-[-0.035em] text-[#15151d] sm:text-4xl md:text-[42px]">
-            Request a{" "}
-            <span className="text-[#850d27]">Quote</span>
+            {data.formTitleFirst}{" "}
+            <span className="text-[#850d27]">{data.formTitleHighlight}</span>
           </h2>
 
           <span className="mt-3 block h-[2px] w-14 bg-[#850d27]" />
 
           <p className="mt-3 text-sm leading-6 text-[#85838b] sm:text-base sm:leading-7">
-            Fill out the form below and tell us about your project.
-            Our team will reach out with a personalised quote.
+            {data.formDescription}
           </p>
 
           <form
@@ -235,14 +195,14 @@ export default function QuoteSection() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="fullName" className="text-sm font-semibold text-[#292730]">
-                  Full Name <span className="text-[#850d27]">*</span>
+                  {data.fields.fullName.label} <span className="text-[#850d27]">*</span>
                 </label>
                 <input
                   id="fullName"
                   name="fullName"
                   type="text"
                   autoComplete="name"
-                  placeholder="Enter your name"
+                  placeholder={data.fields.fullName.placeholder}
                   required
                   minLength={2}
                   className={inputClass}
@@ -251,14 +211,14 @@ export default function QuoteSection() {
 
               <div>
                 <label htmlFor="email" className="text-sm font-semibold text-[#292730]">
-                  Email Address <span className="text-[#850d27]">*</span>
+                  {data.fields.email.label} <span className="text-[#850d27]">*</span>
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="Enter your email"
+                  placeholder={data.fields.email.placeholder}
                   required
                   className={inputClass}
                 />
@@ -266,14 +226,14 @@ export default function QuoteSection() {
 
               <div>
                 <label htmlFor="phone" className="text-sm font-semibold text-[#292730]">
-                  Phone Number <span className="text-[#850d27]">*</span>
+                  {data.fields.phone.label} <span className="text-[#850d27]">*</span>
                 </label>
                 <input
                   id="phone"
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  placeholder="Enter phone number"
+                  placeholder={data.fields.phone.placeholder}
                   required
                   className={inputClass}
                 />
@@ -281,7 +241,7 @@ export default function QuoteSection() {
 
               <div>
                 <label htmlFor="projectType" className="text-sm font-semibold text-[#292730]">
-                  Project Type <span className="text-[#850d27]">*</span>
+                  {data.fields.projectType.label} <span className="text-[#850d27]">*</span>
                 </label>
                 <select
                   id="projectType"
@@ -291,9 +251,9 @@ export default function QuoteSection() {
                   className={`${inputClass} cursor-pointer`}
                 >
                   <option value="" disabled>
-                    Select project type
+                    {data.fields.projectType.placeholder}
                   </option>
-                  {projectTypes.map((type) => (
+                  {data.projectTypes.map((type) => (
                     <option key={type} value={type}>
                       {type}
                     </option>
@@ -304,13 +264,13 @@ export default function QuoteSection() {
 
             <div>
               <label htmlFor="location" className="text-sm font-semibold text-[#292730]">
-                Project Location <span className="text-[#850d27]">*</span>
+                {data.fields.location.label} <span className="text-[#850d27]">*</span>
               </label>
               <input
                 id="location"
                 name="location"
                 type="text"
-                placeholder="Enter your location"
+                placeholder={data.fields.location.placeholder}
                 required
                 className={inputClass}
               />
@@ -319,7 +279,7 @@ export default function QuoteSection() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="budget" className="text-sm font-semibold text-[#292730]">
-                  Estimated Budget
+                  {data.fields.budget.label}
                 </label>
                 <select
                   id="budget"
@@ -328,9 +288,9 @@ export default function QuoteSection() {
                   className={`${inputClass} cursor-pointer`}
                 >
                   <option value="" disabled>
-                    Select budget range
+                    {data.fields.budget.placeholder}
                   </option>
-                  {budgets.map((budget) => (
+                  {data.budgets.map((budget) => (
                     <option key={budget} value={budget}>
                       {budget}
                     </option>
@@ -340,7 +300,7 @@ export default function QuoteSection() {
 
               <div>
                 <label htmlFor="timeline" className="text-sm font-semibold text-[#292730]">
-                  Preferred Timeline
+                  {data.fields.timeline.label}
                 </label>
                 <select
                   id="timeline"
@@ -349,9 +309,9 @@ export default function QuoteSection() {
                   className={`${inputClass} cursor-pointer`}
                 >
                   <option value="" disabled>
-                    Select timeline
+                    {data.fields.timeline.placeholder}
                   </option>
-                  {timelines.map((timeline) => (
+                  {data.timelines.map((timeline) => (
                     <option key={timeline} value={timeline}>
                       {timeline}
                     </option>
@@ -362,13 +322,13 @@ export default function QuoteSection() {
 
             <div>
               <label htmlFor="details" className="text-sm font-semibold text-[#292730]">
-                Project Details <span className="text-[#850d27]">*</span>
+                {data.fields.details.label} <span className="text-[#850d27]">*</span>
               </label>
               <textarea
                 id="details"
                 name="details"
                 rows={4}
-                placeholder="Tell us about your project requirements..."
+                placeholder={data.fields.details.placeholder}
                 required
                 minLength={10}
                 className={`${inputClass} min-h-28 resize-y`}
@@ -389,13 +349,12 @@ export default function QuoteSection() {
 
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center gap-2 text-sm font-semibold text-[#292730]">
-                    Upload Files (Optional)
+                    {data.uploadTitle}
                     <Upload size={14} className="text-[#850d27]" />
                   </span>
 
                   <span className="mt-1 block text-xs leading-5 text-[#939098] sm:text-sm">
-                    Upload reference images, floor plans or any other
-                    document. Max 10 MB total, JPG, PNG, PDF.
+                    {data.uploadDescription}
                   </span>
 
                   {files && files.length > 0 && (
@@ -435,7 +394,7 @@ export default function QuoteSection() {
 
                   if (invalidFile || totalSize > 10 * 1024 * 1024) {
                     setError(
-                      "Please select JPG, PNG or PDF files within a combined 10 MB limit."
+                      data.invalidFilesMessage
                     );
                     event.target.value = "";
                     setFiles(null);
@@ -456,7 +415,7 @@ export default function QuoteSection() {
 
             {submitted && (
               <p role="status" className="text-sm font-medium text-green-700">
-                Your quote request has been submitted successfully!
+                {data.successMessage}
               </p>
             )}
 
@@ -467,14 +426,14 @@ export default function QuoteSection() {
               whileTap={{ scale: 0.98 }}
               className="group flex min-h-14 w-full items-center justify-center gap-4 bg-[#850d27] px-5 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#69091e] disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
             >
-              <span>{loading ? "Submitting..." : "Request a Quote"}</span>
+              <span>{loading ? data.submittingLabel : data.submitLabel}</span>
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#850d27] transition-transform duration-300 group-hover:translate-x-1">
                 <ArrowRight size={21} />
               </span>
             </motion.button>
 
             <p className="text-center text-xs leading-5 text-[#99959a]">
-              Your project details will be handled with care.
+              {data.privacyMessage}
             </p>
           </form>
         </motion.div>

@@ -13,7 +13,7 @@ export default function AboutSection() {
     return (
         <section
             id="about"
-            className="relative overflow-hidden bg-[#faf9f6] px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
+            className="relative overflow-hidden bg-[#faf9f6] px-5 py-6 sm:px-8 sm:py-12 lg:px-12 lg:py-16 xl:px-16"
         >
             <div className="mx-auto grid max-w-[1600px] items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
 
@@ -32,7 +32,7 @@ export default function AboutSection() {
                         whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.15 }}
-                        className="absolute left-0 top-0 h-[68%] w-[47%] bg-[#850d25]"
+                        className="absolute left-0 lg:left-[11px] top-[17px] lg:top-[28px] h-[68%] w-[47%] bg-[#850d25]"
                     />
 
                     <div className="relative z-10 ml-[5%] mt-[5%] aspect-[1.22/1] overflow-hidden bg-neutral-200 shadow-sm">
@@ -158,11 +158,6 @@ export default function AboutSection() {
                             </motion.span>
                         </Link>
                     </motion.div>
-
-                    <div className="mt-10 flex items-center gap-3 text-[9px] uppercase tracking-[0.2em] text-neutral-400 sm:mt-12">
-                        <MoveUpRight size={14} className="text-[#850d25]" />
-                        <span>{aboutSectionData.tagline}</span>
-                    </div>
                 </motion.div>
             </div>
         </section>

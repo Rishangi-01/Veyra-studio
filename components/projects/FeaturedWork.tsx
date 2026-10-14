@@ -5,72 +5,15 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
-const categories = [
-  "All",
-  "Residential",
-  "Commercial",
-  "Interior",
-  "Landscape",
-] as const;
+import { featuredWorkData } from "../../data";
 
-type Category = (typeof categories)[number];
-
-type Project = {
-  title: string;
-  category: Exclude<Category, "All">;
-  location: string;
-  image: string;
-  imageAlt: string;
-};
-
-const projects: Project[] = [
-  {
-    title: "The Willow Residence",
-    category: "Residential",
-    location: "California, USA",
-    image: "/images/home/banner2.jpg",
-    imageAlt: "Contemporary residence framed by a landscaped garden",
-  },
-  {
-    title: "Horizon Office",
-    category: "Commercial",
-    location: "New York, USA",
-    image: "/images/home/banner3.jpg",
-    imageAlt: "Modern glass-fronted commercial building",
-  },
-  {
-    title: "Urban Luxe",
-    category: "Interior",
-    location: "Miami, USA",
-    image: "/images/home/banner4.jpg",
-    imageAlt: "Warm, contemporary living room with natural finishes",
-  },
-  {
-    title: "Cedar Ridge Retreat",
-    category: "Landscape",
-    location: "Oregon, USA",
-    image: "/images/home/banner5.jpg",
-    imageAlt: "A modern retreat integrated with its surrounding landscape",
-  },
-  {
-    title: "The Courtyard House",
-    category: "Residential",
-    location: "Austin, USA",
-    image: "/images/home/banner6.jpg",
-    imageAlt: "Modern family home with a private courtyard",
-  },
-  {
-    title: "The Glass Pavilion",
-    category: "Commercial",
-    location: "Seattle, USA",
-    image: "/images/home/banner7.jpg",
-    imageAlt: "Contemporary pavilion with expansive glass walls",
-  },
-];
+type Category = (typeof featuredWorkData.categories)[number];
 
 export default function FeaturedWork() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const reduceMotion = useReducedMotion();
+  const categories = featuredWorkData.categories;
+  const projects = featuredWorkData.items;
 
   const visibleProjects =
     activeCategory === "All"
@@ -92,7 +35,7 @@ export default function FeaturedWork() {
           >
             <div className="mb-3 flex items-center gap-4">
               <p className="text-xs font-medium uppercase tracking-[0.18em]">
-                Featured Work
+                {featuredWorkData.eyebrow}
               </p>
               <span className="h-px w-16 bg-[#8b102b]/50" />
             </div>
@@ -100,16 +43,16 @@ export default function FeaturedWork() {
               id="featured-work-title"
               className="font-serif text-[clamp(3.2rem,7vw,4.8rem)] leading-[0.98] tracking-[-0.055em]"
             >
-              Our <span className="text-[#850d25]">Projects</span>
+              {featuredWorkData.titleFirst}{" "}
+              <span className="text-[#850d25]">{featuredWorkData.titleHighlight}</span>
             </h2>
             <p className="mt-4 max-w-[660px] text-base leading-7 text-black/60 sm:text-lg">
-              A collection of thoughtfully designed spaces that reflect our
-              commitment to quality, functionality and timeless design.
+              {featuredWorkData.description}
             </p>
           </motion.div>
 
           <div
-            aria-label="Filter projects by category"
+            aria-label={featuredWorkData.filterLabel}
             className="-mx-1 flex max-w-full gap-1 overflow-x-auto px-1 pb-2 lg:flex-wrap lg:justify-end lg:overflow-visible"
           >
             {categories.map((category) => {
@@ -178,7 +121,7 @@ export default function FeaturedWork() {
                   </div>
                   <a
                     aria-hidden="true"
-                    href="/projects/projects-detail"
+                    href={featuredWorkData.detailsHref}
                     className="mt-1 shrink-0 text-[#850d25] transition-transform duration-300 group-hover:translate-x-1.5"
                   >
                     <ArrowRight size={25} strokeWidth={1.4} />

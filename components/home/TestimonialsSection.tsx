@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
       aria-label="Client testimonials"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative overflow-hidden bg-[#fdfcfb] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+      className="relative overflow-hidden bg-[#fdfcfb] px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-16"
     >
       <div className="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14 xl:gap-20">
 
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
             </AnimatePresence>
           </div>
 
-          <div className="mt-8 flex flex-col justify-between gap-7 border-t border-[#e9e5e1] pt-7 sm:flex-row sm:items-center sm:gap-5 sm:border-t-0 sm:pt-0">
+          <div className="mt-2 flex flex-col justify-between gap-7 border-t border-[#e9e5e1] pt-7 sm:flex-row sm:items-center sm:gap-5 sm:border-t-0 sm:pt-0">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={activeIndex}

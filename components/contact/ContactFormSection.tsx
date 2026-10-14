@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useState, type FormEvent } from "react";
 import { motion, useReducedMotion } from "motion/react";
+import { contactFormData } from "../../data";
 
 const burgundy = "#850d25";
 
@@ -11,15 +12,6 @@ const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
-
-const projectTypes = [
-  "Residential Design",
-  "Commercial Design",
-  "Interior Design",
-  "Architecture",
-  "Renovation",
-  "Other",
-];
 
 type IconName = "pin" | "phone" | "mail" | "clock" | "arrow";
 
@@ -87,6 +79,7 @@ const labelClass =
 
 export default function ContactFormSection() {
   const reduceMotion = useReducedMotion();
+  const data = contactFormData;
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -129,7 +122,7 @@ export default function ContactFormSection() {
   return (
     <section
       id="contact-form"
-      aria-label="Contact our studio"
+      aria-label={data.ariaLabel}
       className="overflow-hidden bg-white py-12 sm:py-16 lg:pb-16 lg:pt-12 w-[100%]"
     >
       <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-start gap-10 px-5 sm:px-8 md:px-10 lg:grid-cols-[1.04fr_0.96fr] lg:gap-10 lg:px-[3.8%] xl:gap-12 xl:px-[5%]">
@@ -141,18 +134,17 @@ export default function ContactFormSection() {
         >
           <div className="mb-5 flex items-center gap-5 sm:mb-6">
             <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#850d25] sm:text-sm">
-              Send a Message
+              {data.sendMessageEyebrow}
             </span>
             <span className="h-[2px] w-16 bg-[#850d25]/50 sm:w-20" />
           </div>
 
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl xl:text-[52px]">
-            Get In <span className="text-[#850d25]">Touch</span>
+            {data.titleFirst} <span className="text-[#850d25]">{data.titleHighlight}</span>
           </h2>
 
           <p className="mt-4 max-w-[510px] text-base leading-7 text-[#85858d]">
-            Fill out the form below and our team will get back
-            to you as soon as possible.
+            {data.description}
           </p>
 
           <form onSubmit={handleSubmit} className="mt-7 space-y-5 sm:mt-8 sm:space-y-6">
@@ -160,14 +152,14 @@ export default function ContactFormSection() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-5">
               <motion.div {...animation(0.05)}>
                 <label htmlFor="contact-name" className={labelClass}>
-                  Full Name <span className="text-[#850d25]">*</span>
+                  {data.fields.fullName.label} <span className="text-[#850d25]">*</span>
                 </label>
                 <input
                   id="contact-name"
                   name="name"
                   type="text"
                   autoComplete="name"
-                  placeholder="Enter your name"
+                  placeholder={data.fields.fullName.placeholder}
                   className={inputClass}
                   required
                   maxLength={100}
@@ -176,14 +168,14 @@ export default function ContactFormSection() {
 
               <motion.div {...animation(0.1)}>
                 <label htmlFor="contact-email" className={labelClass}>
-                  Email Address <span className="text-[#850d25]">*</span>
+                  {data.fields.email.label} <span className="text-[#850d25]">*</span>
                 </label>
                 <input
                   id="contact-email"
                   name="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="Enter your email"
+                  placeholder={data.fields.email.placeholder}
                   className={inputClass}
                   required
                   maxLength={254}
@@ -195,14 +187,14 @@ export default function ContactFormSection() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-5">
               <motion.div {...animation(0.15)}>
                 <label htmlFor="contact-phone" className={labelClass}>
-                  Phone Number <span className="text-[#850d25]">*</span>
+                  {data.fields.phone.label} <span className="text-[#850d25]">*</span>
                 </label>
                 <input
                   id="contact-phone"
                   name="phone"
                   type="tel"
                   autoComplete="tel"
-                  placeholder="Enter your phone number"
+                  placeholder={data.fields.phone.placeholder}
                   className={inputClass}
                   required
                   maxLength={25}
@@ -211,7 +203,7 @@ export default function ContactFormSection() {
 
               <motion.div {...animation(0.2)}>
                 <label htmlFor="project-type" className={labelClass}>
-                  Project Type
+                  {data.fields.projectType.label}
                 </label>
                 <select
                   id="project-type"
@@ -220,9 +212,9 @@ export default function ContactFormSection() {
                   className={`${inputClass} cursor-pointer`}
                 >
                   <option value="" disabled>
-                    Select project type
+                    {data.fields.projectType.placeholder}
                   </option>
-                  {projectTypes.map((type) => (
+                  {data.projectTypes.map((type) => (
                     <option key={type} value={type}>
                       {type}
                     </option>
@@ -234,13 +226,13 @@ export default function ContactFormSection() {
             {/* Project location */}
             <motion.div {...animation(0.25)}>
               <label htmlFor="project-location" className={labelClass}>
-                Project Location
+                {data.fields.location.label}
               </label>
               <input
                 id="project-location"
                 name="projectLocation"
                 type="text"
-                placeholder="Enter your project location"
+                placeholder={data.fields.location.placeholder}
                 className={inputClass}
                 maxLength={200}
               />
@@ -249,13 +241,13 @@ export default function ContactFormSection() {
             {/* Message */}
             <motion.div {...animation(0.3)}>
               <label htmlFor="contact-message" className={labelClass}>
-                Message <span className="text-[#850d25]">*</span>
+                {data.fields.message.label} <span className="text-[#850d25]">*</span>
               </label>
               <textarea
                 id="contact-message"
                 name="message"
                 rows={4}
-                placeholder="Tell us about your project requirements..."
+                placeholder={data.fields.message.placeholder}
                 className={`${inputClass} min-h-[125px] resize-y sm:min-h-[140px]`}
                 required
                 maxLength={5000}
@@ -272,7 +264,7 @@ export default function ContactFormSection() {
                 className="group inline-flex min-h-[60px] w-full items-center justify-between gap-6 bg-[#850d25] px-5 py-3 text-white shadow-sm transition-colors duration-300 hover:bg-[#68091d] disabled:cursor-wait disabled:opacity-70 sm:w-auto sm:min-w-[255px] sm:px-6"
               >
                 <span className="text-sm font-medium sm:text-base">
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? data.submittingLabel : data.submitLabel}
                 </span>
 
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#850d25] transition-transform duration-300 group-hover:translate-x-1">
@@ -285,8 +277,7 @@ export default function ContactFormSection() {
                   role="status"
                   className="mt-4 text-sm text-green-700"
                 >
-                  Demo submission completed. Connect your backend
-                  to deliver this enquiry to your inbox.
+                  {data.successMessage}
                 </p>
               )}
             </motion.div>
@@ -298,18 +289,17 @@ export default function ContactFormSection() {
           <motion.div {...animation(0.1)}>
             <div className="mb-4 flex items-center gap-5">
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#850d25] sm:text-sm">
-                Our Location
+                {data.locationEyebrow}
               </span>
               <span className="h-[2px] w-16 bg-[#850d25]/50 sm:w-20" />
             </div>
 
             <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl">
-              Visit Our <span className="text-[#850d25]">Studio</span>
+              {data.locationTitleFirst} <span className="text-[#850d25]">{data.locationTitleHighlight}</span>
             </h2>
 
             <p className="mt-4 max-w-[600px] text-base leading-7 text-[#85858d]">
-              We’re conveniently located in the heart of New York.
-              Stop by our studio to discuss your project in person.
+              {data.locationDescription}
             </p>
           </motion.div>
 
@@ -319,8 +309,8 @@ export default function ContactFormSection() {
             className="group relative isolate h-[270px] overflow-hidden rounded-lg border border-[#ece8e4] bg-[#edf2f5] sm:h-[330px] lg:h-[315px] xl:h-[330px]"
           >
             <iframe
-              title="Veyra Studio location map in New York"
-              src="https://maps.google.com/maps?q=123%20Design%20Avenue%2C%20New%20York%2C%20NY%2010001&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              title={data.mapTitle}
+              src={data.mapUrl}
               className="absolute inset-0 h-full w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -335,12 +325,12 @@ export default function ContactFormSection() {
 
               <span className="min-w-0">
                 <span className="block font-semibold text-[#202027]">
-                  Veyra Studio
+                  {data.studioName}
                 </span>
                 <span className="mt-1 block text-sm leading-5 text-[#777780]">
-                  123 Design Avenue,
+                  {data.mapAddressLines[0]}
                   <br />
-                  New York, NY 10001
+                  {data.mapAddressLines[1]}
                 </span>
               </span>
             </div>
@@ -350,7 +340,7 @@ export default function ContactFormSection() {
           <motion.div {...animation(0.25)}>
             <div className="mb-5 flex items-center gap-5">
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#850d25] sm:text-sm">
-                Our Office
+                {data.officeEyebrow}
               </span>
               <span className="h-[2px] w-16 bg-[#850d25]/50 sm:w-20" />
             </div>
@@ -362,8 +352,8 @@ export default function ContactFormSection() {
                 className="relative h-[230px] overflow-hidden rounded-sm bg-[#eee7df] sm:h-[230px] lg:h-[210px] xl:h-[225px]"
               >
                 <Image
-                  src="/images/contact/gallery1.png"
-                  alt="Warm and contemporary Veyra Studio office interior"
+                  src={data.officeImage}
+                  alt={data.officeImageAlt}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 45vw, 24vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -373,35 +363,35 @@ export default function ContactFormSection() {
               {/* Office contact information */}
               <div className="min-w-0 sm:border-l sm:border-[#e8e4e0] sm:pl-6">
                 <h3 className="font-serif text-2xl tracking-tight text-[#17171b]">
-                  Veyra Studio
+                  {data.studioName}
                 </h3>
 
                 <address className="mt-1 not-italic text-sm leading-[1.7] text-[#77777e]">
-                  123 Design Avenue,
+                  {data.addressLines[0]}
                   <br />
-                  New York, NY 10001, USA
+                  {data.addressLines[1]}
                 </address>
 
                 <div className="mt-4 space-y-3">
                   <a
-                    href="tel:+12345678900"
+                    href={data.phoneHref}
                     className="group flex items-center gap-3 text-sm text-[#5d5d64] transition-colors hover:text-[#850d25]"
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#850d25] text-white transition-transform group-hover:scale-105">
                       <Icon name="phone" className="h-4 w-4" />
                     </span>
-                    <span>+1 234 567 8900</span>
+                    <span>{data.phone}</span>
                   </a>
 
                   <a
-                    href="mailto:info@veyrastudio.com"
+                    href={data.emailHref}
                     className="group flex items-center gap-3 text-sm text-[#5d5d64] transition-colors hover:text-[#850d25]"
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#850d25] text-white transition-transform group-hover:scale-105">
                       <Icon name="mail" className="h-4 w-4" />
                     </span>
                     <span className="break-all">
-                      info@veyrastudio.com
+                      {data.email}
                     </span>
                   </a>
 
@@ -410,9 +400,9 @@ export default function ContactFormSection() {
                       <Icon name="clock" className="h-4 w-4" />
                     </span>
                     <span>
-                      Mon - Sat: 9:00 AM - 6:00 PM
+                      {data.hours[0]}
                       <br />
-                      Sunday: Closed
+                      {data.hours[1]}
                     </span>
                   </div>
                 </div>

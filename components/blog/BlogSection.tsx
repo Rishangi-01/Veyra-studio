@@ -3,69 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const blogs = [
-  {
-    date: "18",
-    month: "SEP 2026",
-    category: "ARCHITECTURE",
-    title: "How Modern Architecture Shapes Better Living Spaces",
-    description:
-      "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
-    image: "/images/blogs/gallery1.png",
-    slug: "/blog/modern-architecture",
-  },
-  {
-    date: "12",
-    month: "SEP 2026",
-    category: "INTERIOR DESIGN",
-    title: "Top Interior Design Trends to Watch in 2026",
-    description:
-      "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
-    image: "/images/blogs/project-detail.png",
-    slug: "/blog/interior-design-trends",
-  },
-  {
-    date: "05",
-    month: "SEP 2026",
-    category: "LANDSCAPE DESIGN",
-    title: "Creating Outdoor Spaces that Inspire Relaxation",
-    description:
-      "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
-    image: "/images/blogs/gallery3.png",
-    slug: "/blog/landscape-design",
-  },
-  {
-    date: "18",
-    month: "SEP 2026",
-    category: "ARCHITECTURE",
-    title: "How Modern Architecture Shapes Better Living Spaces",
-    description:
-      "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
-    image: "/images/blogs/gallery1.png",
-    slug: "/blog/house-design-architecture",
-  },
-  {
-    date: "12",
-    month: "SEP 2026",
-    category: "INTERIOR DESIGN",
-    title: "Top Interior Design Trends to Watch in 2026",
-    description:
-      "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
-    image: "/images/blogs/project-detail.png",
-    slug: "/blog/office-interior-design",
-  },
-  {
-    date: "05",
-    month: "SEP 2026",
-    category: "LANDSCAPE DESIGN",
-    title: "Creating Outdoor Spaces that Inspire Relaxation",
-    description:
-      "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
-    image: "/images/blogs/gallery3.png",
-    slug: "/blog/living-space-design",
-  },
-];
+import { blogSectionData } from "../../data";
 
 export default function BlogSection() {
   const [visible, setVisible] = useState(false);
@@ -103,27 +41,26 @@ export default function BlogSection() {
         >
           <div className="mb-4 flex items-center gap-12">
             <span className="text-xs font-semibold tracking-[0.2em] text-[#850d29] sm:text-sm">
-              OUR BLOGS
+              {blogSectionData.eyebrow}
             </span>
             <span className="h-px w-24 bg-[#a9a5a2]" />
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#11151c] sm:text-5xl lg:text-[60px]">
-            Insights &amp;{" "}
-            <span className="text-[#850d29]">Inspiration</span>
+            {blogSectionData.titleFirst}{" "}
+            <span className="text-[#850d29]">{blogSectionData.titleHighlight}</span>
           </h2>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-[#77777d] sm:text-lg sm:leading-8">
-            Explore our latest thoughts, design ideas and expert insights on
-            architecture, interiors and modern living.
+            {blogSectionData.description}
           </p>
         </div>
 
         {/* Blog cards */}
         <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8">
-          {blogs.map((blog, index) => (
+          {blogSectionData.items.map((blog, index) => (
             <article
-              key={blog.slug}
+              key={blog.href}
               className={`blog-card group min-w-0 ${
                 visible ? "is-visible" : ""
               }`}
@@ -131,8 +68,8 @@ export default function BlogSection() {
             >
               {/* Image and date */}
               <Link
-                href={blog.slug}
-                aria-label={`Read ${blog.title}`}
+                href={blog.href}
+                aria-label={`${blogSectionData.readArticleLabelPrefix} ${blog.title}`}
                 className="blog-image relative block aspect-[1.12/1] overflow-hidden bg-[#e8e4de] sm:aspect-[1.08/1] lg:aspect-[1.08/1]"
               >
                 <Image
@@ -165,7 +102,7 @@ export default function BlogSection() {
                 </div>
 
                 <h3 className="font-serif text-[25px] leading-[1.23] tracking-tight text-[#171920] transition-colors duration-300 group-hover:text-[#850d29] sm:text-[27px]">
-                  <Link href={blog.slug}>{blog.title}</Link>
+                  <Link href={blog.href}>{blog.title}</Link>
                 </h3>
 
                 <p className="mt-4 text-[15px] leading-[1.75] text-[#77777d]">
@@ -173,10 +110,10 @@ export default function BlogSection() {
                 </p>
 
                 <Link
-                  href="/blog/blog-details"
+                  href={blogSectionData.detailsHref}
                   className="blog-read-more mt-5 inline-flex items-center gap-7 border-b border-[#850d29] pb-2 text-sm font-semibold text-[#850d29] transition-all duration-300 hover:gap-10 sm:text-base"
                 >
-                  Read More
+                  {blogSectionData.readMoreLabel}
                   <span
                     aria-hidden="true"
                     className="text-2xl leading-none transition-transform duration-300 group-hover:translate-x-1"

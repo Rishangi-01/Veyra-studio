@@ -1,80 +1,3 @@
-// import siteDataJson from "./site.json";
-
-// export type NavItem = {
-//   label: string;
-//   href: string;
-// };
-
-// export type HeroSlide = {
-//   eyebrow: string;
-//   title: string[];
-//   highlight: string;
-//   description: string;
-//   image: string;
-//   featuredImage: string;
-//   project: string;
-//   location: string;
-//   year: string;
-//   category: string;
-// };
-
-// export type Service = {
-//   title: string;
-//   description: string;
-//   href: string;
-// };
-
-// export type Project = {
-//   number: string;
-//   title: string;
-//   location: string;
-//   category: string;
-//   image: string;
-//   href: string;
-//   position?: "center" | "top" | "bottom" | "left" | "right";
-// };
-
-// export type Stat = {
-//   label: string;
-//   value: string;
-// };
-
-// export type Testimonial = {
-//   name: string;
-//   role: string;
-//   quote: string;
-//   avatar: string;
-// };
-
-// export type ProcessStep = {
-//   number: string;
-//   title: string;
-//   description: string;
-// };
-
-// export type SiteData = {
-//   navItems: NavItem[];
-//   heroSlides: HeroSlide[];
-//   services: Service[];
-//   projects: Project[];
-//   stats: Stat[];
-//   testimonials: Testimonial[];
-//   processSteps: ProcessStep[];
-// };
-
-// const siteData: SiteData = siteDataJson as SiteData;
-
-// export const navItems = siteData.navItems;
-// export const heroSlides = siteData.heroSlides;
-// export const services = siteData.services;
-// export const projects = siteData.projects;
-// export const stats = siteData.stats;
-// export const testimonials = siteData.testimonials;
-// export const processSteps = siteData.processSteps;
-
-// export default siteData;
-
-
 import siteData from "./site.json";
 
 export type NavbarItem = {
@@ -254,6 +177,18 @@ export type ContactCtaData = {
   imageAlt: string;
 };
 
+export type ContactMethod = "phone" | "email" | "location";
+export type QuoteBenefitIconName = "FileText" | "MessageCircle" | "CheckCircle2";
+export type ProjectDetailIconName =
+  | "FiHome"
+  | "FiMapPin"
+  | "FiLayers"
+  | "FiMaximize"
+  | "FiCalendar"
+  | "FiSettings";
+export type ProjectPrincipleIconName = "FaLeaf" | "FiAward" | "FiUsers";
+export type ServiceFeatureIconName = "Palette" | "Leaf" | "Lightbulb" | "PanelsTopLeft";
+
 const footerIconNames = [
   "RiMapPin2Fill",
   "FaPhoneAlt",
@@ -281,6 +216,40 @@ const serviceIconNames = [
   "ClipboardList",
   "MapPinned",
 ] satisfies readonly ServiceIconName[];
+
+const contactMethodNames = [
+  "phone",
+  "email",
+  "location",
+] satisfies readonly ContactMethod[];
+
+const quoteBenefitIconNames = [
+  "FileText",
+  "MessageCircle",
+  "CheckCircle2",
+] satisfies readonly QuoteBenefitIconName[];
+
+const projectDetailIconNames = [
+  "FiHome",
+  "FiMapPin",
+  "FiLayers",
+  "FiMaximize",
+  "FiCalendar",
+  "FiSettings",
+] satisfies readonly ProjectDetailIconName[];
+
+const projectPrincipleIconNames = [
+  "FaLeaf",
+  "FiAward",
+  "FiUsers",
+] satisfies readonly ProjectPrincipleIconName[];
+
+const serviceFeatureIconNames = [
+  "Palette",
+  "Leaf",
+  "Lightbulb",
+  "PanelsTopLeft",
+] satisfies readonly ServiceFeatureIconName[];
 
 function requireIconName<T extends string>(
   value: string,
@@ -331,6 +300,72 @@ export const contactCtaData: ContactCtaData = siteData.Veyra.home.contactCta;
 
 export type VeyraAboutSectionData = typeof siteData.Veyra.home.about;
 export const aboutSectionData: VeyraAboutSectionData = siteData.Veyra.home.about;
+
+export type VeyraPageData = typeof siteData.Veyra.pages;
+export const pageHeroData: VeyraPageData["heroes"] = siteData.Veyra.pages.heroes;
+export const blogSectionData: VeyraPageData["blog"] = siteData.Veyra.pages.blog;
+export const blogDetailsData: VeyraPageData["blogDetails"] = siteData.Veyra.pages.blogDetails;
+
+const rawContactSectionData = siteData.Veyra.pages.contact.section;
+export const contactSectionData: Omit<VeyraPageData["contact"]["section"], "items"> & {
+  items: Array<VeyraPageData["contact"]["section"]["items"][number] & { type: ContactMethod }>;
+} = {
+  ...rawContactSectionData,
+  items: rawContactSectionData.items.map((item) => ({
+    ...item,
+    type: requireIconName(item.type, contactMethodNames, "Veyra contact methods"),
+  })),
+};
+export const contactFormData: VeyraPageData["contact"]["form"] = siteData.Veyra.pages.contact.form;
+
+const rawQuoteSectionData = siteData.Veyra.pages.quote;
+export const quoteSectionData: Omit<VeyraPageData["quote"], "benefits"> & {
+  benefits: Array<VeyraPageData["quote"]["benefits"][number] & { icon: QuoteBenefitIconName }>;
+} = {
+  ...rawQuoteSectionData,
+  benefits: rawQuoteSectionData.benefits.map((benefit) => ({
+    ...benefit,
+    icon: requireIconName(benefit.icon, quoteBenefitIconNames, "Veyra quote benefits"),
+  })),
+};
+export const teamAboutData: VeyraPageData["team"]["about"] = siteData.Veyra.pages.team.about;
+export const teamMembersData: VeyraPageData["team"]["members"] = siteData.Veyra.pages.team.members;
+export const featuredWorkData: VeyraPageData["featuredWork"] = siteData.Veyra.pages.featuredWork;
+
+const rawProjectDetailsData = siteData.Veyra.pages.projectDetails;
+export const projectDetailsData: Omit<VeyraPageData["projectDetails"], "details" | "principles"> & {
+  details: Array<VeyraPageData["projectDetails"]["details"][number] & { icon: ProjectDetailIconName }>;
+  principles: Array<VeyraPageData["projectDetails"]["principles"][number] & { icon: ProjectPrincipleIconName }>;
+} = {
+  ...rawProjectDetailsData,
+  details: rawProjectDetailsData.details.map((detail) => ({
+    ...detail,
+    icon: requireIconName(detail.icon, projectDetailIconNames, "Veyra project details"),
+  })),
+  principles: rawProjectDetailsData.principles.map((principle) => ({
+    ...principle,
+    icon: requireIconName(principle.icon, projectPrincipleIconNames, "Veyra project principles"),
+  })),
+};
+export const projectDetailGalleryData: VeyraPageData["projectDetailGallery"] = siteData.Veyra.pages.projectDetailGallery;
+export const serviceShowcaseData: VeyraPageData["services"]["showcase"] = siteData.Veyra.pages.services.showcase;
+export const architecturalDesignData: VeyraPageData["services"]["architecturalDesign"] = siteData.Veyra.pages.services.architecturalDesign;
+
+const rawServiceKeyFeaturesData = siteData.Veyra.pages.services.keyFeatures;
+export const serviceKeyFeaturesData: Omit<VeyraPageData["services"]["keyFeatures"], "items"> & {
+  items: Array<VeyraPageData["services"]["keyFeatures"]["items"][number] & { icon: ServiceFeatureIconName }>;
+} = {
+  ...rawServiceKeyFeaturesData,
+  items: rawServiceKeyFeaturesData.items.map((item) => ({
+    ...item,
+    icon: requireIconName(item.icon, serviceFeatureIconNames, "Veyra service key features"),
+  })),
+};
+export const serviceDesignProcessData: VeyraPageData["services"]["designProcess"] = siteData.Veyra.pages.services.designProcess;
+export const serviceProjectGalleryData: VeyraPageData["services"]["projectGallery"] = siteData.Veyra.pages.services.projectGallery;
+export const relatedServicesData: VeyraPageData["services"]["relatedServices"] = siteData.Veyra.pages.services.relatedServices;
+export const testimonialsIntroData: VeyraPageData["testimonials"]["intro"] = siteData.Veyra.pages.testimonials.intro;
+export const testimonialReviewsData: VeyraPageData["testimonials"]["reviews"] = siteData.Veyra.pages.testimonials.reviews;
 
 // ── Root Schema Types ──
 export type RawSiteData = typeof siteData;
