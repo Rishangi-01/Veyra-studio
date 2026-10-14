@@ -19,7 +19,7 @@ const iconMap = {
 
 const steps = processSectionData.steps.map((step) => ({
   ...step,
-  icon: iconMap[step.icon as keyof typeof iconMap],
+  icon: iconMap[step.icon],
 }));
 
 export default function ProcessSection() {

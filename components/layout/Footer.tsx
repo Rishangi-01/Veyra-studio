@@ -25,11 +25,11 @@ const iconMap = {
 
 const contactItems = footerData.contactItems.map((item) => ({
   ...item,
-  icon: iconMap[item.icon as keyof typeof iconMap],
+  icon: iconMap[item.icon],
 }));
 const socialLinks = footerData.socialLinks.map((item) => ({
   ...item,
-  icon: iconMap[item.icon as keyof typeof iconMap],
+  icon: iconMap[item.icon],
 }));
 const columns = footerData.columns;
 

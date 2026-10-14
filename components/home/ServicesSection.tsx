@@ -25,7 +25,7 @@ const iconMap = {
 
 const services = homeServicesData.items.map((item) => ({
   ...item,
-  icon: iconMap[item.icon as keyof typeof iconMap],
+  icon: iconMap[item.icon],
 }));
 
 export default function ServicesSection() {

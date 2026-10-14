@@ -254,13 +254,78 @@ export type ContactCtaData = {
   imageAlt: string;
 };
 
+const footerIconNames = [
+  "RiMapPin2Fill",
+  "FaPhoneAlt",
+  "MdEmail",
+  "CiGlobe",
+] satisfies readonly FooterIconName[];
+
+const footerSocialIconNames = [
+  "FaFacebookF",
+  "FaInstagram",
+  "FaLinkedinIn",
+  "FaYoutube",
+] satisfies readonly FooterSocialIconName[];
+
+const processIconNames = [
+  "PencilRuler",
+  "DraftingCompass",
+  "HardHat",
+] satisfies readonly ProcessIconName[];
+
+const serviceIconNames = [
+  "Building2",
+  "Sofa",
+  "Trees",
+  "ClipboardList",
+  "MapPinned",
+] satisfies readonly ServiceIconName[];
+
+function requireIconName<T extends string>(
+  value: string,
+  supportedNames: readonly T[],
+  context: string,
+): T {
+  const iconName = supportedNames.find((supportedName) => supportedName === value);
+  if (!iconName) {
+    throw new Error(`Unsupported icon name "${value}" in ${context}.`);
+  }
+  return iconName;
+}
+
 export const navbarData: NavbarData = siteData.Veyra.home.navbar;
-export const footerData: FooterData = siteData.Veyra.home.footer;
+const rawFooterData = siteData.Veyra.home.footer;
+export const footerData: FooterData = {
+  ...rawFooterData,
+  contactItems: rawFooterData.contactItems.map((item) => ({
+    ...item,
+    icon: requireIconName(item.icon, footerIconNames, "Veyra footer contact items"),
+  })),
+  socialLinks: rawFooterData.socialLinks.map((item) => ({
+    ...item,
+    icon: requireIconName(item.icon, footerSocialIconNames, "Veyra footer social links"),
+  })),
+};
 export const clientLogos: ClientLogo[] = siteData.Veyra.home.clientLogos;
 export const heroSlides: HeroSlide[] = siteData.Veyra.home.hero.slides;
-export const processSectionData: ProcessSectionData = siteData.Veyra.home.process;
+const rawProcessSectionData = siteData.Veyra.home.process;
+export const processSectionData: ProcessSectionData = {
+  ...rawProcessSectionData,
+  steps: rawProcessSectionData.steps.map((step) => ({
+    ...step,
+    icon: requireIconName(step.icon, processIconNames, "Veyra process steps"),
+  })),
+};
 export const homeProjectsData: ProjectSectionData = siteData.Veyra.home.projects;
-export const homeServicesData: ServicesSectionData = siteData.Veyra.home.services;
+const rawHomeServicesData = siteData.Veyra.home.services;
+export const homeServicesData: ServicesSectionData = {
+  ...rawHomeServicesData,
+  items: rawHomeServicesData.items.map((item) => ({
+    ...item,
+    icon: requireIconName(item.icon, serviceIconNames, "Veyra services"),
+  })),
+};
 export const homeTestimonialsData: TestimonialsSectionData = siteData.Veyra.home.testimonials;
 export const contactCtaData: ContactCtaData = siteData.Veyra.home.contactCta;
 
