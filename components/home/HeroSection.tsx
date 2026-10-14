@@ -46,7 +46,7 @@ export default function HeroSection() {
   return (
     <section
       aria-label="Veyra Studio featured architecture"
-      className="relative overflow-hidden bg-[#f8f7f4] text-[#191919]"
+      className="relative overflow-hidden bg-[#f8f7f4] text-[#191919] w-[100%]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocusCapture={() => setIsPaused(true)}
