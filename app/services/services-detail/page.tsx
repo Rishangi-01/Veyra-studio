@@ -1,10 +1,10 @@
-import ArchitecturalDesignSection from "@/app/components/services-detail/ArchitecturalDesignSection";
-import KeyFeatures from "@/app/components/services-detail/KeyFeatures";
-import ServicesDetailsHero from "@/app/components/services-detail/ServicesDetailHero";
-import OurDesignProcess from "@/app/components/services-detail/OurDesignProcess";
-import ProjectGallery from "@/app/components/services-detail/ProjectGallery";
-import RelatedServices from "@/app/components/services-detail/RelatedServices";
-import ContactCTA from "@/app/components/home/ContactCTA";
+import ArchitecturalDesignSection from "@/components/services-detail/ArchitecturalDesignSection";
+import KeyFeatures from "@/components/services-detail/KeyFeatures";
+import ServicesDetailsHero from "@/components/services-detail/ServicesDetailHero";
+import OurDesignProcess from "@/components/services-detail/OurDesignProcess";
+import ProjectGallery from "@/components/services-detail/ProjectGallery";
+import RelatedServices from "@/components/services-detail/RelatedServices";
+import ContactCTA from "@/components/home/ContactCTA";
 
 export default function Services() {
     return (

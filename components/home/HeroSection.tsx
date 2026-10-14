@@ -15,7 +15,7 @@ import {
   motion,
   useReducedMotion,
 } from "motion/react";
-import { heroSlides as slides } from "../../../data";
+import { heroSlides as slides } from "../../data";
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import ServicesHero from "../components/services/ServicesHero";
-import ServicesShowcase from "../components/services/ServicesShowcase";
-import ClientLogos from "../components/home/ClientLogos";
-import ContactCTA from "../components/home/ContactCTA";
+import ServicesHero from "@/components/services/ServicesHero";
+import ServicesShowcase from "@/components/services/ServicesShowcase";
+import ClientLogos from "@/components/home/ClientLogos";
+import ContactCTA from "@/components/home/ContactCTA";
 
 export default function Services() {
     return (

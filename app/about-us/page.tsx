@@ -1,10 +1,10 @@
-import Image from "next/image";
-import AboutHero from "../components/about-us/AboutHero";
-import AboutSection from "../components/home/AboutSection";
-import ClientLogos from "../components/home/ClientLogos";
-import ProcessSection from "../components/home/ProcessSection";
-import ContactCTA from "../components/home/ContactCTA";
-import TestimonialsSection from "../components/home/TestimonialsSection";
+import AboutHero from "@/components/about-us/AboutHero";
+import AboutSection from "@/components/home/AboutSection";
+import ClientLogos from "@/components/home/ClientLogos";
+import ContactCTA from "@/components/home/ContactCTA";
+import ProcessSection from "@/components/home/ProcessSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+
 
 export default function AboutUs() {
     return (

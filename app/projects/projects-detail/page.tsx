@@ -1,6 +1,6 @@
-import ProjectDetailsOverview from "@/app/components/projects-detail/ProjectDetailsOverview";
-import ProjectGallery from "@/app/components/projects-detail/ProjectGallery";
-import ProjectDetailsHero from "@/app/components/projects-detail/ProjectsDetailHero";
+import ProjectDetailsOverview from "@/components/projects-detail/ProjectDetailsOverview";
+import ProjectGallery from "@/components/projects-detail/ProjectGallery";
+import ProjectDetailsHero from "@/components/projects-detail/ProjectsDetailHero";
 
 export default function ProjectDetails() {
   return (

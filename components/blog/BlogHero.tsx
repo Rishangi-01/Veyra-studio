@@ -4,12 +4,12 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 
-export default function AboutHero() {
+export default function BlogHero() {
   const reduceMotion = useReducedMotion();
 
   return (
     <section
-      aria-labelledby="about-heading"
+      aria-labelledby="blog-heading"
       className="relative isolate flex min-h-[300px] items-end overflow-hidden bg-[#11191d] sm:min-h-[350px] md:min-h-[390px] lg:min-h-[420px] xl:min-h-[450px] w-[100%]"
     >
       {/* Background image */}
@@ -52,10 +52,10 @@ export default function AboutHero() {
           }}
         >
           <h1
-            id="about-heading"
+            id="blog-heading"
             className="font-sans text-4xl font-medium tracking-[-0.055em] text-white drop-shadow-md sm:text-5xl md:text-[56px] lg:text-[64px] xl:text-[70px]"
           >
-            About Us
+            Blogs
           </h1>
 
           {/* Animated burgundy accent */}

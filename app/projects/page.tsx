@@ -1,5 +1,5 @@
-import ProjectsHero from "../components/projects/ProjectsHero";
-import FeaturedWork from "../components/projects/FeaturedWork";
+import ProjectsHero from "@/components/projects/ProjectsHero";
+import FeaturedWork from "@/components/projects/FeaturedWork";
 
 export default function Projects() {
   return (
