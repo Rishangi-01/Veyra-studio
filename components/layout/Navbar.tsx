@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDownRight,
@@ -45,9 +46,11 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="relative"
           >
-            <img
+            <Image
               src={navbarData.logo}
               alt="Veyra Studio — Architecture, Interiors, Design"
+              width={300}
+              height={68}
               className="h-auto w-[205px] object-contain sm:w-[245px] lg:w-[300px] xl:w-[210px]"
             />
           </motion.div>

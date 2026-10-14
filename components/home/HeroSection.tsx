@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   ArrowDown,
   ArrowRight,
-  ArrowUpRight,
   MapPin,
 } from "lucide-react";
 import {

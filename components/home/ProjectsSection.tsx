@@ -10,7 +10,6 @@ import {
   MoveUpRight,
 } from "lucide-react";
 import {
-  AnimatePresence,
   motion,
   useReducedMotion,
 } from "motion/react";

@@ -23,8 +23,6 @@ const iconMap = {
   FaYoutube,
 } as const;
 
-const quickLinks = footerData.columns[0].items;
-const services = footerData.columns[1].items;
 const contactItems = footerData.contactItems.map((item) => ({
   ...item,
   icon: iconMap[item.icon as keyof typeof iconMap],
