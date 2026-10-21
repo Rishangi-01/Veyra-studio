@@ -1,9 +1,56 @@
 
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import {
+  animate,
+  motion,
+  useInView,
+  useMotionValue,
+  useReducedMotion,
+  useTransform,
+} from "motion/react";
 import { testimonialsIntroData } from "../../data";
+
+function AnimatedStat({ value }: { value: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.7 });
+  const reduceMotion = useReducedMotion();
+  const match = /^(\d+(?:\.\d+)?)(.*)$/.exec(value);
+  const numericPrefix = match?.[1] ?? "";
+  const isNumeric = numericPrefix.length > 0;
+  const target = isNumeric ? Number(numericPrefix) : 0;
+  const suffix = match?.[2] ?? "";
+  const decimalPlaces = numericPrefix.split(".")[1]?.length ?? 0;
+  const count = useMotionValue(0);
+  const formattedCount = useTransform(
+    count,
+    (current) => `${current.toFixed(decimalPlaces)}${suffix}`
+  );
+
+  useEffect(() => {
+    if (!isInView || !isNumeric) return;
+
+    if (reduceMotion) {
+      count.set(target);
+      return;
+    }
+
+    const animation = animate(count, target, {
+      duration: 1.6,
+      ease: "easeOut",
+    });
+
+    return () => animation.stop();
+  }, [count, isInView, isNumeric, reduceMotion, target]);
+
+  return (
+    <motion.span ref={ref} aria-label={value}>
+      {isNumeric ? formattedCount : value}
+    </motion.span>
+  );
+}
 
 export default function TestimonialsIntro() {
   const reduceMotion = useReducedMotion();
@@ -52,7 +99,7 @@ export default function TestimonialsIntro() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-[800px] font-serif text-[clamp(2.5rem,4.8vw,5rem)] leading-[1.04] tracking-[-0.055em] text-[#111820]">
+          <h2 className="max-w-[800px] font-serif text-[clamp(2.5rem,4.8vw,5rem)] font-medium leading-[1.04] tracking-[-0.055em] text-[#111820]">
             {data.titleFirst}{" "}
             <span className="text-[#850d25]">
               {data.titleHighlight}
@@ -99,7 +146,7 @@ export default function TestimonialsIntro() {
                   whileHover={reduceMotion ? undefined : { y: -3 }}
                   className="font-serif text-4xl font-semibold tracking-tight text-[#850d25] sm:text-3xl md:text-4xl xl:text-[42px]"
                 >
-                  {stat.value}
+                  <AnimatedStat value={stat.value} />
                 </motion.span>
 
                 <p className="mt-1 text-sm leading-relaxed text-[#686970] sm:text-xs md:text-sm xl:text-base">

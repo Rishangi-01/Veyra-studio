@@ -91,7 +91,7 @@ export default function BlogDetails() {
               </time>
             </div>
 
-            <h1 className="max-w-4xl font-serif text-3xl leading-[1.13] tracking-tight text-[#15151c] sm:text-4xl lg:text-[48px]">
+            <h1 className="max-w-4xl font-serif text-3xl font-medium leading-[1.13] tracking-tight text-[#15151c] sm:text-4xl lg:text-[48px]">
               {article.title}
             </h1>
 
@@ -119,7 +119,7 @@ export default function BlogDetails() {
             {article.features.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 100}>
                 <section>
-                  <h2 className="font-serif text-[23px] leading-tight tracking-tight text-[#19191f] sm:text-[27px]">
+                  <h2 className="font-serif text-[23px] font-medium leading-tight tracking-tight text-[#19191f] sm:text-[27px]">
                     {feature.title}
                   </h2>
                   <span className="mt-2 block h-[2px] w-8 bg-[#850d29]" />
@@ -203,7 +203,7 @@ export default function BlogDetails() {
               {sidebar.categories.map((category) => (
                 <Link
                   key={category}
-                  href={`${sidebar.categoryHrefPrefix}${category.toLowerCase().replaceAll(" ", "-")}`}
+                  href="/blog"
                   className="group flex items-center justify-between border-b border-[#eeece9] py-2 text-xs text-[#393940] last:border-0 hover:text-[#850d29]"
                 >
                   {category}
@@ -224,7 +224,7 @@ export default function BlogDetails() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${sidebar.shareOnLabelPrefix} ${social.label}`}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e7e0df] text-xs font-semibold text-[#850d29] transition-all duration-300 hover:-translate-y-1 hover:border-[#850d29] hover:bg-[#850d29] hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e7e0df] text-lg font-bold leading-none text-[#850d29] transition-all duration-300 hover:-translate-y-1 hover:border-[#850d29] hover:bg-[#850d29] hover:text-white"
                 >
                   {social.icon}
                 </a>

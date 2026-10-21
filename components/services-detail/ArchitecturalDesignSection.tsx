@@ -64,7 +64,7 @@ export default function ArchitecturalDesignSection() {
                 {data.eyebrow}
               </p>
 
-              <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#171719] sm:text-5xl xl:text-[48px]">
+              <h2 className="font-serif text-4xl font-medium leading-[1.12] tracking-tight text-[#171719] sm:text-5xl xl:text-[48px]">
                 {data.titleFirst}
                 <br />
                 {data.titleSecond}{" "}

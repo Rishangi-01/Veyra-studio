@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { pageHeroData } from "../../data";
 
@@ -12,7 +13,7 @@ export default function GetAquoteHero() {
   return (
     <section
       aria-labelledby="get-a-quote-heading"
-      className="relative isolate flex min-h-[300px] items-end overflow-hidden bg-[#11191d] sm:min-h-[350px] md:min-h-[390px] lg:min-h-[420px] xl:min-h-[450px] w-[100%]"
+      className="relative isolate flex min-h-[280px] items-end overflow-hidden bg-[#11191d] sm:min-h-[330px] md:min-h-[370px] lg:min-h-[400px] xl:min-h-[420px] w-[100%]"
     >
       <motion.div
         initial={reduceMotion ? false : { scale: 1.08 }}
@@ -66,6 +67,13 @@ export default function GetAquoteHero() {
             }}
             className="mt-4 h-[3px] bg-[#850d25]"
           />
+
+          <Link
+            href="#request-quote"
+            className="mt-6 inline-flex min-h-12 items-center justify-center bg-[#850d25] px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#65091c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            Request a Quote
+          </Link>
         </motion.div>
       </div>
 

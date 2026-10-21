@@ -46,7 +46,7 @@ export default function BlogSection() {
             <span className="h-px w-24 bg-[#a9a5a2]" />
           </div>
 
-          <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#11151c] sm:text-5xl lg:text-[60px]">
+          <h2 className="font-serif text-4xl font-medium leading-[1.12] tracking-tight text-[#11151c] sm:text-5xl lg:text-[60px]">
             {blogSectionData.titleFirst}{" "}
             <span className="text-[#850d29]">{blogSectionData.titleHighlight}</span>
           </h2>
@@ -60,7 +60,7 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8">
           {blogSectionData.items.map((blog, index) => (
             <article
-              key={blog.href}
+              key={blog.id}
               className={`blog-card group min-w-0 ${
                 visible ? "is-visible" : ""
               }`}

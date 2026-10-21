@@ -1,0 +1,134 @@
+
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, MoveUpRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
+import { aboutSectionData } from "../../data";
+
+export default function AboutSection() {
+    const reduceMotion = useReducedMotion();
+
+    return (
+        <section
+            id="about"
+            className="relative overflow-hidden bg-[#faf9f6] px-5 py-6 sm:px-8 sm:py-12 lg:px-12 lg:py-16 xl:px-16"
+        >
+            <div className="mx-auto grid max-w-[1600px] items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-16">
+
+                <motion.div
+                    initial={reduceMotion ? false : { opacity: 0, x: -45 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                        duration: 0.85,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="relative mx-auto w-full max-w-[700px] pb-7 pl-0 pr-3 pt-5 sm:pb-8 sm:pl-3 sm:pr-5 sm:pt-8 lg:pr-0"
+                >
+                    <motion.div
+                        initial={reduceMotion ? false : { scale: 0.92, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.15 }}
+                        className="absolute left-0 lg:left-[11px] top-[17px] lg:top-[28px] h-[68%] w-[47%] bg-[#850d25]"
+                    />
+
+                    <div className="relative z-10 ml-[5%] mt-[5%] aspect-[1.22/1] overflow-hidden bg-neutral-200 shadow-sm">
+                        <motion.div
+                            initial={reduceMotion ? false : { scale: 1.08 }}
+                            whileInView={{ scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Image
+                                src={aboutSectionData.images.primary.src}
+                                alt={aboutSectionData.images.primary.alt}
+                                fill
+                                priority={false}
+                                sizes="(max-width: 1023px) 90vw, 48vw"
+                                className="object-cover object-center transition-transform duration-700 hover:scale-[1.035]"
+                            />
+                        </motion.div>
+                    </div>
+
+                    <motion.div
+                        initial={reduceMotion ? false : { opacity: 0, y: 28, x: 20 }}
+                        whileInView={{ opacity: 1, y: 0, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{
+                            duration: 0.75,
+                            delay: 0.3,
+                            ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className="absolute bottom-0 right-0 z-20 w-[27%] border-[5px] border-white bg-white shadow-xl sm:right-[-1%] sm:w-[27%] sm:border-[7px] lg:right-[-1%] lg:w-[27%]"
+                    >
+                        <div className="relative aspect-[0.72/1] overflow-hidden bg-neutral-200">
+                            <Image
+                                src={aboutSectionData.images.secondary.src}
+                                alt={aboutSectionData.images.secondary.alt}
+                                fill
+                                sizes="(max-width: 1023px) 28vw, 14vw"
+                                className="object-cover transition-transform duration-700 hover:scale-110"
+                            />
+                        </div>
+                    </motion.div>
+                </motion.div>
+
+                <motion.div
+                    initial={reduceMotion ? false : { opacity: 0, x: 35 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                        duration: 0.85,
+                        delay: 0.1,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="flex flex-col items-start lg:pl-1 xl:pl-5"
+                >
+                    <div className="mb-6 flex w-full max-w-[365px] items-center gap-6 sm:mb-7">
+                        <span className="shrink-0 text-[11px] font-medium uppercase tracking-[0.18em] text-[#850d25] sm:text-sm sm:tracking-[0.2em]">
+                            {aboutSectionData.eyebrow}
+                        </span>
+
+                        <span className="h-px flex-1 bg-[#850d25]" />
+                    </div>
+
+                    <h2 className="max-w-[650px] font-serif text-[clamp(2.7rem,5vw,4.5rem)] font-medium leading-[1.06] tracking-[-0.045em] text-[#171717]">
+                        <motion.span
+                            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="block"
+                        >
+                            {aboutSectionData.titleFirstLine}
+                        </motion.span>
+
+                        <motion.span
+                            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.12 }}
+                            className="mt-1 block text-[#850d25]"
+                        >
+                            {aboutSectionData.titleSecondLine}
+                        </motion.span>
+                    </h2>
+
+                    <motion.p
+                        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.65, delay: 0.25 }}
+                        className="mt-7 max-w-[620px] text-[15px] leading-[1.75] text-[#686868] sm:text-base sm:leading-[1.75] lg:mt-7"
+                    >
+                        {aboutSectionData.description}
+                    </motion.p>
+                </motion.div>
+            </div>
+        </section>
+    );
+}

@@ -87,7 +87,7 @@ export default function ContactSection() {
           {/* Heading */}
           <h2
             id="contact-section-heading"
-            className="max-w-[700px] font-serif text-[clamp(2.5rem,5vw,5rem)] font-normal leading-[1.04] tracking-[-0.055em] text-[#111318]"
+            className="max-w-[700px] font-serif text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.04] tracking-[-0.055em] text-[#111318]"
           >
             {contactSectionData.titleFirst}
             <br />

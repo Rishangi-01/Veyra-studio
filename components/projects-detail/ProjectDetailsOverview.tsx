@@ -46,7 +46,7 @@ function SectionHeading({
 }) {
   return (
     <div className="mb-3">
-      <h2 className="font-serif text-[25px] leading-tight tracking-tight text-[#15171d] sm:text-[28px]">
+      <h2 className="font-serif text-[25px] font-medium leading-tight tracking-tight text-[#15171d] sm:text-[28px]">
         {children}
       </h2>
       <span className="mt-2 block h-[2px] w-7 bg-[#9b102d]" />
@@ -87,7 +87,7 @@ export default function ProjectDetailsOverview() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h1 className="font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-[42px]">
+            <h1 className="font-serif text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-[42px]">
               {data.titleFirst}{" "}
               <span className="text-[#94102b]">{data.titleHighlight}</span>
             </h1>
@@ -299,7 +299,7 @@ export default function ProjectDetailsOverview() {
                 {data.ctaEyebrow}
               </p>
 
-              <h2 className="mt-2 font-serif text-[27px] leading-[1.15] tracking-tight">
+              <h2 className="mt-2 font-serif text-[27px] font-medium leading-[1.15] tracking-tight">
                 {data.ctaTitleFirst}
                 <br />
                 <span className="text-[#94102b]">{data.ctaTitleSecond}</span>

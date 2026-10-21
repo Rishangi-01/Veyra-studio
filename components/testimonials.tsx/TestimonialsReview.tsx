@@ -2,18 +2,28 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { FiStar } from "react-icons/fi";
 import { testimonialReviewsData } from "../../data";
 
+const INITIAL_REVIEW_COUNT = 6;
+const REVIEWS_PER_LOAD = 3;
+
 export default function TestimonialsReview() {
   const reduceMotion = useReducedMotion();
   const data = testimonialReviewsData;
+  const [visibleCount, setVisibleCount] = useState(INITIAL_REVIEW_COUNT);
+  const visibleItems = data.items.slice(0, visibleCount);
 
   return (
     <section className="overflow-hidden bg-[#faf9f7] px-4 py-12 sm:px-7 sm:py-16 lg:px-10 lg:pb-20">
-      <div className="mx-auto grid max-w-[1700px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-5">
-        {data.items.map((item, index) => (
+      <div className="mx-auto max-w-[1700px]">
+        <div
+          id="testimonial-reviews"
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-5"
+        >
+        {visibleItems.map((item, index) => (
           <motion.article
             key={item.name}
             initial={
@@ -23,7 +33,7 @@ export default function TestimonialsReview() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{
               duration: reduceMotion ? 0 : 0.7,
-              delay: reduceMotion ? 0 : index * 0.15,
+              delay: reduceMotion ? 0 : (index % REVIEWS_PER_LOAD) * 0.12,
               ease: [0.22, 1, 0.36, 1],
             }}
             className="group flex min-w-0 flex-col overflow-hidden border border-[#e9e6e2] bg-white shadow-[0_4px_18px_rgba(20,20,20,0.035)] transition-shadow duration-500 hover:shadow-[0_14px_38px_rgba(20,20,20,0.10)] sm:flex-row"
@@ -50,7 +60,9 @@ export default function TestimonialsReview() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.45,
-                  delay: reduceMotion ? 0 : 0.2 + index * 0.15,
+                  delay: reduceMotion
+                    ? 0
+                    : 0.2 + (index % REVIEWS_PER_LOAD) * 0.12,
                 }}
                 aria-hidden="true"
                 className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-[#850d25]"
@@ -103,6 +115,24 @@ export default function TestimonialsReview() {
             </div>
           </motion.article>
         ))}
+        </div>
+
+        {visibleCount < data.items.length && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() =>
+                setVisibleCount((count) =>
+                  Math.min(count + REVIEWS_PER_LOAD, data.items.length)
+                )
+              }
+              aria-controls="testimonial-reviews"
+              className="inline-flex min-h-12 items-center justify-center border border-[#850d25] bg-[#850d25] px-7 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:border-[#65091c] hover:bg-[#65091c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#850d25]"
+            >
+              Load More Testimonials
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

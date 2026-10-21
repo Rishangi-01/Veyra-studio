@@ -7,7 +7,9 @@ export default function OurTeam() {
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
             <TeamHero />
-            <AboutTeam />
+            <div className="lg:pt-12 w-[100%]">
+                <AboutTeam />
+            </div>
             <OurTeamMembers />
         </div>
     );

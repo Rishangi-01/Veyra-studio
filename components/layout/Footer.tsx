@@ -92,7 +92,7 @@ export default function Footer() {
                 {footerData.description}
               </p>
 
-              <Link
+              {/* <Link
                 href={footerData.discoverLink.href}
                 className="group mt-5 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.15em] text-[#e0a2ae] transition-colors hover:text-white"
               >
@@ -101,10 +101,9 @@ export default function Footer() {
                   size={15}
                   className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
-              </Link>
+              </Link> */}
             </div>
 
-            {/* Quick links and services */}
             {columns.map((column, columnIndex) => (
               <div
                 key={column.title}
@@ -183,10 +182,10 @@ export default function Footer() {
                             ? "noreferrer"
                             : undefined
                         }
-                        className="group flex items-center gap-3.5"
+                        className="group flex items-start gap-3.5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0a2ae]"
                       >
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#850d25] text-white transition-all duration-300 group-hover:scale-105 group-hover:bg-[#a90031] group-hover:shadow-[0_0_22px_rgba(169,0,49,0.28)]">
-                          <Icon size={17} strokeWidth={1.8} />
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-[#a90031]/50 bg-[#850d25]/20 text-[#e0a2ae] transition-all duration-300 group-hover:border-[#a90031] group-hover:bg-[#a90031] group-hover:text-white group-hover:shadow-[0_0_18px_rgba(169,0,49,0.3)]">
+                          <Icon size={16} className="block" aria-hidden="true" />
                         </span>
 
                         <span className="min-w-0 text-[13px] leading-[1.8] text-white/80 transition-colors duration-300 group-hover:text-white">

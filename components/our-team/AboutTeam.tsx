@@ -35,7 +35,7 @@ export default function AboutTeam() {
               delay: 0.12,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="max-w-[650px] font-serif text-[clamp(2.8rem,6vw,5rem)] leading-[0.91] tracking-[-0.055em] text-[#111a20]"
+            className="max-w-[650px] font-serif text-[clamp(2.8rem,6vw,5rem)] font-medium leading-[0.91] tracking-[-0.055em] text-[#111a20]"
           >
             {data.titleFirst}
             <br />

@@ -98,7 +98,7 @@ export default function HeroSection() {
                     duration: 0.55,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="font-serif text-[clamp(2.65rem,5.1vw,5.4rem)] leading-[0.99] tracking-[-0.055em]"
+                  className="font-serif text-[clamp(2.65rem,5.1vw,5.4rem)] font-medium leading-[0.99] tracking-[-0.055em]"
                 >
                   {slide.title.map((line) => (
                     <span key={line} className="block">
@@ -112,7 +112,7 @@ export default function HeroSection() {
               </AnimatePresence>
             </div>
 
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
               <motion.p
                 key={`description-${current}`}
                 initial={{ opacity: 0, y: 14 }}
@@ -144,7 +144,7 @@ export default function HeroSection() {
                 </motion.span>
               </Link>
 
-              {/* <div className="flex items-center gap-3 text-xs text-neutral-500">
+              <div className="flex items-center gap-3 text-xs text-neutral-500">
                 <span className="font-medium text-[#850d25]">
                   {String(current + 1).padStart(2, "0")}
                 </span>
@@ -157,8 +157,8 @@ export default function HeroSection() {
                   />
                 </span>
                 <span>{String(slides.length).padStart(2, "0")}</span>
-              </div> */}
-            </div>
+              </div>
+            </div> */}
           </div>
         </div>
 
@@ -227,7 +227,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-20 mx-auto -mt-0 max-w-[1600px] px-0 sm:px-8 lg:-mt-20 lg:px-0 xl:px-8">
+      <div className="relative z-20 mx-auto -mt-0 max-w-[1600px] px-0 sm:px-8 lg:-mt-20 lg:px-0 xl:px-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

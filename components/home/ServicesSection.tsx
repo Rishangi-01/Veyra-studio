@@ -41,7 +41,7 @@ export default function ServicesSection() {
       className="overflow-hidden bg-[#faf9f6] px-5 py-6 sm:px-8 sm:py-24 lg:px-12 lg:pb-16 lg:pt-10 xl:px-16 w-[100%]"
     >
       <div className="mx-auto max-w-[1600px]">
-        <div className="grid items-center gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12 xl:grid-cols-[0.5fr_1.22fr] xl:gap-16">
 
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, x: -35 }}
@@ -60,7 +60,7 @@ export default function ServicesSection() {
               <span className="h-px w-20 bg-[#850d25] sm:w-24" />
             </div>
 
-            <h2 className="font-serif text-5xl leading-[1.05] tracking-[-0.045em] text-[#181818] sm:text-6xl xl:text-[68px]">
+            <h2 className="font-serif text-5xl font-medium leading-[1.05] tracking-[-0.045em] text-[#181818] sm:text-6xl xl:text-[68px]">
               {homeServicesData.title}
             </h2>
 
@@ -155,7 +155,7 @@ export default function ServicesSection() {
             }}
             className="relative min-w-0 pb-8 pt-2 sm:pb-10 sm:pt-4 lg:pb-5 lg:pt-0"
           >
-            <div className="absolute left-0 top-0 z-0 h-28 w-[38%] bg-[#dce4e9]/80 sm:h-36" />
+            <div className="absolute left-[50px] top-[85px] z-1 h-28 w-[35%] bg-[#dce4e9]/80 sm:h-24" />
 
             <div className="relative ml-[16%] aspect-[1.13/1] overflow-hidden bg-[#e6e2da] sm:aspect-[1.28/1] lg:aspect-[1.15/1] xl:aspect-[1.26/1]">
               <Image
@@ -176,7 +176,7 @@ export default function ServicesSection() {
 
             <motion.div
               layout
-              className="relative z-10 -mt-14 ml-0 w-[94%] border border-white/70 bg-[#faf9f6]/[0.98] p-6 shadow-[0_15px_50px_rgba(0,0,0,0.07)] sm:absolute sm:left-0 sm:top-1/2 sm:mt-0 sm:w-[57%] sm:-translate-y-1/2 sm:p-7 md:p-8 lg:w-[59%] xl:p-9"
+              className="relative z-10 -mt-14 ml-0 w-[94%] border border-white/70 bg-[#faf9f6]/[0.98] p-6 shadow-[0_15px_50px_rgba(0,0,0,0.07)] sm:absolute sm:left-0 sm:top-1/2 sm:mt-0 sm:w-[57%] sm:-translate-y-1/2 sm:p-7 md:p-8 lg:w-[45%] xl:p-9"
             >
               <AnimatePresence mode="wait">
                 <motion.div

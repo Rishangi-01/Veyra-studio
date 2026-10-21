@@ -79,8 +79,6 @@ export default function ServicesShowcase() {
             </div>
           </motion.div>
 
-          {/* Small decorative line */}
-          <div className="absolute bottom-0 left-5 h-px w-1/3 bg-[#850c2b]/50 sm:left-8" />
         </motion.div>
 
         {/* RIGHT: Services Content */}

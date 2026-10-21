@@ -12,7 +12,7 @@ export default function TeamHero() {
   return (
     <section
       aria-labelledby="team-heading"
-      className="relative isolate flex min-h-[300px] items-end overflow-hidden bg-[#11191d] sm:min-h-[350px] md:min-h-[390px] lg:min-h-[420px] xl:min-h-[450px] w-[100%]"
+      className="relative isolate flex min-h-[280px] items-end overflow-hidden bg-[#11191d] sm:min-h-[330px] md:min-h-[370px] lg:min-h-[400px] xl:min-h-[420px] w-[100%]"
     >
       <motion.div
         initial={reduceMotion ? false : { scale: 1.08 }}

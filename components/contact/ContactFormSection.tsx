@@ -127,7 +127,6 @@ export default function ContactFormSection() {
     >
       <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-start gap-10 px-5 sm:px-8 md:px-10 lg:grid-cols-[1.04fr_0.96fr] lg:gap-10 lg:px-[3.8%] xl:gap-12 xl:px-[5%]">
 
-        {/* LEFT: CONTACT FORM */}
         <motion.div
           {...animation()}
           className="min-w-0 border border-[#efebe6] bg-[#fbf9f6] p-5 shadow-[0_5px_30px_rgba(30,20,10,0.025)] sm:p-8 md:p-10 xl:p-11"
@@ -139,7 +138,7 @@ export default function ContactFormSection() {
             <span className="h-[2px] w-16 bg-[#850d25]/50 sm:w-20" />
           </div>
 
-          <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl xl:text-[52px]">
+          <h2 className="font-serif text-4xl font-medium leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl xl:text-[52px]">
             {data.titleFirst} <span className="text-[#850d25]">{data.titleHighlight}</span>
           </h2>
 
@@ -148,7 +147,6 @@ export default function ContactFormSection() {
           </p>
 
           <form onSubmit={handleSubmit} className="mt-7 space-y-5 sm:mt-8 sm:space-y-6">
-            {/* Name and email */}
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-5">
               <motion.div {...animation(0.05)}>
                 <label htmlFor="contact-name" className={labelClass}>
@@ -183,7 +181,6 @@ export default function ContactFormSection() {
               </motion.div>
             </div>
 
-            {/* Phone and project type */}
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-5">
               <motion.div {...animation(0.15)}>
                 <label htmlFor="contact-phone" className={labelClass}>
@@ -223,7 +220,6 @@ export default function ContactFormSection() {
               </motion.div>
             </div>
 
-            {/* Project location */}
             <motion.div {...animation(0.25)}>
               <label htmlFor="project-location" className={labelClass}>
                 {data.fields.location.label}
@@ -238,7 +234,6 @@ export default function ContactFormSection() {
               />
             </motion.div>
 
-            {/* Message */}
             <motion.div {...animation(0.3)}>
               <label htmlFor="contact-message" className={labelClass}>
                 {data.fields.message.label} <span className="text-[#850d25]">*</span>
@@ -254,7 +249,6 @@ export default function ContactFormSection() {
               />
             </motion.div>
 
-            {/* Submit button */}
             <motion.div {...animation(0.35)} className="pt-1">
               <motion.button
                 type="submit"
@@ -284,7 +278,6 @@ export default function ContactFormSection() {
           </form>
         </motion.div>
 
-        {/* RIGHT: STUDIO LOCATION */}
         <div className="min-w-0 space-y-7 sm:space-y-8 lg:pt-3">
           <motion.div {...animation(0.1)}>
             <div className="mb-4 flex items-center gap-5">
@@ -294,7 +287,7 @@ export default function ContactFormSection() {
               <span className="h-[2px] w-16 bg-[#850d25]/50 sm:w-20" />
             </div>
 
-            <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl">
+            <h2 className="font-serif text-4xl font-medium leading-tight tracking-[-0.045em] text-[#111318] sm:text-5xl">
               {data.locationTitleFirst} <span className="text-[#850d25]">{data.locationTitleHighlight}</span>
             </h2>
 
@@ -303,10 +296,9 @@ export default function ContactFormSection() {
             </p>
           </motion.div>
 
-          {/* MAP */}
           <motion.div
             {...animation(0.18)}
-            className="group relative isolate h-[270px] overflow-hidden rounded-lg border border-[#ece8e4] bg-[#edf2f5] sm:h-[330px] lg:h-[315px] xl:h-[330px]"
+            className="group relative isolate h-[270px] overflow-hidden rounded-lg border border-[#ece8e4] bg-[#edf2f5] sm:h-[330px] lg:h-[315px] xl:h-[570px]"
           >
             <iframe
               title={data.mapTitle}
@@ -337,7 +329,7 @@ export default function ContactFormSection() {
           </motion.div>
 
           {/* OFFICE DETAILS */}
-          <motion.div {...animation(0.25)}>
+          {/* <motion.div {...animation(0.25)}>
             <div className="mb-5 flex items-center gap-5">
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#850d25] sm:text-sm">
                 {data.officeEyebrow}
@@ -346,7 +338,6 @@ export default function ContactFormSection() {
             </div>
 
             <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] sm:gap-6">
-              {/* Office photograph */}
               <motion.div
                 whileHover={reduceMotion ? undefined : { scale: 1.015 }}
                 className="relative h-[230px] overflow-hidden rounded-sm bg-[#eee7df] sm:h-[230px] lg:h-[210px] xl:h-[225px]"
@@ -360,7 +351,6 @@ export default function ContactFormSection() {
                 />
               </motion.div>
 
-              {/* Office contact information */}
               <div className="min-w-0 sm:border-l sm:border-[#e8e4e0] sm:pl-6">
                 <h3 className="font-serif text-2xl tracking-tight text-[#17171b]">
                   {data.studioName}
@@ -408,7 +398,7 @@ export default function ContactFormSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

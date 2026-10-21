@@ -96,7 +96,7 @@ export default function AboutSection() {
                         <span className="h-px flex-1 bg-[#850d25]" />
                     </div>
 
-                    <h2 className="max-w-[650px] font-serif text-[clamp(2.7rem,5vw,4.5rem)] leading-[1.06] tracking-[-0.045em] text-[#171717]">
+                    <h2 className="max-w-[650px] font-serif text-[clamp(2.7rem,5vw,4.5rem)] font-medium leading-[1.06] tracking-[-0.045em] text-[#171717]">
                         <motion.span
                             initial={reduceMotion ? false : { opacity: 0, y: 18 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export default function AboutSection() {
                     >
                         <Link
                             href={aboutSectionData.button.href}
-                            className="group inline-flex items-center gap-5 text-base font-semibold text-[#850d25] sm:gap-8 sm:text-lg"
+                            className="group inline-flex items-center gap-5 text-base font-semibold text-[#850d25] sm:gap-5 sm:text-lg"
                         >
                             <span className="relative">
                                 {aboutSectionData.button.label}
@@ -148,10 +148,10 @@ export default function AboutSection() {
                                 whileHover={{ scale: 1.08 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ duration: 0.2 }}
-                                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#850d25] text-white shadow-lg shadow-[#850d25]/15 transition-colors duration-300 group-hover:bg-[#62091b] sm:h-[60px] sm:w-[60px]"
+                                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#850d25] text-white shadow-lg shadow-[#850d25]/15 transition-colors duration-300 group-hover:bg-[#62091b] sm:h-[40px] sm:w-[40px]"
                             >
                                 <ArrowRight
-                                    size={25}
+                                    size={23}
                                     strokeWidth={1.6}
                                     className="transition-transform duration-300 group-hover:translate-x-1"
                                 />

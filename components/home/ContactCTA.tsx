@@ -48,7 +48,7 @@ export default function ContactCTA() {
             {/* Heading */}
             <h2
               id="contact-cta-title"
-              className="font-serif text-[clamp(2.8rem,5.2vw,4.2rem)] leading-[1.04] tracking-[-0.045em] text-[#fffaf6]"
+              className="font-serif text-[clamp(2.8rem,5.2vw,4.2rem)] font-medium leading-[1.04] tracking-[-0.045em] text-[#fffaf6]"
             >
               {contactCtaData.title[0]}
               <br />

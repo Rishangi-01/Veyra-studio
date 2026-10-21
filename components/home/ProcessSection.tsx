@@ -58,7 +58,7 @@ export default function ProcessSection() {
             <span className="h-px w-12 bg-[#b34b61] sm:w-16" />
           </div>
 
-          <h2 className="font-serif text-[clamp(2rem,4.2vw,3.6rem)] leading-[1.12] tracking-[-0.045em] text-[#17191c]">
+          <h2 className="font-serif text-[clamp(2rem,4.2vw,3.6rem)] font-medium leading-[1.12] tracking-[-0.045em] text-[#17191c]">
             {processSectionData.title[0]}{" "}
             <span className="text-[#850d25]">
               {processSectionData.title[1]}
@@ -151,14 +151,14 @@ export default function ProcessSection() {
                   </p>
 
                   {/* Optional details link */}
-                  <a
+                  {/* <a
                     href={step.linkHref}
                     aria-label={`${step.linkLabel} for ${step.title} with Veyra Studio`}
                     className="mt-auto flex w-fit items-center gap-2 pt-5 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#850d25] opacity-80 transition-all duration-300 hover:gap-3 hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#850d25]"
                   >
                     {step.linkLabel}
                     <ArrowUpRight size={15} />
-                  </a>
+                  </a> */}
                 </div>
 
                 {/* Floating icon tile */}

@@ -215,7 +215,7 @@ export default function TestimonialsSection() {
             </motion.div>
           </AnimatePresence>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-px bg-[#d8d3cf] lg:block" />
+          {/* <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-px bg-[#d8d3cf] lg:block" /> */}
 
           <div className="pointer-events-none absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-white/65 text-[#850d25] backdrop-blur-sm sm:bottom-5 sm:right-5">
             <Quote size={17} strokeWidth={1.4} />

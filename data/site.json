@@ -301,24 +301,24 @@
                 "href": "/about-us"
               },
               {
-                "label": "Our Services",
-                "href": "/our-services"
-              },
-              {
-                "label": "Our Projects",
-                "href": "/our-projects"
-              },
-              {
-                "label": "Blog",
-                "href": "/blog"
+                "label": "Our Team",
+                "href": "/our-team"
               },
               {
                 "label": "Testimonials",
                 "href": "/testimonials"
               },
               {
-                "label": "FAQs",
-                "href": "/faq"
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Projects",
+                "href": "/projects"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
               },
               {
                 "label": "Contact Us",
@@ -1494,39 +1494,11 @@
           },
           {
             "label": "Services",
-            "href": "/services",
-            "submenu": [
-              {
-                "label": "Architecture",
-                "href": "#"
-              },
-              {
-                "label": "Interior Design",
-                "href": "#"
-              },
-              {
-                "label": "Landscape Design",
-                "href": "#"
-              }
-            ]
+            "href": "/services"
           },
           {
             "label": "Projects",
-            "href": "/projects",
-            "submenu": [
-              {
-                "label": "Residential",
-                "href": "#"
-              },
-              {
-                "label": "Commercial",
-                "href": "#"
-              },
-              {
-                "label": "Interior Projects",
-                "href": "#"
-              }
-            ]
+            "href": "/projects"
           },
           {
             "label": "Blog",
@@ -1539,13 +1511,13 @@
         ],
         "quoteButton": {
           "label": "Get a Quote",
-          "href": "/contact"
+          "href": "/get-a-quote"
         },
         "mobileTagline": "Architecture • Interiors • Design"
       },
       "footer": {
         "backgroundImage": "/images/footer.png",
-        "logo": "/images/veyra-logo.png",
+        "logo": "/images/Veyra_Studio_Architectural_Identity.png",
         "description": "At Veyra Studio, we design spaces that inspire, function beautifully and elevate everyday living through thoughtful architecture and interiors.",
         "discoverLink": {
           "label": "Discover our studio",
@@ -1564,24 +1536,24 @@
                 "href": "/about-us"
               },
               {
-                "label": "Our Services",
-                "href": "/services"
-              },
-              {
-                "label": "Our Projects",
-                "href": "/projects"
-              },
-              {
-                "label": "Our Process",
-                "href": "/#process"
+                "label": "Our Team",
+                "href": "/our-team"
               },
               {
                 "label": "Testimonials",
                 "href": "/testimonials"
               },
               {
-                "label": "Get a Quote",
-                "href": "/get-a-quote"
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Projects",
+                "href": "/projects"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
               },
               {
                 "label": "Contact Us",
@@ -1609,20 +1581,12 @@
                 "href": "/services"
               },
               {
+                "label": "Sustainable Design",
+                "href": "/services"
+              },
+              {
                 "label": "Urban Planning",
                 "href": "/services"
-              },
-              {
-                "label": "Residential Design",
-                "href": "/services"
-              },
-              {
-                "label": "Commercial Design",
-                "href": "/services"
-              },
-              {
-                "label": "Consultation",
-                "href": "/contact"
               }
             ]
           }
@@ -1641,17 +1605,17 @@
           {
             "label": "Phone",
             "lines": [
-              "+1 234 567 8900"
+              "+1 000000000"
             ],
-            "href": "tel:+12345678900",
+            "href": "tel:+1 000000000",
             "icon": "FaPhoneAlt"
           },
           {
             "label": "Email",
             "lines": [
-              "info@veyrastudio.com"
+              "info@xyz.com"
             ],
-            "href": "mailto:info@veyrastudio.com",
+            "href": "mailto:info@xyz.com",
             "icon": "MdEmail"
           },
           {
@@ -1685,7 +1649,7 @@
             "icon": "FaYoutube"
           }
         ],
-        "copyright": "© 2026 Veyra Studio. All Rights Reserved."
+        "copyright": "Copyright © 2026. All Rights Reserved. Powered By Lestow."
       },
       "clientLogos": [
         {
@@ -2009,58 +1973,64 @@
         "detailsHref": "/blog/blog-details",
         "items": [
           {
+            "id": "1",
             "date": "18",
             "month": "SEP 2026",
             "category": "ARCHITECTURE",
             "title": "How Modern Architecture Shapes Better Living Spaces",
             "description": "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
             "image": "/images/blogs/gallery1.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           },
           {
+            "id": "2",
             "date": "12",
             "month": "SEP 2026",
             "category": "INTERIOR DESIGN",
             "title": "Top Interior Design Trends to Watch in 2026",
             "description": "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
             "image": "/images/blogs/project-detail.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           },
           {
+            "id": "3",
             "date": "05",
             "month": "SEP 2026",
             "category": "LANDSCAPE DESIGN",
             "title": "Creating Outdoor Spaces that Inspire Relaxation",
             "description": "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
             "image": "/images/blogs/gallery3.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           },
           {
-            "date": "18",
+            "id": "4",
+            "date": "19",
             "month": "SEP 2026",
             "category": "ARCHITECTURE",
             "title": "How Modern Architecture Shapes Better Living Spaces",
             "description": "Discover how thoughtful architectural design can enhance everyday living with functionality, aesthetics and sustainability.",
             "image": "/images/blogs/gallery1.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           },
           {
-            "date": "12",
+            "id": "5",
+            "date": "13",
             "month": "SEP 2026",
             "category": "INTERIOR DESIGN",
             "title": "Top Interior Design Trends to Watch in 2026",
             "description": "From natural materials to minimalist aesthetics, explore the top interior design trends that are defining modern homes and workplaces.",
             "image": "/images/blogs/project-detail.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           },
           {
-            "date": "05",
+            "id": "6",
+            "date": "03",
             "month": "SEP 2026",
             "category": "LANDSCAPE DESIGN",
             "title": "Creating Outdoor Spaces that Inspire Relaxation",
             "description": "Learn how landscape design can transform your outdoor areas into beautiful, functional and relaxing retreats.",
             "image": "/images/blogs/gallery3.png",
-            "href": "/blog"
+            "href": "/blog/blog-details"
           }
         ]
       },
@@ -2643,37 +2613,37 @@
             {
               "number": "01",
               "title": "Architectural Design",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "02",
               "title": "Interior Design",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "03",
               "title": "Landscape Design",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "04",
               "title": "Project Management",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "05",
               "title": "Urban Planning",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "06",
               "title": "Residential Design",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "07",
               "title": "Commercial Design",
-              "href": "/services"
+              "href": "/services/services-detail"
             },
             {
               "number": "08",

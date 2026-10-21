@@ -4,7 +4,6 @@ import ServicesDetailsHero from "@/components/services-detail/ServicesDetailHero
 import OurDesignProcess from "@/components/services-detail/OurDesignProcess";
 import ProjectGallery from "@/components/services-detail/ProjectGallery";
 import RelatedServices from "@/components/services-detail/RelatedServices";
-import ContactCTA from "@/components/home/ContactCTA";
 
 export default function Services() {
     return (
@@ -15,7 +14,6 @@ export default function Services() {
             <OurDesignProcess />
             <ProjectGallery />
             <RelatedServices />
-            <ContactCTA />
         </div>
     );
 }

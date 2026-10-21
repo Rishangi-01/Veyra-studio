@@ -1,9 +1,7 @@
 import AboutHero from "@/components/about-us/AboutHero";
-import AboutSection from "@/components/home/AboutSection";
+import AboutSection from "@/components/about-us/AboutSection";
 import ClientLogos from "@/components/home/ClientLogos";
-import ContactCTA from "@/components/home/ContactCTA";
 import ProcessSection from "@/components/home/ProcessSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
 
 
 export default function AboutUs() {
@@ -13,8 +11,6 @@ export default function AboutUs() {
             <AboutSection />
             <ClientLogos />
             <ProcessSection />
-            <ContactCTA />
-            <TestimonialsSection />
         </div>
     );
 }

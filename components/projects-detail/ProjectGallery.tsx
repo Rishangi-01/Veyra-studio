@@ -58,7 +58,7 @@ export default function ProjectGallery() {
           className="mb-5 flex items-center justify-between gap-4 sm:mb-6"
         >
           <div>
-            <h2 className="font-serif text-3xl tracking-tight text-[#17191f] sm:text-4xl lg:text-[42px]">
+            <h2 className="font-serif text-3xl font-medium tracking-tight text-[#17191f] sm:text-4xl lg:text-[42px]">
               {data.titleFirst} <span className="text-[#94102b]">{data.titleHighlight}</span>
             </h2>
             <span className="mt-3 block h-[2px] w-12 bg-[#94102b]" />
