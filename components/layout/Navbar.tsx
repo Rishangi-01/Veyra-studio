@@ -4,6 +4,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   ArrowDownRight,
   ArrowRight,
@@ -17,11 +18,10 @@ import { navbarData } from "../../data";
 const navigation = navbarData.navigation;
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeLink, setActiveLink] = useState(
-    navbarData.navigation[0]?.label ?? "Home"
-  );
+  const currentPath = pathname.replace(/\/+$/, "") || "/";
 
   return (
     <motion.header
@@ -38,7 +38,6 @@ export default function Navbar() {
         <Link
           href="/"
           aria-label="Veyra Studio home"
-          onClick={() => setActiveLink("Home")}
           className="group flex shrink-0 items-center"
         >
           <motion.div
@@ -59,7 +58,9 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden flex-1 items-center justify-center gap-5 lg:flex xl:gap-9">
           {navigation.map((item) => {
-            const isActive = activeLink === item.label;
+            const isActive =
+              currentPath === item.href ||
+              (item.href !== "/" && currentPath.startsWith(`${item.href}/`));
 
             return (
               <div
@@ -72,7 +73,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  onClick={() => setActiveLink(item.label)}
+                  aria-current={isActive ? "page" : undefined}
                   aria-haspopup={item.submenu ? "true" : undefined}
                   aria-expanded={
                     item.submenu
@@ -130,7 +131,6 @@ export default function Navbar() {
                             <Link
                               href={subItem.href}
                               onClick={() => {
-                                setActiveLink(item.label);
                                 setActiveDropdown(null);
                               }}
                               className="group flex items-center justify-between px-4 py-3 text-sm text-neutral-700 transition-colors hover:bg-[#861329]/[0.05] hover:text-[#861329]"
@@ -226,24 +226,30 @@ export default function Navbar() {
             className="absolute left-0 right-0 top-full overflow-hidden border-t border-neutral-100 bg-white shadow-xl lg:hidden"
           >
             <div className="max-h-[calc(100dvh-90px)] overflow-y-auto px-5 pb-6 pt-3 sm:px-8">
-              {navigation.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.045 }}
-                  className="border-b border-neutral-100"
-                >
+              {navigation.map((item, index) => {
+                const isActive =
+                  currentPath === item.href ||
+                  (item.href !== "/" &&
+                    currentPath.startsWith(`${item.href}/`));
+
+                return (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.045 }}
+                    className="border-b border-neutral-100"
+                  >
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
                       onClick={() => {
-                        setActiveLink(item.label);
                         setMobileOpen(false);
                         setActiveDropdown(null);
                       }}
+                      aria-current={isActive ? "page" : undefined}
                       className={`flex-1 py-4 text-base font-medium transition-colors ${
-                        activeLink === item.label
+                        isActive
                           ? "text-[#861329]"
                           : "text-neutral-800 hover:text-[#861329]"
                       }`}
@@ -294,7 +300,6 @@ export default function Navbar() {
                                 key={subItem.label}
                                 href={subItem.href}
                                 onClick={() => {
-                                  setActiveLink(item.label);
                                   setMobileOpen(false);
                                   setActiveDropdown(null);
                                 }}
@@ -308,8 +313,9 @@ export default function Navbar() {
                         </motion.div>
                       )}
                   </AnimatePresence>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
 
               <Link
                 href={navbarData.quoteButton.href}
