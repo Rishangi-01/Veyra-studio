@@ -57,7 +57,7 @@ export default function HeroSection() {
       }}
     >
       <div className="mx-auto grid max-w-[1800px] grid-cols-1 lg:grid-cols-[1.03fr_0.97fr]">
-        <div className="relative flex min-h-[490px] flex-col justify-center px-6 pb-12 pt-16 sm:px-10 sm:pb-16 sm:pt-20 md:px-14 lg:min-h-[660px] lg:px-12 lg:py-20 xl:px-20">
+        <div className="relative flex min-h-[280px] flex-col justify-center px-6 pb-8 pt-12 sm:px-10 sm:pb-16 sm:pt-20 md:px-14 lg:min-h-[660px] lg:px-12 lg:py-20 xl:px-20">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -218,11 +218,6 @@ export default function HeroSection() {
             </div>
 
             <span className="h-8 w-px bg-white/50" />
-          </div>
-
-          <div className="absolute bottom-5 left-5 z-10 flex items-center gap-2 bg-black/25 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur-sm sm:bottom-8 sm:left-8">
-            <MapPin size={13} />
-            Thoughtfully designed spaces
           </div>
         </div>
       </div>

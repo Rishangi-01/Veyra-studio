@@ -162,25 +162,6 @@ export default function ServicesShowcase() {
               </motion.div>
             ))}
           </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: reduceMotion ? 0 : 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: reduceMotion ? 0 : 0.5, delay: 0.25 }}
-            className="mt-8"
-          >
-            <Link
-              href={data.ctaHref}
-              className="group inline-flex items-center gap-5 bg-[#850c2b] px-6 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#650720] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#850c2b] focus-visible:ring-offset-4"
-            >
-              {data.ctaLabel}
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#850c2b] transition-transform duration-300 group-hover:rotate-45">
-                <ArrowUpRight size={18} />
-              </span>
-            </Link>
-          </motion.div>
         </motion.div>
       </div>
     </section>
